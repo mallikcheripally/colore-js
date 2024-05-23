@@ -1,25 +1,22 @@
-import typescript from '@rollup/plugin-typescript';
-import { terser } from '@rollup/plugin-terser';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import alias from '@rollup/plugin-alias';
-import path from 'path';
+const typescript = require('@rollup/plugin-typescript');
+const terser = require('@rollup/plugin-terser');
+const resolve = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const alias = require('@rollup/plugin-alias');
+const path = require('path');
 
-export default {
+module.exports = {
     input: 'src/index.ts',
     output: [
         {
             file: 'dist/kolors.cjs.js',
             format: 'cjs',
+            sourcemap: true,
         },
         {
             file: 'dist/kolors.esm.js',
-            format: 'esm',
-        },
-        {
-            file: 'dist/kolors.umd.js',
-            format: 'umd',
-            name: 'Kolors',
+            format: 'es',
+            sourcemap: true,
         },
     ],
     plugins: [

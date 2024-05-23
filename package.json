@@ -19,9 +19,13 @@
     "url": "https://github.com/mallikcheripally/kolors/issues"
   },
   "homepage": "https://github.com/mallikcheripally/kolors#readme",
+  "type": "module",
   "main": "dist/kolors.cjs.js",
   "module": "dist/kolors.esm.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint 'src/**/*.{js,ts}'",
