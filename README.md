@@ -59,3 +59,7 @@ Converts a HEX color string to an HSL color string.
 
 ### `hslToHex(h: number, s: number, l: number): string`
 Converts HSL values to a HEX color string.
+
+
+### `rgbToHsv(r: number, g: number, b: number): string`
+Converts RGB values to an HSV color string.
