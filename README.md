@@ -27,56 +27,23 @@ or
 yarn add kolors
 ```
 
-## Usage
-
-Here's an example of how to use Kolors in your project:
-
-### Converting HEX to RGB
-```javascript
-import { hexToRgb } from 'kolors';
-
-const rgbColor = hexToRgb('#ff5733');
-console.log(rgbColor); // Output: rgb(255, 87, 51)
-```
-
-### Converting RGB to HEX
-```javascript
-import { rgbToHex } from 'kolors';
-
-const hexColor = rgbToHex(255, 87, 51);
-console.log(hexColor); // Output: #ff5733
-```
-
-### Converting RGB to HSL
-```javascript
-import { rgbToHsl } from 'kolors';
-
-const hslColor = rgbToHsl(255, 87, 51);
-console.log(hslColor); // Output: hsl(14, 100%, 60%)
-```
-
-### Converting HSL to RGB
-```javascript
-import { hslToRgb } from 'kolors';
-
-const rgbColor = hslToRgb(14, 100, 60);
-console.log(rgbColor); // Output: rgb(255, 87, 51)
-```
-
 ## API Reference
 
-### hexToRgb(hex: string): string
-
+### `hexToRgb(hex: string): string`
 Converts a HEX color string to an RGB color string.
 
-### rgbToHex(r: number, g: number, b: number): string
 
+### `rgbToHex(r: number, g: number, b: number): string`
 Converts RGB values to a HEX color string.
 
-### rgbToHsl(r: number, g: number, b: number): string
 
+### `rgbToHsl(r: number, g: number, b: number): string`
 Converts RGB values to an HSL color string.
 
-### hslToRgb(h: number, s: number, l: number): string
 
+### `hslToRgb(h: number, s: number, l: number): string`
 Converts HSL values to an RGB color string.
+
+
+### `rgbToCmyk(r: number, g: number, b: number): string`
+Converts RGB values to a CMYK color string.
