@@ -7,9 +7,9 @@ export { cmykToRgb } from '@/conversions/cmykToRgb';
 export { hexToHsl } from '@/conversions/hexToHsl';
 export { hslToHex } from '@/conversions/hslToHex';
 export { rgbToHsv } from '@/conversions/rgbToHsv';
+export { hsvToRgb } from '@/conversions/hsvToRgb';
 
 // Additional Color Conversion Functions
-//     RGB to HSV: Convert RGB values to HSV (Hue, Saturation, Value) values.
 //     HSV to RGB: Convert HSV values to RGB values.
 //     HEX to HSV: Convert HEX color strings to HSV values.
 //     HSV to HEX: Convert HSV values to HEX color strings.
