@@ -7,6 +7,11 @@
  * @returns {string} The HEX color string in the format "#RRGGBB".
  */
 export function hslToHex(h: number, s: number, l: number): string {
+    // Adjust the hue value to fall within the correct range
+    if (h >= 360) {
+        h = h % 360;
+    }
+
     s /= 100;
     l /= 100;
 
