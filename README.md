@@ -55,3 +55,7 @@ Converts CMYK values to an RGB color string.
 
 ### `hexToHsl(hex: string): string`
 Converts a HEX color string to an HSL color string.
+
+
+### `hslToHex(h: number, s: number, l: number): string`
+Converts HSL values to a HEX color string.
