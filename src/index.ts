@@ -9,10 +9,9 @@ export { hslToHex } from '@/conversions/hslToHex';
 export { rgbToHsv } from '@/conversions/rgbToHsv';
 export { hsvToRgb } from '@/conversions/hsvToRgb';
 export { hexToHsv } from '@/conversions/hexToHsv';
+export { hsvToHex } from '@/conversions/hsvToHex';
 
 // Additional Color Conversion Functions
-//     HEX to HSV: Convert HEX color strings to HSV values.
-//     HSV to HEX: Convert HSV values to HEX color strings.
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
 //     Luminance Calculation: Calculate the luminance of a color.
 //     Contrast Ratio: Calculate the contrast ratio between two colors.

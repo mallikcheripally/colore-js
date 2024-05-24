@@ -71,3 +71,7 @@ Converts HSV values to an RGB color string.
 
 ### `hexToHsv(hex: string): string`
 Converts a HEX color string to an HSV color string.
+
+
+### `hsvToHex(h: number, s: number, v: number): string`
+Converts HSV values to a HEX color string.
