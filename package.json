@@ -1,10 +1,10 @@
 {
-  "name": "kolors",
+  "name": "colore",
   "version": "1.0.0",
   "description": "A JavaScript library for advanced color manipulation and conversion.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mallikcheripally/kolors.git"
+    "url": "https://github.com/mallikcheripally/colore.git"
   },
   "keywords": [
     "color",
@@ -16,12 +16,12 @@
   "author": "Mallik Cheripally",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mallikcheripally/kolors/issues"
+    "url": "https://github.com/mallikcheripally/colore/issues"
   },
-  "homepage": "https://github.com/mallikcheripally/kolors#readme",
+  "homepage": "https://github.com/mallikcheripally/colore#readme",
   "type": "module",
-  "main": "dist/kolors.cjs.js",
-  "module": "dist/kolors.esm.js",
+  "main": "dist/colore.cjs.js",
+  "module": "dist/colore.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"

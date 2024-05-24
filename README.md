@@ -1,12 +1,12 @@
-# Kolors
+# Colore
 
-[![Version](https://img.shields.io/npm/v/kolors.svg)](https://www.npmjs.com/package/kolors)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/mallikcheripally/kolors/build.yml)](https://github.com/mallikcheripally/kolors/actions)
-[![License](https://img.shields.io/npm/l/kolors.svg)](https://github.com/mallikcheripally/kolors/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/kolors.svg)](https://www.npmjs.com/package/kolors)
+[![Version](https://img.shields.io/npm/v/colore.svg)](https://www.npmjs.com/package/colore)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore/build.yml)](https://github.com/mallikcheripally/colore/actions)
+[![License](https://img.shields.io/npm/l/colore.svg)](https://github.com/mallikcheripally/colore/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/colore.svg)](https://www.npmjs.com/package/colore)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Kolors is a JavaScript library for advanced color manipulation and conversion. It provides utility functions to enhance, lighten, darken, and transform colors between various formats such as HEX and RGB.
+Colore is a JavaScript library for advanced color manipulation and conversion. It provides utility functions to enhance, lighten, darken, and transform colors between various formats such as HEX and RGB.
 
 ## Features
 
@@ -17,14 +17,14 @@ Kolors is a JavaScript library for advanced color manipulation and conversion. I
 
 ## Installation
 
-You can install Kolors using npm or Yarn:
+You can install Colore using npm or Yarn:
 
 ```bash
-npm install kolors
+npm install colore
 ```
 or 
 ```bash
-yarn add kolors
+yarn add colore
 ```
 
 ## API Reference

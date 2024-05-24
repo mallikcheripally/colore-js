@@ -9,12 +9,12 @@ module.exports = {
     input: 'src/index.ts',
     output: [
         {
-            file: 'dist/kolors.cjs.js',
+            file: 'dist/colore.cjs.js',
             format: 'cjs',
             sourcemap: true,
         },
         {
-            file: 'dist/kolors.esm.js',
+            file: 'dist/colore.esm.js',
             format: 'es',
             sourcemap: true,
         },
