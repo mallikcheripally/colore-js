@@ -8,9 +8,9 @@ export { hexToHsl } from '@/conversions/hexToHsl';
 export { hslToHex } from '@/conversions/hslToHex';
 export { rgbToHsv } from '@/conversions/rgbToHsv';
 export { hsvToRgb } from '@/conversions/hsvToRgb';
+export { hexToHsv } from '@/conversions/hexToHsv';
 
 // Additional Color Conversion Functions
-//     HSV to RGB: Convert HSV values to RGB values.
 //     HEX to HSV: Convert HEX color strings to HSV values.
 //     HSV to HEX: Convert HSV values to HEX color strings.
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
