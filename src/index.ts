@@ -15,6 +15,9 @@ export { rgbToXyz } from '@/conversions/rgbToXyz';
 export { xyzToRgb } from '@/conversions/xyzToRgb';
 export { xyzToLab } from '@/conversions/xyzToLab';
 export { labToXyz } from '@/conversions/labToXyz';
+export { labToRgb } from '@/conversions/labToRgb';
+export { lchToLab } from '@/conversions/lchToLab';
+export { lchToRgb } from '@/conversions/lchToRgb';
 
 
 // Validations
@@ -28,4 +31,4 @@ export { isValidNamedColor } from '@/validations/isValidNamedColor';
 export { isValidLch } from '@/validations/isValidLch';
 export { isValidXyz } from '@/validations/isValidXyz';
 export { isValidLab } from '@/validations/isValidLab';
-export { detectColorFormat } from '@/validations/detectColorFormat';
+export { detectColorFormat } from '@/parser/detectColorFormat';

@@ -1,4 +1,4 @@
-import { detectColorFormat } from '@/validations/detectColorFormat';
+import { detectColorFormat } from '@/parser/detectColorFormat';
 
 describe('detectColorFormat', () => {
     test('detects hex color format', () => {
