@@ -10,6 +10,7 @@ export { rgbToHsv } from '@/conversions/rgbToHsv';
 export { hsvToRgb } from '@/conversions/hsvToRgb';
 export { hexToHsv } from '@/conversions/hexToHsv';
 export { hsvToHex } from '@/conversions/hsvToHex';
+export { rgbToXyz } from '@/conversions/rgbToXyz';
 
 // Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
