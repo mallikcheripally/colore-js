@@ -2,14 +2,33 @@
  * Converts a HEX color string to an HSL color string.
  *
  * @param {string} hex - The HEX color string.
- * @returns {string} The HSL color string in the format "hsl(h, s%, l%)".
+ * @param {true} [asString=true] - Whether to return the result as a string.
+ * @returns {string} - The HSL color string in the format "hsl(h, s%, l%)".
  */
-export function hexToHsl(hex: string): string {
+/**
+ * Converts a HEX color string to an HSL color string.
+ *
+ * @param {string} hex - The HEX color string.
+ * @param {false} [asString=false] - Whether to return the result as an object.
+ * @returns {{h: number; s: number; l: number}} - The HSL color as an object.
+ */
+/**
+ * Converts a HEX color string to an HSL color string.
+ *
+ * @param {string} hex - The HEX color string.
+ * @param {boolean} [asString=true] - Whether to return the result as a string.
+ * @returns {string | {h: number; s: number; l: number}} - The HSL color string in the format "hsl(h, s%, l%)" or in object format.
+ */
+export function hexToHsl(hex: string, asString?: true): string;
+export function hexToHsl(hex: string, asString?: false): { h: number; s: number; l: number };
+export function hexToHsl(hex: string, asString: boolean = true): string | { h: number; s: number; l: number } {
     if (!/^#([0-9A-F]{3}){1,2}$/i.test(hex)) {
         throw new Error('Invalid HEX color.');
     }
 
-    let r = 0, g = 0, b = 0;
+    let r = 0,
+        g = 0,
+        b = 0;
 
     if (hex.length === 4) {
         r = parseInt(hex[1] + hex[1], 16);
@@ -25,8 +44,11 @@ export function hexToHsl(hex: string): string {
     g /= 255;
     b /= 255;
 
-    const max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h = 0, s = 0, l = (max + min) / 2;
+    const max = Math.max(r, g, b),
+        min = Math.min(r, g, b);
+    let h = 0,
+        s = 0,
+        l = (max + min) / 2;
 
     if (max !== min) {
         const d = max - min;
@@ -51,5 +73,9 @@ export function hexToHsl(hex: string): string {
     s = Math.round(s * 100);
     l = Math.round(l * 100);
 
-    return `hsl(${h}, ${s}%, ${l}%)`;
+    if (asString) {
+        return `hsl(${h}, ${s}%, ${l}%)`;
+    }
+
+    return { h, s, l };
 }
