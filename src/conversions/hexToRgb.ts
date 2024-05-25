@@ -1,3 +1,5 @@
+import { isValidHex } from "@/validations/isValidHex";
+
 /**
  * Converts a HEX color string to an RGB color string.
  *
@@ -5,20 +7,36 @@
  * full form "#RRGGBB") and converts it to the equivalent RGB color string.
  *
  * @param {string} hex - The hexadecimal color string to convert.
- * @returns {string} The RGB color string in the format "rgb(r, g, b)".
+ * @param {true} [asString=true] - Whether to return the result as a string.
+ * @returns {string} - The RGB color string in the format "rgb(r, g, b)".
  * @throws {Error} Throws an error if the provided string is not a valid HEX color.
- *
- * @example
- * // Convert full form hex color to RGB
- * hexToRgb("#ff0000"); // Returns "rgb(255, 0, 0)"
- *
- * @example
- * // Convert shorthand hex color to RGB
- * hexToRgb("#03F"); // Returns "rgb(0, 51, 255)"
  */
-export function hexToRgb(hex: string): string {
-    // Validate hex input
-    if (!/^#([0-9A-F]{3}){1,2}$/i.test(hex)) {
+/**
+ * Converts a HEX color string to an RGB color string.
+ *
+ * This function takes a hexadecimal color string (either in shorthand form "#RGB" or
+ * full form "#RRGGBB") and converts it to the equivalent RGB color string.
+ *
+ * @param {string} hex - The hexadecimal color string to convert.
+ * @param {false} [asString=false] - Whether to return the result as an object.
+ * @returns {{r: number; g: number; b: number}} - The RGB color as an object.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
+ */
+/**
+ * Converts a HEX color string to an RGB color string.
+ *
+ * This function takes a hexadecimal color string (either in shorthand form "#RGB" or
+ * full form "#RRGGBB") and converts it to the equivalent RGB color string.
+ *
+ * @param {string} hex - The hexadecimal color string to convert.
+ * @param {boolean} [asString=true] - Whether to return the result as a string.
+ * @returns {string | {r: number; g: number; b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
+ */
+export function hexToRgb(hex: string, asString?: true): string;
+export function hexToRgb(hex: string, asString?: false): { r: number; g: number; b: number };
+export function hexToRgb(hex: string, asString: boolean = true): string | { r: number; g: number; b: number } {
+    if (!isValidHex(hex)) {
         throw new Error('Invalid HEX color.');
     }
 
@@ -37,5 +55,9 @@ export function hexToRgb(hex: string): string {
     const g = (num >> 8) & 255;
     const b = num & 255;
 
-    return `rgb(${r}, ${g}, ${b})`;
+    if (asString) {
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    return { r, g, b };
 }
