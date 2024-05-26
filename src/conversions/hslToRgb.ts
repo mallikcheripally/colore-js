@@ -40,7 +40,7 @@
 export function hslToRgb(h: number, s: number, l: number, asString?: true): string;
 export function hslToRgb(h: number, s: number, l: number, asString?: false): { r: number; g: number; b: number; };
 export function hslToRgb(h: number, s: number, l: number, asString: boolean = true): string | { r: number; g: number; b: number; } {
-    if (h < 0 || h >= 360 || s < 0 || s > 100 || l < 0 || l > 100) {
+    if (h < 0 || h > 360 || s < 0 || s > 100 || l < 0 || l > 100) {
         throw new Error(`Invalid HSL color value ${h}, ${s}, ${l}`);
     }
 

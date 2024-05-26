@@ -4,9 +4,41 @@
  * @param {number} h - The hue value (0-360).
  * @param {number} s - The saturation value (0-100).
  * @param {number} v - The value (brightness) value (0-100).
- * @returns {string} The RGB color string in the format "rgb(r, g, b)".
- */
-export function hsvToRgb(h: number, s: number, v: number): string {
+ * @param {true} [asString=true] - Whether to return the result as a string.
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ * */
+/**
+ * Converts HSV color values to RGB values.
+ *
+ * @param {number} h - The hue value (0-360).
+ * @param {number} s - The saturation value (0-100).
+ * @param {number} v - The value (brightness) value (0-100).
+ * @param {false} [asString=false] - Whether to return the result as an object.
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ * */
+/**
+ * Converts HSV color values to RGB values.
+ *
+ * @param {number} h - The hue value (0-360).
+ * @param {number} s - The saturation value (0-100).
+ * @param {number} v - The value (brightness) value (0-100).
+ * @param {boolean} [asString=true] - Whether to return the result as a string
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ * */
+export function hsvToRgb(h: number, s: number, v: number, asString?: true): string;
+export function hsvToRgb(h: number, s: number, v: number, asString?: false): { r: number, g: number; b: number };
+export function hsvToRgb(h: number, s: number, v: number, asString: boolean = true): string | { r: number, g: number; b: number } {
+    if (h < 0 || h > 360 || s < 0 || s > 100 || v < 0 || v > 100) {
+        throw new Error(`Invalid HSL color value ${h}, ${s}, ${v}`);
+    }
+
+    if (h === 360) {
+        h = h % 360;
+    }
+
     s /= 100;
     v /= 100;
 
@@ -34,5 +66,9 @@ export function hsvToRgb(h: number, s: number, v: number): string {
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
 
-    return `rgb(${r}, ${g}, ${b})`;
+    if (asString) {
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    return { r, g, b };
 }
