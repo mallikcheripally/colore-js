@@ -37,7 +37,7 @@ export function hexToRgb(hex: string, asString?: true): string;
 export function hexToRgb(hex: string, asString?: false): { r: number; g: number; b: number };
 export function hexToRgb(hex: string, asString: boolean = true): string | { r: number; g: number; b: number } {
     if (!isValidHex(hex)) {
-        throw new Error('Invalid HEX color.');
+        throw new Error(`Invalid HEX color ${hex}`);
     }
 
     // Remove the hash symbol if present

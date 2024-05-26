@@ -18,9 +18,9 @@ describe('hexToRgb', () => {
     });
 
     test('should throw an error for invalid HEX input', () => {
-        expect(() => hexToRgb('#zzz')).toThrow('Invalid HEX color.');
-        expect(() => hexToRgb('123456')).toThrow('Invalid HEX color.');
-        expect(() => hexToRgb('#12345')).toThrow('Invalid HEX color.');
+        expect(() => hexToRgb('#zzz')).toThrow('Invalid HEX color #zzz');
+        expect(() => hexToRgb('123456')).toThrow('Invalid HEX color 123456');
+        expect(() => hexToRgb('#12345')).toThrow('Invalid HEX color #12345');
     });
 
     test('should convert 3-digit HEX to RGB string by default', () => {
