@@ -44,6 +44,10 @@ export function hslToRgb(h: number, s: number, l: number, asString: boolean = tr
         throw new Error(`Invalid HSL color value ${h}, ${s}, ${l}`);
     }
 
+    if (h === 360) {
+        h = h % 360;
+    }
+
     h /= 360;
     s /= 100;
     l /= 100;
