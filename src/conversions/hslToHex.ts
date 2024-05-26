@@ -5,6 +5,7 @@
  * @param {number} s - The saturation value (0-100).
  * @param {number} l - The lightness value (0-100).
  * @returns {string} The HEX color string in the format "#RRGGBB"
+ * @throws {Error} Throws an error if any of the color values are out of range.
  */
 export function hslToHex(h: number, s: number, l: number): string {
     if (h < 0 || h > 360 || s < 0 || s > 100 || l < 0 || l > 100) {
