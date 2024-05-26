@@ -18,9 +18,9 @@ describe('hexToHsl', () => {
     });
 
     test('should throw an error for invalid HEX input', () => {
-        expect(() => hexToHsl('#zzz')).toThrow('Invalid HEX color.');
-        expect(() => hexToHsl('123456')).toThrow('Invalid HEX color.');
-        expect(() => hexToHsl('#12345')).toThrow('Invalid HEX color.');
+        expect(() => hexToHsl('#zzz')).toThrow('Invalid HEX color #zzz');
+        expect(() => hexToHsl('123456')).toThrow('Invalid HEX color 123456');
+        expect(() => hexToHsl('#12345')).toThrow('Invalid HEX color #12345');
     });
 
     test('should convert 3-digit HEX to HSL string by default', () => {

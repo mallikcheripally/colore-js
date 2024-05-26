@@ -1,3 +1,5 @@
+import { isValidHex } from "@/validations/isValidHex";
+
 /**
  * Converts a HEX color string to an HSL color string.
  *
@@ -22,8 +24,8 @@
 export function hexToHsl(hex: string, asString?: true): string;
 export function hexToHsl(hex: string, asString?: false): { h: number; s: number; l: number };
 export function hexToHsl(hex: string, asString: boolean = true): string | { h: number; s: number; l: number } {
-    if (!/^#([0-9A-F]{3}){1,2}$/i.test(hex)) {
-        throw new Error('Invalid HEX color.');
+    if (!isValidHex(hex)) {
+        throw new Error(`Invalid HEX color ${hex}`);
     }
 
     let r = 0,
