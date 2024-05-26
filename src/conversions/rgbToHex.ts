@@ -9,18 +9,10 @@
  * @param {number} b - The blue color value (0-255).
  * @returns {string} The hexadecimal color string in the format "#RRGGBB".
  * @throws {Error} Throws an error if any of the color values are out of range.
- *
- * @example
- * // Convert RGB color to hex
- * rgbToHex(255, 0, 0); // Returns "#ff0000"
- *
- * @example
- * // Convert RGB color to hex
- * rgbToHex(0, 51, 255); // Returns "#0033ff"
  */
 export function rgbToHex(r: number, g: number, b: number): string {
     if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
-        throw new Error('Invalid RGB color value.');
+        throw new Error(`Invalid RGB color value ${r}, ${g}, ${b}`);
     }
 
     const toHex = (n: number) => n.toString(16).padStart(2, '0');

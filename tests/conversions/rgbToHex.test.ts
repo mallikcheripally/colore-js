@@ -11,9 +11,9 @@ describe('rgbToHex', () => {
     });
 
     test('throws error for invalid RGB color values', () => {
-        expect(() => rgbToHex(256, 0, 0)).toThrow('Invalid RGB color value.');
-        expect(() => rgbToHex(-1, 255, 0)).toThrow('Invalid RGB color value.');
-        expect(() => rgbToHex(255, 0, 300)).toThrow('Invalid RGB color value.');
-        expect(() => rgbToHex(255, -10, 255)).toThrow('Invalid RGB color value.');
+        expect(() => rgbToHex(256, 0, 0)).toThrow('Invalid RGB color value 256, 0, 0');
+        expect(() => rgbToHex(-1, 255, 0)).toThrow('Invalid RGB color value -1, 255, 0');
+        expect(() => rgbToHex(255, 0, 300)).toThrow('Invalid RGB color value 255, 0, 300');
+        expect(() => rgbToHex(255, -10, 255)).toThrow('Invalid RGB color value 255, -10, 255');
     });
 });
