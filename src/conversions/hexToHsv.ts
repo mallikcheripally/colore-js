@@ -6,6 +6,7 @@ import { isValidHex } from '@/validations/isValidHex';
  * @param {string} hex - The hex color string.
  * @param {true} [asString=true] - Whether to return the result as a string.
  * @returns {string} - The HSV color string in the format "hsv(h, s%, v%)".
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 /**
  * Converts a hex color to HSV.
@@ -13,6 +14,7 @@ import { isValidHex } from '@/validations/isValidHex';
  * @param {string} hex - The hex color string.
  * @param {false} [asString=false] - Whether to return the result as an object.
  * @returns {{h: number; s: number; v: number}} - The HSV color as an object.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 /**
  * Converts a hex color to HSV.
@@ -20,12 +22,13 @@ import { isValidHex } from '@/validations/isValidHex';
  * @param {string} hex - The hex color string.
  * @param {boolean} [asString=true] - Whether to return the result as a string.
  * @returns {string | {h: number; s: number; v: number}} - The HSV color string in the format "hsv(h, s%, v%)" or in object format.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 export function hexToHsv(hex: string, asString?: true): string;
 export function hexToHsv(hex: string, asString?: false): { h: number; s: number; v: number };
 export function hexToHsv(hex: string, asString: boolean = true): string | { h: number; s: number; v: number } {
     if (!isValidHex(hex)) {
-        throw new Error('Invalid HEX color.')
+        throw new Error(`Invalid HEX color ${hex}`);
     }
 
     // Remove the hash at the start if it's there

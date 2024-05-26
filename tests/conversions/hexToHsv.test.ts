@@ -18,8 +18,8 @@ describe('hexToHsv', () => {
     });
 
     test('should throw an error for invalid HEX input', () => {
-        expect(() => hexToHsv('#zzz')).toThrow('Invalid HEX color.');
-        expect(() => hexToHsv('123456')).toThrow('Invalid HEX color.');
-        expect(() => hexToHsv('#12345')).toThrow('Invalid HEX color.');
+        expect(() => hexToHsv('#zzz')).toThrow('Invalid HEX color #zzz');
+        expect(() => hexToHsv('123456')).toThrow('Invalid HEX color 123456');
+        expect(() => hexToHsv('#12345')).toThrow('Invalid HEX color #12345');
     });
 });
