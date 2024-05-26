@@ -20,11 +20,11 @@ describe('hslToRgb', () => {
     });
 
     test('throws error for invalid HSL color values', () => {
-        expect(() => hslToRgb(361, 100, 50)).toThrow('Invalid HSL color value.');
-        expect(() => hslToRgb(-1, 100, 50)).toThrow('Invalid HSL color value.');
-        expect(() => hslToRgb(0, 101, 50)).toThrow('Invalid HSL color value.');
-        expect(() => hslToRgb(0, -1, 50)).toThrow('Invalid HSL color value.');
-        expect(() => hslToRgb(0, 100, 101)).toThrow('Invalid HSL color value.');
-        expect(() => hslToRgb(0, 100, -1)).toThrow('Invalid HSL color value.');
+        expect(() => hslToRgb(361, 100, 50)).toThrow(`Invalid HSL color value 361, 100, 50`);
+        expect(() => hslToRgb(-1, 100, 50)).toThrow('Invalid HSL color value -1, 100, 50');
+        expect(() => hslToRgb(0, 101, 50)).toThrow('Invalid HSL color value 0, 101, 50');
+        expect(() => hslToRgb(0, -1, 50)).toThrow('Invalid HSL color value 0, -1, 50');
+        expect(() => hslToRgb(0, 100, 101)).toThrow('Invalid HSL color value 0, 100, 101');
+        expect(() => hslToRgb(0, 100, -1)).toThrow('Invalid HSL color value 0, 100, -1');
     });
 });

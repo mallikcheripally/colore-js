@@ -7,20 +7,41 @@
  * @param {number} h - The hue value (0-360).
  * @param {number} s - The saturation value (0-100).
  * @param {number} l - The lightness value (0-100).
- * @returns {string} The RGB color string in the format "rgb(r, g, b)".
+ * @param {true} [asString=true] - Whether to return the result as a string.
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
  * @throws {Error} Throws an error if any of the color values are out of range.
- *
- * @example
- * // Convert HSL color to RGB
- * hslToRgb(0, 100, 50); // Returns "rgb(255, 0, 0)"
- *
- * @example
- * // Convert HSL color to RGB
- * hslToRgb(225, 100, 50); // Returns "rgb(0, 51, 204)"
  */
-export function hslToRgb(h: number, s: number, l: number): string {
+/**
+ * Converts HSL color values to an RGB color string.
+ *
+ * This function takes hue, saturation, and lightness values and converts them
+ * to the equivalent RGB (Red, Green, Blue) color string.
+ *
+ * @param {number} h - The hue value (0-360).
+ * @param {number} s - The saturation value (0-100).
+ * @param {number} l - The lightness value (0-100).
+ * @param {false} [asString=false] - Whether to return the result as an object.
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ */
+/**
+ * Converts HSL color values to an RGB color string.
+ *
+ * This function takes hue, saturation, and lightness values and converts them
+ * to the equivalent RGB (Red, Green, Blue) color string.
+ *
+ * @param {number} h - The hue value (0-360).
+ * @param {number} s - The saturation value (0-100).
+ * @param {number} l - The lightness value (0-100).
+ * @param {boolean} [asString=true] - Whether to return the result as a string
+ * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ */
+export function hslToRgb(h: number, s: number, l: number, asString?: true): string;
+export function hslToRgb(h: number, s: number, l: number, asString?: false): { r: number; g: number; b: number; };
+export function hslToRgb(h: number, s: number, l: number, asString: boolean = true): string | { r: number; g: number; b: number; } {
     if (h < 0 || h >= 360 || s < 0 || s > 100 || l < 0 || l > 100) {
-        throw new Error('Invalid HSL color value.');
+        throw new Error(`Invalid HSL color value ${h}, ${s}, ${l}`);
     }
 
     h /= 360;
@@ -53,5 +74,9 @@ export function hslToRgb(h: number, s: number, l: number): string {
     g = Math.round(g * 255);
     b = Math.round(b * 255);
 
-    return `rgb(${r}, ${g}, ${b})`;
+    if (asString) {
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    return { r, g, b };
 }
