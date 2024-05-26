@@ -6,6 +6,7 @@ import { isValidHex } from "@/validations/isValidHex";
  * @param {string} hex - The HEX color string.
  * @param {true} [asString=true] - Whether to return the result as a string.
  * @returns {string} - The HSL color string in the format "hsl(h, s%, l%)".
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 /**
  * Converts a HEX color string to an HSL color string.
@@ -13,6 +14,7 @@ import { isValidHex } from "@/validations/isValidHex";
  * @param {string} hex - The HEX color string.
  * @param {false} [asString=false] - Whether to return the result as an object.
  * @returns {{h: number; s: number; l: number}} - The HSL color as an object.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 /**
  * Converts a HEX color string to an HSL color string.
@@ -20,6 +22,7 @@ import { isValidHex } from "@/validations/isValidHex";
  * @param {string} hex - The HEX color string.
  * @param {boolean} [asString=true] - Whether to return the result as a string.
  * @returns {string | {h: number; s: number; l: number}} - The HSL color string in the format "hsl(h, s%, l%)" or in object format.
+ * @throws {Error} Throws an error if the provided string is not a valid HEX color.
  */
 export function hexToHsl(hex: string, asString?: true): string;
 export function hexToHsl(hex: string, asString?: false): { h: number; s: number; l: number };
