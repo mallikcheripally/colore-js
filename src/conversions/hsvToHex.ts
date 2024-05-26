@@ -1,4 +1,5 @@
 import { hsvToRgb } from './hsvToRgb';
+import { rgbToHex } from './rgbToHex';
 
 /**
  * Converts HSV color values to a HEX color string.
@@ -7,18 +8,18 @@ import { hsvToRgb } from './hsvToRgb';
  * @param {number} s - The saturation value (0-100).
  * @param {number} v - The value (brightness) value (0-100).
  * @returns {string} The HEX color string in the format "#RRGGBB".
+ * @throws {Error} Throws an error if any of the color values are out of range.
  */
 export function hsvToHex(h: number, s: number, v: number): string {
-    const rgb = hsvToRgb(h, s, v);
-    const result = rgb.match(/\d+/g)?.map(Number);
-
-    if (!result || result.length !== 3) {
-        throw new Error('Invalid RGB value.');
+    if (h < 0 || h > 360 || s < 0 || s > 100 || v < 0 || v > 100) {
+        throw new Error(`Invalid HSV color value ${h}, ${s}, ${v}`);
     }
 
-    const [r, g, b] = result;
+    if (h === 360) {
+        h = h % 360;
+    }
 
-    const toHex = (n: number) => n.toString(16).padStart(2, '0');
-
-    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+    // @ts-ignore
+    const { r, g, b } = hsvToRgb(h, s, v, false);
+    return rgbToHex(r, g, b);
 }
