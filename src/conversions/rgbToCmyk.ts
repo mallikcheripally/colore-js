@@ -32,7 +32,7 @@ export function rgbToCmyk(r: number, g: number, b: number, asString?: true): str
 export function rgbToCmyk(r: number, g: number, b: number, asString?: false): { c: number, m: number, y: number, k: number };
 export function rgbToCmyk(r: number, g: number, b: number, asString: boolean = true): string | { c: number, m: number, y: number, k: number } {
     if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
-        throw new Error(`Invalid RGB values ${r}, ${g}, ${b}`);
+        throw new Error(`Invalid RGB color value ${r}, ${g}, ${b}`);
     }
 
     if (r === 0 && g === 0 && b === 0) {
