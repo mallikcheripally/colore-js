@@ -4,11 +4,14 @@
  * @param {number} h - The hue value (0-360).
  * @param {number} s - The saturation value (0-100).
  * @param {number} l - The lightness value (0-100).
- * @returns {string} The HEX color string in the format "#RRGGBB".
+ * @returns {string} The HEX color string in the format "#RRGGBB"
  */
 export function hslToHex(h: number, s: number, l: number): string {
-    // Adjust the hue value to fall within the correct range
-    if (h >= 360) {
+    if (h < 0 || h > 360 || s < 0 || s > 100 || l < 0 || l > 100) {
+        throw new Error(`Invalid HSL color value ${h}, ${s}, ${l}`);
+    }
+
+    if (h === 360) {
         h = h % 360;
     }
 
