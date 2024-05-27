@@ -50,7 +50,7 @@ export function lchToLab(
     };
 
     if (asString) {
-        return `lab(${roundTo(l)}, ${roundTo(a)}, ${roundTo(b)})`;
+        return `lab(${roundTo(l)}% ${roundTo(a)} ${roundTo(b)})`;
     }
 
     return {

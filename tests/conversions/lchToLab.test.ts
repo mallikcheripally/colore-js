@@ -2,8 +2,8 @@ import { lchToLab } from '@/conversions/lchToLab';
 
 describe('lchToLab', () => {
     test('converts LCH to LAB correctly', () => {
-        expect(lchToLab(53.23, 104.55, 40.00)).toBe('lab(53.23, 80.09, 67.2)');
-        expect(lchToLab(87.74, 119.78, 136.02)).toBe('lab(87.74, -86.19, 83.18)');
+        expect(lchToLab(53.23, 104.55, 40.00)).toBe('lab(53.23% 80.09 67.2)');
+        expect(lchToLab(87.74, 119.78, 136.02)).toBe('lab(87.74% -86.19 83.18)');
 
         const lab1 = lchToLab(50, 50, 180, false);
         expect(lab1.l).toBeCloseTo(50, 2);
@@ -33,6 +33,6 @@ describe('lchToLab', () => {
 
     test('rounds numbers correctly in string output', () => {
         const roundedResult = lchToLab(60, 25, 45, true);
-        expect(roundedResult).toBe('lab(60, 17.68, 17.68)');
+        expect(roundedResult).toBe('lab(60% 17.68 17.68)');
     });
 });
