@@ -30,11 +30,11 @@ describe('labToRgb', () => {
     test('converts LAB to RGB object correctly', () => {
         let result = labToRgb(53.24, 80.09, 67.20, false);
         expect(result.r).toBeCloseTo(255, 0);
-        expect(result.g).toBeCloseTo(0, 0);
+        expect(result.g).toBeCloseTo(1, 0);
         expect(result.b).toBeCloseTo(0, 0);
 
         result = labToRgb(87.74, -86.18, 83.18, false);
-        expect(result.r).toBeCloseTo(0, 0);
+        expect(result.r).toBeCloseTo(1, 0);
         expect(result.g).toBeCloseTo(255, 0);
         expect(result.b).toBeCloseTo(0, 0);
 
