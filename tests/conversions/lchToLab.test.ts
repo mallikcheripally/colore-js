@@ -2,31 +2,37 @@ import { lchToLab } from '@/conversions/lchToLab';
 
 describe('lchToLab', () => {
     test('converts LCH to LAB correctly', () => {
-        const [l1, a1, b1] = lchToLab(53.23, 104.55, 40.00);
-        expect(l1).toBeCloseTo(53.23, 2);
-        expect(a1).toBeCloseTo(80.09, 1); // Changed precision to 1
-        expect(b1).toBeCloseTo(67.2, 1);  // Changed precision to 1
+        expect(lchToLab(53.23, 104.55, 40.00)).toBe('lab(53.23, 80.09, 67.2)');
+        expect(lchToLab(87.74, 119.78, 136.02)).toBe('lab(87.74, -86.19, 83.18)');
 
-        const [l2, a2, b2] = lchToLab(87.74, 119.78, 136.02);
-        expect(l2).toBeCloseTo(87.74, 2);
-        expect(a2).toBeCloseTo(-86.18, 1); // Changed precision to 1
-        expect(b2).toBeCloseTo(83.18, 1);  // Changed precision to 1
-
-        const [l3, a3, b3] = lchToLab(32.3, 133.81, 306.29);
-        expect(l3).toBeCloseTo(32.3, 2);
-        expect(a3).toBeCloseTo(79.2, 1); // Changed precision to 1
-        expect(b3).toBeCloseTo(-107.86, 1); // Changed precision to 1
+        const lab1 = lchToLab(50, 50, 180, false);
+        expect(lab1.l).toBeCloseTo(50, 2);
+        expect(lab1.a).toBeCloseTo(-50, 2);
+        expect(lab1.b).toBeCloseTo(0, 2);
     });
 
-    test('handles edge cases', () => {
-        const [l4, a4, b4] = lchToLab(0, 0, 0);
-        expect(l4).toBeCloseTo(0, 2);
-        expect(a4).toBeCloseTo(0, 2);
-        expect(b4).toBeCloseTo(0, 2);
+    test('handles edge cases correctly', () => {
+        const zeroChroma = lchToLab(50, 0, 0, false);
+        expect(zeroChroma.l).toBeCloseTo(50, 2);
+        expect(zeroChroma.a).toBeCloseTo(0, 2);
+        expect(zeroChroma.b).toBeCloseTo(0, 2);
 
-        const [l5, a5, b5] = lchToLab(100, 0, 0);
-        expect(l5).toBeCloseTo(100, 2);
-        expect(a5).toBeCloseTo(0, 2);
-        expect(b5).toBeCloseTo(0, 2);
+        const fullHue = lchToLab(100, 100, 360, false);
+        expect(fullHue.l).toBeCloseTo(100, 2);
+        expect(fullHue.a).toBeCloseTo(100, 2);
+        expect(fullHue.b).toBeCloseTo(0, 2);
+    });
+
+    test('throws errors for invalid values', () => {
+        expect(() => lchToLab(-10, 50, 50)).toThrow('Invalid LCH color value -10, 50, 50');
+        expect(() => lchToLab(110, 50, 50)).toThrow('Invalid LCH color value 110, 50, 50');
+        expect(() => lchToLab(50, -50, 50)).toThrow('Invalid LCH color value 50, -50, 50');
+        expect(() => lchToLab(50, 50, -10)).toThrow('Invalid LCH color value 50, 50, -10');
+        expect(() => lchToLab(50, 50, 400)).toThrow('Invalid LCH color value 50, 50, 400');
+    });
+
+    test('rounds numbers correctly in string output', () => {
+        const roundedResult = lchToLab(60, 25, 45, true);
+        expect(roundedResult).toBe('lab(60, 17.68, 17.68)');
     });
 });
