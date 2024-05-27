@@ -25,11 +25,11 @@ describe('rgbToCmyk', () => {
     });
 
     test('throws error for invalid values', () => {
-        expect(() => rgbToCmyk(-10, 50, 50)).toThrow('Invalid RGB values -10, 50, 50');
-        expect(() => rgbToCmyk(370, 50, 50)).toThrow('Invalid RGB values 370, 50, 50');
-        expect(() => rgbToCmyk(180, -10, 50)).toThrow('Invalid RGB values 180, -10, 50');
-        expect(() => rgbToCmyk(180, 110, -50)).toThrow('Invalid RGB values 180, 110, -50');
-        expect(() => rgbToCmyk(180, 50, -10)).toThrow('Invalid RGB values 180, 50, -10');
-        expect(() => rgbToCmyk(256, 50, 110)).toThrow('Invalid RGB values 256, 50, 110');
+        expect(() => rgbToCmyk(-10, 50, 50)).toThrow('Invalid RGB color value -10, 50, 50');
+        expect(() => rgbToCmyk(370, 50, 50)).toThrow('Invalid RGB color value 370, 50, 50');
+        expect(() => rgbToCmyk(180, -10, 50)).toThrow('Invalid RGB color value 180, -10, 50');
+        expect(() => rgbToCmyk(180, 110, -50)).toThrow('Invalid RGB color value 180, 110, -50');
+        expect(() => rgbToCmyk(180, 50, -10)).toThrow('Invalid RGB color value 180, 50, -10');
+        expect(() => rgbToCmyk(256, 50, 110)).toThrow('Invalid RGB color value 256, 50, 110');
     });
 });
