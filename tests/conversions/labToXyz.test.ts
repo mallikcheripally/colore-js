@@ -1,52 +1,95 @@
 import { labToXyz } from '@/conversions/labToXyz';
 
 describe('labToXyz', () => {
-    test('converts LAB values to XYZ color values correctly', () => {
-        let [x, y, z] = labToXyz(53.23288178584245, 80.10930952982204, 67.22006831026425);
-        expect(x).toBeCloseTo(41.24, 1);
-        expect(y).toBeCloseTo(21.26, 1);
-        expect(z).toBeCloseTo(1.93, 1);
+    const xyzCloseTo = (received: string, expected: string, tolerance: number = 1): boolean => {
+        const extractXyz = (xyz: string) => {
+            const [x, y, z] = xyz.match(/(\d+(\.\d+)?)/g)?.map(Number) || [];
+            return { x, y, z };
+        };
 
-        [x, y, z] = labToXyz(87.73703347354422, -86.18463649762525, 83.18116474777854);
-        expect(x).toBeCloseTo(35.76, 1);
-        expect(y).toBeCloseTo(71.52, 1);
-        expect(z).toBeCloseTo(11.92, 1);
+        const receivedXyz = extractXyz(received);
+        const expectedXyz = extractXyz(expected);
 
-        [x, y, z] = labToXyz(32.29567256501325, 79.18559091020245, -107.8573002066949);
-        expect(x).toBeCloseTo(18.05, 1);
-        expect(y).toBeCloseTo(7.22, 1);
-        expect(z).toBeCloseTo(95.05, 1);
+        return (
+            Math.abs(receivedXyz.x - expectedXyz.x) <= tolerance &&
+            Math.abs(receivedXyz.y - expectedXyz.y) <= tolerance &&
+            Math.abs(receivedXyz.z - expectedXyz.z) <= tolerance
+        );
+    };
 
-        [x, y, z] = labToXyz(97.13950703971375, -21.55375051648618, 94.47812227661082);
-        expect(x).toBeCloseTo(77.00, 1);
-        expect(y).toBeCloseTo(92.78, 1);
-        expect(z).toBeCloseTo(13.85, 1);
-
-        [x, y, z] = labToXyz(91.11322037233457, -48.07961859102164, -14.138127754846148);
-        expect(x).toBeCloseTo(53.81, 1);
-        expect(y).toBeCloseTo(78.74, 1);
-        expect(z).toBeCloseTo(106.97, 1);
-
-        [x, y, z] = labToXyz(60.319933664076004, 98.25421868616108, -60.84313813154685);
-        expect(x).toBeCloseTo(59.29, 1);
-        expect(y).toBeCloseTo(28.48, 1);
-        expect(z).toBeCloseTo(96.98, 1);
-
-        [x, y, z] = labToXyz(0, 0, 0);
-        expect(x).toBeCloseTo(0.00, 1);
-        expect(y).toBeCloseTo(0.00, 1);
-        expect(z).toBeCloseTo(0.00, 1);
-
-        [x, y, z] = labToXyz(100.00000000000001, 0.00526049995830391, -0.010408184525267927);
-        expect(x).toBeCloseTo(95.05, 1);
-        expect(y).toBeCloseTo(100.00, 1);
-        expect(z).toBeCloseTo(108.88, 1);
+    test('converts LAB to XYZ string correctly', () => {
+        expect(xyzCloseTo(labToXyz(53.24, 80.09, 67.20), 'xyz(41.24, 21.26, 1.93)')).toBe(true); // Example 1
+        expect(xyzCloseTo(labToXyz(87.74, -86.18, 83.18), 'xyz(35.76, 71.52, 11.92)')).toBe(true); // Example 2
+        expect(xyzCloseTo(labToXyz(32.30, 79.20, -107.86), 'xyz(18.05, 7.22, 95.05)')).toBe(true); // Example 3
+        expect(xyzCloseTo(labToXyz(97.14, -21.55, 94.48), 'xyz(77.00, 92.78, 13.85)')).toBe(true); // Example 4
+        expect(xyzCloseTo(labToXyz(0.00, 0.00, 0.00), 'xyz(0.00, 0.00, 0.00)')).toBe(true); // Black
+        expect(xyzCloseTo(labToXyz(100.00, 0.00, 0.00), 'xyz(95.05, 100.00, 108.88)')).toBe(true); // White
+        expect(xyzCloseTo(labToXyz(53.59, 0.00, 0.00), 'xyz(20.52, 21.59, 23.32)')).toBe(true); // Grey
     });
 
-    test('handles edge cases', () => {
-        let [x, y, z] = labToXyz(53.585013452169026, 0.003563266679648726, -0.006290844383869461);
-        expect(x).toBeCloseTo(20.52, 0.25);
-        expect(y).toBeCloseTo(21.59, 0.25);
-        expect(z).toBeCloseTo(23.32, 0.25);
+    test('converts LAB to XYZ object correctly', () => {
+        let result = labToXyz(53.24, 80.09, 67.20, false);
+        expect(result.x).toBeCloseTo(41.24, 2);
+        expect(result.y).toBeCloseTo(21.27, 2);
+        expect(result.z).toBeCloseTo(1.93, 2);
+
+        result = labToXyz(87.74, -86.18, 83.18, false);
+        expect(result.x).toBeCloseTo(35.77, 2);
+        expect(result.y).toBeCloseTo(71.53, 2);
+        expect(result.z).toBeCloseTo(11.92, 2);
+
+        result = labToXyz(32.30, 79.20, -107.86, false);
+        expect(result.x).toBeCloseTo(18.05, 2);
+        expect(result.y).toBeCloseTo(7.22, 2);
+        expect(result.z).toBeCloseTo(95.04, 2);
+
+        result = labToXyz(97.14, -21.55, 94.48, false);
+        expect(result.x).toBeCloseTo(77.01, 2);
+        expect(result.y).toBeCloseTo(92.78, 2);
+        expect(result.z).toBeCloseTo(13.85, 2);
+
+        result = labToXyz(0.00, 0.00, 0.00, false);
+        expect(result.x).toBeCloseTo(0.00, 2);
+        expect(result.y).toBeCloseTo(0.00, 2);
+        expect(result.z).toBeCloseTo(0.00, 2);
+
+        result = labToXyz(100.00, 0.00, 0.00, false);
+        expect(result.x).toBeCloseTo(95.05, 2);
+        expect(result.y).toBeCloseTo(100.00, 2);
+        expect(result.z).toBeCloseTo(108.88, 2);
+
+        result = labToXyz(53.59, 0.00, 0.00, false);
+        expect(result.x).toBeCloseTo(20.52, 2);
+        expect(result.y).toBeCloseTo(21.59, 2);
+        expect(result.z).toBeCloseTo(23.51, 2);
+    });
+
+    test('handles intermediate values correctly', () => {
+        let result = labToXyz(60.00, 10.00, 20.00, false);
+        expect(result.x).toBeCloseTo(29.25, 2);
+        expect(result.y).toBeCloseTo(28.12, 2);
+        expect(result.z).toBeCloseTo(18.63, 2);
+
+        result = labToXyz(70.00, -20.00, 20.00, false);
+        expect(result.x).toBeCloseTo(32.79, 2);
+        expect(result.y).toBeCloseTo(40.75, 2);
+        expect(result.z).toBeCloseTo(28.73, 2);
+
+        result = labToXyz(50.00, 50.00, -50.00, false);
+        expect(result.x).toBeCloseTo(28.45, 2);
+        expect(result.y).toBeCloseTo(18.42, 2);
+        expect(result.z).toBeCloseTo(59.81, 2);
+
+        result = labToXyz(30.00, 20.00, 10.00, false);
+        expect(result.x).toBeCloseTo(7.91, 2);
+        expect(result.y).toBeCloseTo(6.24, 2);
+        expect(result.z).toBeCloseTo(4.53, 2);
+    });
+
+    test('throws error for invalid values', () => {
+        expect(() => labToXyz(-10, 0, 0)).toThrow('Invalid LAB color value -10, 0,0');
+        expect(() => labToXyz(50, -129, 0)).toThrow('Invalid LAB color value 50, -129,0');
+        expect(() => labToXyz(50, 0, 128)).toThrow('Invalid LAB color value 50, 0,128');
+        expect(() => labToXyz(101, 0, 0)).toThrow('Invalid LAB color value 101, 0,0');
     });
 });

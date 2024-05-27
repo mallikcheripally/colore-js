@@ -4,9 +4,42 @@
  * @param {number} l - The lightness component.
  * @param {number} a - The a component.
  * @param {number} b - The b component.
- * @returns {[number, number, number]} - The corresponding XYZ values.
+ * @param {true} [asString=true] - Whether to return the result as a string.
+ * @returns {string} - The XYZ color string in the format "xyz(x, y, z)"
+ * @throws {Error} Throws an error if any of the color values are out of range.
  */
-export function labToXyz(l: number, a: number, b: number): [number, number, number] {
+/**
+ * Converts LAB color values to XYZ color space.
+ *
+ * @param {number} l - The lightness component.
+ * @param {number} a - The a component.
+ * @param {number} b - The b component.
+ * @param {false} [asString=false] - Whether to return the result as an object.
+ * @returns {x: number, y: number, z: number} - The XYZ color in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ */
+/**
+ * Converts LAB color values to XYZ color space.
+ *
+ * @param {number} l - The lightness component.
+ * @param {number} a - The a component.
+ * @param {number} b - The b component.
+ * @param {boolean} [asString=true] - Whether to return the result as a string
+ * @returns {string | {x: number, y: number, z: number}} - The XYZ color string in the format "xyz(x, y, z)" or in object format
+ * @throws {Error} Throws an error if any of the color values are out of range.
+ */
+export function labToXyz(l: number, a: number, b: number, asString?: true): string;
+export function labToXyz(l: number, a: number, b: number, asString?: false): { x: number; y: number; z: number };
+export function labToXyz(
+    l: number,
+    a: number,
+    b: number,
+    asString: boolean = true,
+): string | { x: number; y: number; z: number } {
+    if (l < 0 || l > 100 || a < -128 || a > 127 || b < -128 || b > 127) {
+        throw new Error(`Invalid LAB color value ${l}, ${a},${b}`);
+    }
+
     // Reference values for D65 illuminant
     const refX = 95.047;
     const refY = 100.0;
@@ -28,5 +61,18 @@ export function labToXyz(l: number, a: number, b: number): [number, number, numb
     y *= refY;
     z *= refZ;
 
-    return [x, y, z];
+    const roundTo = (num: number, precision: number = 2) => {
+        const factor = Math.pow(10, precision);
+        return Math.round(num * factor) / factor;
+    };
+
+    if (asString) {
+        return `xyz(${x}, ${roundTo(y)}, ${roundTo(z)}`;
+    }
+
+    return {
+        x: roundTo(x),
+        y: roundTo(y),
+        z: roundTo(z)
+    };
 }
