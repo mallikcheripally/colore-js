@@ -5,7 +5,7 @@
  * @param {number} c - The chroma value.
  * @param {number} h - The hue value (0 to 360).
  * @param {true} [asString=true] - Whether to return the result as a string.
- * @returns {string} - The XYZ color string in the format "xyz(x, y, z)"
+ * @returns {string} - The LCH color string in the format "lch(l, c, h)"
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
 /**
@@ -15,7 +15,7 @@
  * @param {number} c - The chroma value.
  * @param {number} h - The hue value (0 to 360).
  * @param {false} [asString=false] - Whether to return the result as an object.
- * @returns { l: number; a: number; b: number;} - The XYZ color in object format
+ * @returns { l: number; a: number; b: number;} - The LCH color in object format
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
 /**
@@ -25,7 +25,7 @@
  * @param {number} c - The chroma value.
  * @param {number} h - The hue value (0 to 360).
  * @param {boolean} [asString=true] - Whether to return the result as a string
- * @returns {string | { l: number; a: number; b: number;}} - The XYZ color string in the format "xyz(x, y, z)" or in object format
+ * @returns {string | { l: number; a: number; b: number;}} - The LCH color string in the format "lch(l, c, h)" or in object format
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
 export function lchToLab(l: number, c: number, h: number, asString?: true): string;
