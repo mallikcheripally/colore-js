@@ -8,13 +8,13 @@ function roundTo(num: number, precision: number) {
 
 describe('xyzToLab', () => {
     test('converts XYZ to LAB string correctly', () => {
-        expect(xyzToLab(41.24, 21.26, 1.93)).toBe('lab(53.233, 80.109, 67.22)'); // Red
-        expect(xyzToLab(35.76, 71.52, 11.92)).toBe('lab(87.737, -86.185, 83.181)'); // Green
-        expect(xyzToLab(18.05, 7.22, 95.05)).toBe('lab(32.303, 79.197, -107.864)'); // Blue
-        expect(xyzToLab(77.00, 92.78, 13.85)).toBe('lab(97.138, -21.556, 94.482)'); // Yellow
-        expect(xyzToLab(0.00, 0.00, 0.00)).toBe('lab(0, 0, 0)'); // Black
-        expect(xyzToLab(95.05, 100.00, 108.88)).toBe('lab(100, 0.005, 0.002)'); // White
-        expect(xyzToLab(20.52, 21.59, 23.32)).toBe('lab(53.589, -0.003, 0.32)'); // Grey
+        expect(xyzToLab(41.24, 21.26, 1.93)).toBe('lab(53.233% 80.109 67.22)'); // Red
+        expect(xyzToLab(35.76, 71.52, 11.92)).toBe('lab(87.737% -86.185 83.181)'); // Green
+        expect(xyzToLab(18.05, 7.22, 95.05)).toBe('lab(32.303% 79.197 -107.864)'); // Blue
+        expect(xyzToLab(77.00, 92.78, 13.85)).toBe('lab(97.138% -21.556 94.482)'); // Yellow
+        expect(xyzToLab(0.00, 0.00, 0.00)).toBe('lab(0% 0 0)'); // Black
+        expect(xyzToLab(95.05, 100.00, 108.88)).toBe('lab(100% 0.005 0.002)'); // White
+        expect(xyzToLab(20.52, 21.59, 23.32)).toBe('lab(53.589% -0.003 0.32)'); // Grey
     });
 
     test('converts XYZ to LAB object correctly', () => {

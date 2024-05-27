@@ -58,7 +58,7 @@ export function xyzToLab(x: number, y: number, z: number, asString: boolean = tr
     };
 
     if (asString) {
-        return `lab(${roundTo(l)}, ${roundTo(a)}, ${roundTo(b)})`;
+        return `lab(${roundTo(l)}% ${roundTo(a)} ${roundTo(b)})`;
     }
 
     return {
