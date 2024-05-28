@@ -1,23 +1,30 @@
 import { isValidRgba } from '@/validations/isValidRgba';
 
 describe('isValidRgba', () => {
-    test('validates RGBA color format', () => {
+    test('validates rgba colors correctly', () => {
         expect(isValidRgba('rgba(255, 0, 0, 1)')).toBe(true);
-        expect(isValidRgba('rgba(0, 255, 0, 0.5)')).toBe(true);
-        expect(isValidRgba('rgba(0, 0, 255, 0)')).toBe(true);
-        expect(isValidRgba('rgba(128, 128, 128, 0.75)')).toBe(true);
+        expect(isValidRgba('rgba(100%, 0%, 0%, 0.5)')).toBe(true);
+        expect(isValidRgba('rgba(0, 128, 255, 0.75)')).toBe(true);
+        expect(isValidRgba('rgba(50%, 50%, 50%, 0.25)')).toBe(true);
+        expect(isValidRgba('rgba(100%, 100%, 100%, none)')).toBe(true);
+        expect(isValidRgba('rgba(255, 255, 255, none)')).toBe(true);
+        expect(isValidRgba('rgba(none, none, none, none)')).toBe(true);
     });
 
-    test('invalidates incorrect RGBA color format', () => {
+    test('invalidates incorrect rgba colors', () => {
         expect(isValidRgba('rgba(256, 0, 0, 1)')).toBe(false);
-        expect(isValidRgba('rgba(-1, 0, 0, 1)')).toBe(false);
-        expect(isValidRgba('rgba(0, 0, 0)')).toBe(false);
-        expect(isValidRgba('rgba(0, 0, 0, 0, 0)')).toBe(false);
-        expect(isValidRgba('rgba(0, 0, 256, 1)')).toBe(false);
-        expect(isValidRgba('rgba(255, 255, 255, 2)')).toBe(false);
-        expect(isValidRgba('rgba(255, 255, 255, -1)')).toBe(false);
-        expect(isValidRgba('rgba(0,0,0,0.5)')).toBe(true); // Test without spaces
-        expect(isValidRgba('rgba( 0 , 0 , 0 , 0.5 )')).toBe(true); // Test with spaces
-        expect(isValidRgba('rgb(0, 0, 0)')).toBe(false); // Test RGB format
+        expect(isValidRgba('rgba(255, -1, 0, 1)')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 300, 1)')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0, 1.5)')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0, 101%)')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0, -0.5)')).toBe(false);
+    });
+
+    test('invalidates malformed rgba colors', () => {
+        expect(isValidRgba('rgba(255, 0, 0, 1, 0)')).toBe(false);
+        expect(isValidRgba('rgba(255,0,0,1')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0, 1 /)')).toBe(false);
+        expect(isValidRgba('rgba255, 0, 0, 1')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0 0)')).toBe(false);
     });
 });

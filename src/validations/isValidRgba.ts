@@ -1,13 +1,30 @@
 /**
- * Checks if the input string is a valid RGBA color format.
+ * Checks if the provided RGBA color string is valid.
  *
- * @param {string} color - The input color string.
- * @returns {boolean} - True if the input is a valid RGBA color, false otherwise.
+ * This function validates an RGBA color string, ensuring it adheres to the format
+ * specified in the CSS Color Module Level 4, including support for percentages and
+ * the 'none' keyword.
+ *
+ * @param {string} color - The RGBA color string to validate.
+ * @returns {boolean} True if the color string is valid, false otherwise.
  */
 export function isValidRgba(color: string): boolean {
-    const rgbaRegex = /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(0|1|0?\.\d+)\s*\)$/;
+    const rgbaRegex = /^rgba\(\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(0|1|0?\.\d+|none|0?%|100%)\s*\)$/i;
     const match = color.match(rgbaRegex);
+
+    const parseValue = (value: string, isAlpha = false): number => {
+        if (value === 'none') return isAlpha ? 1 : 0;
+        if (value.includes('%')) {
+            const percentValue = parseFloat(value) * (isAlpha ? 0.01 : 2.55);
+            return Math.round(percentValue * 100) / 100;
+        }
+        return parseFloat(value);
+    };
+
     return match !== null &&
-        match.slice(1, 4).every(value => parseInt(value, 10) >= 0 && parseInt(value, 10) <= 255) &&
-        parseFloat(match[4]) >= 0 && parseFloat(match[4]) <= 1;
+        match.slice(1, 4).every(value => {
+            const parsedValue = parseValue(value);
+            return parsedValue >= 0 && parsedValue <= 255;
+        }) &&
+        parseValue(match[4], true) >= 0 && parseValue(match[4], true) <= 1;
 }

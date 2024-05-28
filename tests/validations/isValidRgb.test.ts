@@ -6,6 +6,7 @@ describe('isValidRgb', () => {
         expect(isValidRgb('rgb(0, 255, 0)')).toBe(true);
         expect(isValidRgb('rgb(0, 0, 255)')).toBe(true);
         expect(isValidRgb('rgb(128, 128, 128)')).toBe(true);
+        expect(isValidRgb('rgb(100%, 50%, 30%)')).toBe(true);
     });
 
     test('invalidates incorrect RGB color format', () => {
