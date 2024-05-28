@@ -6,6 +6,6 @@
  * @returns {boolean} - True if the input is a valid hex color, false otherwise.
  */
 export function isValidHex(color: string): boolean {
-    const hexRegex = /^#([A-Fa-f0-9]{3}){1,2}$/;
+    const hexRegex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/;
     return hexRegex.test(color);
 }
