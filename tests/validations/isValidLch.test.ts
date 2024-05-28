@@ -1,24 +1,51 @@
 import { isValidLch } from '@/validations/isValidLch';
 
 describe('isValidLch', () => {
-    test('validates LCH color format', () => {
-        expect(isValidLch('lch(53.23, 104.55, 40.00)')).toBe(true);
-        expect(isValidLch('lch(97.14, 113.79, 102.85)')).toBe(true);
-        expect(isValidLch('lch(87.74, 119.78, 136.02)')).toBe(true);
-        expect(isValidLch('lch(32.30, 133.81, 306.29)')).toBe(true);
+    test('valid LCH color values', () => {
+        expect(isValidLch('lch(29.2345% 44.2 27)')).toBe(true);
+        expect(isValidLch('lch(52.2345% 72.2 56.2)')).toBe(true);
+        expect(isValidLch('lch(52.2345% 72.2 56.2 / .5)')).toBe(true);
+        expect(isValidLch('lch(100% 0 0 / none)')).toBe(true);
+        expect(isValidLch('lch(0% 0 0 / 0%)')).toBe(true);
+        expect(isValidLch('lch(100 0 0)')).toBe(true);
+        expect(isValidLch('lch(50 125 125)')).toBe(true);
+        expect(isValidLch('lch(50 230 360deg)')).toBe(true);
+        expect(isValidLch('lch(50 230 2rad)')).toBe(true);
+        expect(isValidLch('lch(50 230 0.5turn)')).toBe(true);
     });
 
-    test('invalidates incorrect LCH color format', () => {
-        expect(isValidLch('lch(53.23, -104.55, 40.00)')).toBe(false); // Negative chroma
-        expect(isValidLch('lch(53.23, 104.55)')).toBe(false); // Missing hue
-        expect(isValidLch('lch(53.23, 104.55, 40.00%)')).toBe(false); // Percentage in hue
-        expect(isValidLch('lch(53.23, 104.55, 40, 50)')).toBe(false); // Extra value
-        expect(isValidLch('lch(53.23, 104.55, forty)')).toBe(false); // Non-numeric hue
-        expect(isValidLch('rgb(255, 0, 0)')).toBe(false); // RGB format
+    test('invalid LCH color values', () => {
+        expect(isValidLch('lch(29.2345 39.3825)')).toBe(false); // Missing h value
+        expect(isValidLch('lch(29.2345% 39.3825%)')).toBe(false); // Missing h value
+        expect(isValidLch('lch(29.2345% 39.3825 20.0664 50%)')).toBe(false); // Extra value
+        expect(isValidLch('lch(110 0 0)')).toBe(false); // L value out of range
+        expect(isValidLch('lch(50 250 360deg)')).toBe(false); // C value out of range
+        expect(isValidLch('lch(50 125 125 / 1.5)')).toBe(false); // Alpha value out of range
+        expect(isValidLch('lch(50 50)')).toBe(false); // Missing one value
+        expect(isValidLch('lch(50 50%)')).toBe(false); // Missing one value
+        expect(isValidLch('lch(50 50 / 50%)')).toBe(false); // Missing h value
+        expect(isValidLch('lch(50 none 50 50)')).toBe(false); // Extra value
     });
 
-    test('validates LCH color format with negative hue', () => {
-        expect(isValidLch('lch(53.23, 104.55, -40.00)')).toBe(true);
-        expect(isValidLch('lch(97.14, 113.79, -102.85)')).toBe(true);
+    test('valid LCH color values with different formats', () => {
+        expect(isValidLch('lch(29.2345% 39.3825 20.0664)')).toBe(true);
+        expect(isValidLch('lch(50% 50% 50deg)')).toBe(true);
+        expect(isValidLch('lch(100 0 0 / 1)')).toBe(true);
+        expect(isValidLch('lch(50 0 0 / 50%)')).toBe(true);
+        expect(isValidLch('lch(none 0 0)')).toBe(true);
+    });
+
+    test('valid LCH color values with "none" keyword', () => {
+        expect(isValidLch('lch(none none none / none)')).toBe(true);
+        expect(isValidLch('lch(50 none none)')).toBe(true);
+        expect(isValidLch('lch(none 0 0 / 0.5)')).toBe(true);
+    });
+
+    test('invalid LCH color values with incorrect formats', () => {
+        expect(isValidLch('lch(50 50)')).toBe(false); // Missing one value
+        expect(isValidLch('lch(50 50%)')).toBe(false); // Missing one value
+        expect(isValidLch('lch(50 none 50 50)')).toBe(false); // Extra value
+        expect(isValidLch('lch(50 50 / 50%)')).toBe(false); // Missing h value
+        expect(isValidLch('lch(50 50%)')).toBe(false); // Missing one value
     });
 });
