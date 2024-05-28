@@ -13,7 +13,6 @@ export function isValidHsl(color: string): boolean {
         let hueValue = parseFloat(hue);
         switch (unit) {
             case 'deg':
-            case undefined:
                 return hueValue;
             case 'rad':
                 return hueValue * (180 / Math.PI);
@@ -22,7 +21,7 @@ export function isValidHsl(color: string): boolean {
             case 'turn':
                 return hueValue * 360;
             default:
-                return NaN;
+                return hueValue;
         }
     };
 
@@ -31,7 +30,7 @@ export function isValidHsl(color: string): boolean {
     const l = parseFloat(match[4]);
 
     return (
-        !isNaN(h) && h >= 0 && h <= 360 &&
+        h >= 0 && h <= 360 &&
         s >= 0 && s <= 100 &&
         l >= 0 && l <= 100
     );
