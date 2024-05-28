@@ -1,24 +1,52 @@
 import { isValidLab } from '@/validations/isValidLab';
 
 describe('isValidLab', () => {
-    test('validates LAB color format', () => {
-        expect(isValidLab('lab(53.23, 80.09, 67.2)')).toBe(true);
-        expect(isValidLab('lab(87.74, -86.18, 83.18)')).toBe(true);
-        expect(isValidLab('lab(32.3, 79.2, -107.86)')).toBe(true);
-        expect(isValidLab('lab(97.14, -21.55, 94.48)')).toBe(true);
+    test('valid Lab color values', () => {
+        expect(isValidLab('lab(29.2345% 39.3825 20.0664)')).toBe(true);
+        expect(isValidLab('lab(52.2345% 40.1645 59.9971)')).toBe(true);
+        expect(isValidLab('lab(52.2345% 40.1645 59.9971 / .5)')).toBe(true);
+        expect(isValidLab('lab(52.2345% 40.1645 59.9971 / 0.5)')).toBe(true);
+        expect(isValidLab('lab(52.2345% 40.1645 59.9971 / 50%)')).toBe(true);
+        expect(isValidLab('lab(100% 0 0 / none)')).toBe(true);
+        expect(isValidLab('lab(0% 0 0 / 0%)')).toBe(true);
+        expect(isValidLab('lab(100 0 0)')).toBe(true);
+        expect(isValidLab('lab(50 125 -125)')).toBe(true);
     });
 
-    test('invalidates incorrect LAB color format', () => {
-        expect(isValidLab('lab(101, 80.09, 67.2)')).toBe(false); // Lightness > 100
-        expect(isValidLab('lab(-1, 80.09, 67.2)')).toBe(false); // Lightness < 0
-        expect(isValidLab('lab(53.23, 80.09)')).toBe(false); // Missing B value
-        expect(isValidLab('lab(53.23, 80.09, 67.2%)')).toBe(false); // Percentage in B value
-        expect(isValidLab('lab(53.23, 80.09, sixty)')).toBe(false); // Non-numeric B value
-        expect(isValidLab('rgb(255, 0, 0)')).toBe(false); // RGB format
+    test('invalid Lab color values', () => {
+        expect(isValidLab('lab(29.2345 39.3825)')).toBe(false); // Missing b value
+        expect(isValidLab('lab(29.2345% 39.3825%)')).toBe(false); // Missing b value
+        expect(isValidLab('lab(29.2345% 39.3825 20.0664 50%)')).toBe(false); // Extra value
+        expect(isValidLab('lab(110 0 0)')).toBe(false); // L value out of range
+        expect(isValidLab('lab(50 130 -130)')).toBe(false); // a and b values out of range
+        expect(isValidLab('lab(50% 50% 50% 50%)')).toBe(false); // Invalid format
+        expect(isValidLab('lab(50 50 50 / 1.5)')).toBe(false); // Alpha value out of range
     });
 
-    test('validates LAB color format with different spacing', () => {
-        expect(isValidLab('lab( 53.23 , 80.09 , 67.2 )')).toBe(true); // Extra spaces
-        expect(isValidLab('lab(53.23,80.09,67.2)')).toBe(true); // No spaces
+    test('valid Lab color values with extended ranges', () => {
+        expect(isValidLab('lab(50 -160 160)')).toBe(false); // a and b values out of practical limit
+        expect(isValidLab('lab(50 160 -160)')).toBe(false); // a and b values out of practical limit
+        expect(isValidLab('lab(50 -125 125)')).toBe(true); // a and b values within practical limit
+    });
+
+    test('valid Lab color values with different formats', () => {
+        expect(isValidLab('lab(29.2345% 39.3825 20.0664)')).toBe(true);
+        expect(isValidLab('lab(50% -50% 50%)')).toBe(true);
+        expect(isValidLab('lab(100 0 0 / 1)')).toBe(true);
+        expect(isValidLab('lab(50 0 0 / 50%)')).toBe(true);
+    });
+
+    test('valid Lab color values with "none" keyword', () => {
+        expect(isValidLab('lab(none none none / none)')).toBe(true);
+        expect(isValidLab('lab(50 none none)')).toBe(true); // 'none' not allowed in a or b values
+        expect(isValidLab('lab(none 0 0 / 0.5)')).toBe(true); // 'none' not allowed in L value
+    });
+
+    test('invalid Lab color values with incorrect formats', () => {
+        expect(isValidLab('lab(50 50)')).toBe(false); // Missing one value
+        expect(isValidLab('lab(50 50%)')).toBe(false); // Missing one value
+        expect(isValidLab('lab(50 none 50 50)')).toBe(false); // Extra value
+        expect(isValidLab('lab(50 50 / 50%)')).toBe(false); // Missing b value
+        expect(isValidLab('lab(50 50%)')).toBe(false); // Missing one value
     });
 });
