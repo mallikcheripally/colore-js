@@ -37,7 +37,13 @@ export { isValidXyz } from '@/validations/isValidXyz';
 export { detectColorFormat } from '@/parser/detectColorFormat';
 export { decomposeColor } from '@/parser/decomposeColor';
 export { recomposeColor } from '@/parser/recomposeColor';
+export { parseRgb } from '@/parser/parseRgb';
+export { parseRgba } from '@/parser/parseRgba';
+export { parseLab } from '@/parser/parseLab';
 
+
+// Manipulations
+export { lightenColor } from '@/manipulations/lightenColor';
 
 // Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
