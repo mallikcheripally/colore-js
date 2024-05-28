@@ -42,6 +42,7 @@ export { parseRgba } from '@/parser/parseRgba';
 export { parseLab } from '@/parser/parseLab';
 export { parseHex } from '@/parser/parseHex';
 export { parseHexAlpha } from '@/parser/parseHexAlpha';
+export { parseHsl } from '@/parser/parseHsl';
 
 
 // Manipulations

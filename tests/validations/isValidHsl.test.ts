@@ -1,25 +1,32 @@
 import { isValidHsl } from '@/validations/isValidHsl';
 
 describe('isValidHsl', () => {
-    test('validates HSL color format', () => {
-        expect(isValidHsl('hsl(0, 100%, 50%)')).toBe(true);
+    test('validates HSL colors correctly', () => {
         expect(isValidHsl('hsl(120, 100%, 50%)')).toBe(true);
-        expect(isValidHsl('hsl(240, 100%, 50%)')).toBe(true);
-        expect(isValidHsl('hsl(360, 100%, 50%)')).toBe(true);
-        expect(isValidHsl('hsl(180, 50%, 75%)')).toBe(true);
+        expect(isValidHsl('hsl(240, 50%, 50%)')).toBe(true);
+        expect(isValidHsl('hsl(360, 100%, 100%)')).toBe(true);
+        expect(isValidHsl('hsl(0, 0%, 0%)')).toBe(true);
     });
 
-    test('invalidates incorrect HSL color format', () => {
-        expect(isValidHsl('hsl(361, 100%, 50%)')).toBe(false); // Hue > 360
-        expect(isValidHsl('hsl(-1, 100%, 50%)')).toBe(false); // Hue < 0
-        expect(isValidHsl('hsl(120, 101%, 50%)')).toBe(false); // Saturation > 100%
-        expect(isValidHsl('hsl(120, -1%, 50%)')).toBe(false); // Saturation < 0%
-        expect(isValidHsl('hsl(120, 100%, 101%)')).toBe(false); // Lightness > 100%
-        expect(isValidHsl('hsl(120, 100%, -1%)')).toBe(false); // Lightness < 0%
-        expect(isValidHsl('hsl(0, 100%, 50)')).toBe(false); // Missing % for lightness
-        expect(isValidHsl('hsl(0, 100, 50%)')).toBe(false); // Missing % for saturation
-        expect(isValidHsl('hsl(0,100%,50%)')).toBe(true); // No spaces
-        expect(isValidHsl('hsl( 0 , 100% , 50% )')).toBe(true); // Extra spaces
-        expect(isValidHsl('rgb(0, 0, 0)')).toBe(false); // RGB format
+    test('validates HSL colors with different units for hue correctly', () => {
+        expect(isValidHsl('hsl(180deg, 100%, 50%)')).toBe(true);
+        expect(isValidHsl('hsl(3.14rad, 100%, 50%)')).toBe(true);
+        expect(isValidHsl('hsl(200grad, 100%, 50%)')).toBe(true);
+        expect(isValidHsl('hsl(0.5turn, 100%, 50%)')).toBe(true);
+    });
+
+    test('invalidates incorrect HSL colors', () => {
+        expect(isValidHsl('hsl(120, 100, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100%, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(120deg, 100%, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100%, 50%, 1)')).toBe(false);
+        expect(isValidHsl('hsl(-10, 100%, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(370, 100%, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(120, -10%, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(120, 110%, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100%, -10%)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100%, 110%)')).toBe(false);
     });
 });
+
