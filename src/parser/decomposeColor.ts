@@ -66,7 +66,7 @@ function parseNamedColor(color: string): { r: number, g: number, b: number } {
  * @returns {object} - The RGB representation of the color.
  * @throws {Error} - Throws an error if the input color format is invalid.
  */
-export function parseToRgb(color: string): { r: number, g: number, b: number } {
+export function decomposeColor(color: string): { r: number, g: number, b: number } {
     const format = detectColorFormat(color);
 
     switch (format) {

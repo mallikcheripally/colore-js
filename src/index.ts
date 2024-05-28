@@ -35,7 +35,7 @@ export { isValidXyz } from '@/validations/isValidXyz';
 
 // Parser
 export { detectColorFormat } from '@/parser/detectColorFormat';
-export { parseToRgb } from '@/parser/parseToRgb';
+export { decomposeColor } from '@/parser/decomposeColor';
 
 
 // Additional Color Conversion Functions
