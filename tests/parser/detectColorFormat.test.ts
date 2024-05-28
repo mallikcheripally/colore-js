@@ -37,7 +37,7 @@ describe('detectColorFormat', () => {
     });
 
     test('detects lch color format', () => {
-        expect(detectColorFormat('lch(53.23, 104.55, 40.00)')).toBe('lch');
+        expect(detectColorFormat('lch(53.23% 104.55 40.00)')).toBe('lch');
     });
 
     test('detects xyz color format', () => {
@@ -45,7 +45,7 @@ describe('detectColorFormat', () => {
     });
 
     test('detects lab color format', () => {
-        expect(detectColorFormat('lab(53.23, 80.09, 67.2)')).toBe('lab');
+        expect(detectColorFormat('lab(53.23% 80.09 67.2)')).toBe('lab');
     });
 
     test('returns unknown for invalid color format', () => {
