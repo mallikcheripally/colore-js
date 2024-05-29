@@ -12,11 +12,11 @@ describe('decomposeColor', () => {
     });
 
     test('converts lab to rgb', () => {
-        expect(decomposeColor('lab(53.23, 80.09, 67.2)')).toEqual({ r: 255, g: 0, b: 0 });
+        expect(decomposeColor('lab(53.23 80.09 67.2)')).toEqual({ r: 255, g: 0, b: 0 });
     });
 
     test('converts lch to rgb', () => {
-        expect(decomposeColor('lch(53.23, 104.55, 40.00)')).toEqual({ r: 255, g: 0, b: 0 });
+        expect(decomposeColor('lch(53.23 104.55 40.00)')).toEqual({ r: 255, g: 0, b: 0 });
     });
 
     test('converts xyz to rgb', () => {
