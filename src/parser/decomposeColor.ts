@@ -12,6 +12,7 @@ import { parseHsla } from './parseHsla';
 import { parseLch } from './parseLch';
 import { parseXyz } from './parseXyz';
 import { parseNamedColor } from './parseNamedColor';
+import {parseHexAlpha} from "@/parser/parseHexAlpha";
 
 /**
  * Converts any valid color format to RGB.
@@ -24,9 +25,13 @@ export function decomposeColor(color: string): { r: number; g: number; b: number
     const format = detectColorFormat(color);
 
     switch (format) {
-        case 'hex':
-        case 'hex-alpha': {
+        case 'hex': {
             return hexToRgb(color, false);
+        }
+
+        case 'hex-alpha': {
+            const rgb = parseHexAlpha(color);
+            return { r: rgb[0], g: rgb[1], b: rgb[2], a: rgb[3] };
         }
 
         case 'hsl': {
@@ -35,8 +40,11 @@ export function decomposeColor(color: string): { r: number; g: number; b: number
         }
 
         case 'hsla': {
-            const [hslaH, hslaS, hslaL] = parseHsla(color);
-            return hslToRgb(hslaH, hslaS, hslaL, false);
+            const [hslaH, hslaS, hslaL, hslaA] = parseHsla(color);
+            const rgb = hslToRgb(hslaH, hslaS, hslaL, false);
+            return {
+                r: rgb.r, g: rgb.g, b: rgb.b, a: hslaA,
+            }
         }
 
         case 'lab': {
