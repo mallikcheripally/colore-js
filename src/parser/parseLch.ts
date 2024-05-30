@@ -17,9 +17,6 @@ export function parseLch(color: string): [number, number, number, number?] {
 
     const parseComponent = (value: string, percentage = false) => {
         if (value === 'none') return 0;
-        // if (percentage && value.includes('%')) {
-        //     return parseFloat(value) / 100;
-        // }
         return parseFloat(value);
     };
 
