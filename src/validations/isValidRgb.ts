@@ -1,3 +1,5 @@
+import { rgbRegex } from '@/utils/regex';
+
 /**
  * Checks if the input string is a valid RGB color format.
  *
@@ -5,7 +7,6 @@
  * @returns {boolean} - True if the input is a valid RGB color, false otherwise.
  */
 export function isValidRgb(color: string): boolean {
-    const rgbRegex = /^rgb\(\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*\)$/i;
     const match = color.match(rgbRegex);
     if (!match) return false;
 

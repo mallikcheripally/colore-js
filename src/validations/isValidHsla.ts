@@ -1,3 +1,5 @@
+import { hslaRegex } from '@/utils/regex';
+
 /**
  * Checks if the input string is a valid HSLA color format.
  *
@@ -5,7 +7,6 @@
  * @returns {boolean} - True if the input is a valid HSLA color, false otherwise.
  */
 export function isValidHsla(color: string): boolean {
-    const hslaRegex = /^hsla\(\s*([\d.]+)(deg|rad|grad|turn)?\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*,\s*(0|1|0?\.\d+|0?\.?\d+%|none)\s*\)$/;
     const match = color.match(hslaRegex);
     if (!match) return false;
 
@@ -34,10 +35,5 @@ export function isValidHsla(color: string): boolean {
         a = parseFloat(match[5]) / 100;
     }
 
-    return (
-        h >= 0 && h <= 360 &&
-        s >= 0 && s <= 100 &&
-        l >= 0 && l <= 100 &&
-        a >= 0 && a <= 1
-    );
+    return h >= 0 && h <= 360 && s >= 0 && s <= 100 && l >= 0 && l <= 100 && a >= 0 && a <= 1;
 }

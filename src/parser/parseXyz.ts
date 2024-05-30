@@ -1,4 +1,5 @@
-import {isValidXyz} from "@/validations/isValidXyz";
+import { isValidXyz } from '@/validations/isValidXyz';
+import { xyzRegex } from '@/utils/regex';
 
 /**
  * Parses an XYZ color string and returns the corresponding XYZ values.
@@ -8,16 +9,11 @@ import {isValidXyz} from "@/validations/isValidXyz";
  * @throws {Error} Throws an error if the color format is invalid.
  */
 export function parseXyz(color: string): [number, number, number] {
-    const xyzRegex = /^xyz\(\s*(-?\d+(\.\d+)?)\s*,\s*(-?\d+(\.\d+)?)\s*,\s*(-?\d+(\.\d+)?)\s*\)$/;
     const match = color.match(xyzRegex);
 
     if (!match || !isValidXyz(color)) {
         throw new Error('Invalid XYZ color format');
     }
 
-    return [
-        parseFloat(match[1]),
-        parseFloat(match[3]),
-        parseFloat(match[5])
-    ];
+    return [parseFloat(match[1]), parseFloat(match[3]), parseFloat(match[5])];
 }

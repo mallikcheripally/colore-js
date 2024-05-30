@@ -1,3 +1,5 @@
+import { hslRegex } from '@/utils/regex';
+
 /**
  * Checks if the input string is a valid HSL color format.
  *
@@ -5,7 +7,6 @@
  * @returns {boolean} - True if the input is a valid HSL color, false otherwise.
  */
 export function isValidHsl(color: string): boolean {
-    const hslRegex = /^hsl\(\s*([\d.]+)(deg|rad|grad|turn)?\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*\)$/;
     const match = color.match(hslRegex);
     if (!match) return false;
 
@@ -29,9 +30,5 @@ export function isValidHsl(color: string): boolean {
     const s = parseFloat(match[3]);
     const l = parseFloat(match[4]);
 
-    return (
-        h >= 0 && h <= 360 &&
-        s >= 0 && s <= 100 &&
-        l >= 0 && l <= 100
-    );
+    return h >= 0 && h <= 360 && s >= 0 && s <= 100 && l >= 0 && l <= 100;
 }

@@ -11,8 +11,6 @@ import { isValidHex } from '@/validations/isValidHex';
  * @throws {Error} Throws an error if the HEX color format is invalid.
  */
 export function parseHex(color: string): [number, number, number] {
-    const hexRegex = /^#([a-fA-F0-9]{3}|[a-fA-F0-9]{6})$/;
-
     if (!isValidHex(color)) {
         throw new Error('Invalid HEX color format');
     }

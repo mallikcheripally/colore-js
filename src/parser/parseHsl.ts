@@ -1,4 +1,5 @@
-import {isValidHsl} from "@/validations/isValidHsl";
+import { isValidHsl } from '@/validations/isValidHsl';
+import { hslRegex } from '@/utils/regex';
 
 /**
  * Parses an HSL color string to its HSL components.
@@ -11,8 +12,6 @@ import {isValidHsl} from "@/validations/isValidHsl";
  * @throws {Error} Throws an error if the HSL color format is invalid.
  */
 export function parseHsl(color: string): [number, number, number] {
-    const hslRegex = /^hsl\(\s*([\d.]+)(deg|rad|grad|turn)?\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*\)$/;
-
     const match = color.match(hslRegex);
     if (!match || !isValidHsl(color)) {
         throw new Error('Invalid HSL color format');

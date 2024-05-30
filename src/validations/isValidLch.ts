@@ -1,3 +1,5 @@
+import { lchRegex } from '@/utils/regex';
+
 /**
  * Checks if the input string is a valid LCH color format.
  *
@@ -5,7 +7,6 @@
  * @returns {boolean} - True if the input is a valid LCH color, false otherwise.
  */
 export function isValidLch(color: string): boolean {
-    const lchRegex = /^lch\(\s*(none|\d+(\.\d+)?%?)\s+(none|\d+(\.\d+)?%?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|\d*\.?\d+%?|0?\.\d+|\d(\.\d+)?))?\s*\)$/;
     const match = color.match(lchRegex);
     if (match === null) return false;
 
@@ -56,14 +57,3 @@ export function isValidLch(color: string): boolean {
 
     return isValidL(l) && isValidC(c) && isValidH(h) && (alpha === undefined || isValidAlpha(alpha.trim()));
 }
-
-
-
-
-
-
-
-
-
-
-

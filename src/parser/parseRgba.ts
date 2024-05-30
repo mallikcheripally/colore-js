@@ -1,4 +1,5 @@
-import {isValidRgba} from "@/validations/isValidRgba";
+import { isValidRgba } from '@/validations/isValidRgba';
+import { rgbaRegex } from '@/utils/regex';
 
 /**
  * Parses an RGBA color string into its individual components.
@@ -12,7 +13,6 @@ import {isValidRgba} from "@/validations/isValidRgba";
  * @throws {Error} Throws an error if the color string is not a valid RGBA format.
  */
 export function parseRgba(color: string): [number, number, number, number] {
-    const rgbaRegex = /^rgba\(\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(0|1|0?\.\d+|none|0?%|100%)\s*\)$/i;
     const match = color.match(rgbaRegex);
     if (!match || !isValidRgba(color)) throw new Error('Invalid RGBA color format');
 

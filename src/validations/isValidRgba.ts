@@ -1,3 +1,5 @@
+import {rgbaRegex} from "@/utils/regex";
+
 /**
  * Checks if the provided RGBA color string is valid.
  *
@@ -9,7 +11,6 @@
  * @returns {boolean} True if the color string is valid, false otherwise.
  */
 export function isValidRgba(color: string): boolean {
-    const rgbaRegex = /^rgba\(\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(0|1|0?\.\d+|none|0?%|100%)\s*\)$/i;
     const match = color.match(rgbaRegex);
 
     const parseValue = (value: string, isAlpha = false): number => {

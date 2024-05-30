@@ -1,3 +1,5 @@
+import { labRegex } from '@/utils/regex';
+
 /**
  * Checks if the input string is a valid LAB color format.
  *
@@ -5,7 +7,6 @@
  * @returns {boolean} - True if the input is a valid LAB color, false otherwise.
  */
 export function isValidLab(color: string): boolean {
-    const labRegex = /^lab\(\s*(none|\d+(\.\d+)?%?)\s+(-?\d+(\.\d+)?%?|none)\s+(-?\d+(\.\d+)?%?|none)(?:\s*\/\s*(\d+(\.\d+)?%?|none|.\d+))?\s*\)$/;
     const match = color.match(labRegex);
     if (match === null) return false;
 
@@ -43,4 +44,3 @@ export function isValidLab(color: string): boolean {
 
     return isValidL(l) && isValidAB(a) && isValidAB(b) && (alpha === undefined || isValidAlpha(alpha));
 }
-

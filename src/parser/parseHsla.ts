@@ -1,4 +1,5 @@
 import { isValidHsla } from '@/validations/isValidHsla';
+import { hslaRegex } from '@/utils/regex';
 
 /**
  * Parses an HSLA color string.
@@ -8,13 +9,8 @@ import { isValidHsla } from '@/validations/isValidHsla';
  * @param {string} color - The HSLA color string to parse.
  * @returns {[number, number, number, number]} An array containing the hue, saturation, lightness, and alpha values.
  * @throws {Error} Throws an error if the color string is not a valid HSLA color.
- *
- * @example
- * parseHsla('hsla(120, 100%, 50%, 0.5)'); // [120, 100, 50, 0.5]
  */
 export function parseHsla(color: string): [number, number, number, number] {
-    const hslaRegex =
-        /^hsla\(\s*([\d.]+)(deg|rad|grad|turn)?\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*,\s*(0|1|0?\.\d+|0?\.?\d+%|none)\s*\)$/;
     const match = color.match(hslaRegex);
     if (!match || !isValidHsla(color)) throw new Error('Invalid HSLA color format');
 

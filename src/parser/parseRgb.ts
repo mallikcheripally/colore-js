@@ -1,4 +1,5 @@
 import { isValidRgb } from '@/validations/isValidRgb';
+import { rgbRegex } from '@/utils/regex';
 
 /**
  * Parses an RGB color string and returns an array of color components.
@@ -11,8 +12,6 @@ import { isValidRgb } from '@/validations/isValidRgb';
  * @throws {Error} Throws an error if the color format is invalid.
  */
 export function parseRgb(color: string): [number, number, number] {
-    const rgbRegex = /^rgb\(\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*\)$/i;
-
     const match = color.match(rgbRegex);
     if (!match || !isValidRgb(color)) throw new Error('Invalid RGB color format');
 

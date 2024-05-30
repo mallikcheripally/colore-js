@@ -1,3 +1,5 @@
+import { lchRegex } from '@/utils/regex';
+
 /**
  * Parses an LCH color string into its components.
  *
@@ -8,7 +10,6 @@
  * @throws {Error} Throws an error if the LCH color string is invalid.
  */
 export function parseLch(color: string): [number, number, number, number?] {
-    const lchRegex = /^lch\(\s*(none|\d+(\.\d+)?%?)\s+(none|\d+(\.\d+)?%?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|\d*\.?\d+%?|0?\.\d+|\d(\.\d+)?))?\s*\)$/;
     const match = color.match(lchRegex);
     if (!match) throw new Error('Invalid LCH color format');
 
@@ -16,9 +17,9 @@ export function parseLch(color: string): [number, number, number, number?] {
 
     const parseComponent = (value: string, percentage = false) => {
         if (value === 'none') return 0;
-        if (percentage && value.includes('%')) {
-            return parseFloat(value) / 100;
-        }
+        // if (percentage && value.includes('%')) {
+        //     return parseFloat(value) / 100;
+        // }
         return parseFloat(value);
     };
 
