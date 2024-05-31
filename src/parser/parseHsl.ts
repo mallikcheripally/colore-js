@@ -2,16 +2,13 @@ import { isValidHsl } from '@/validations/isValidHsl';
 import { hslRegex } from '@/utils/regex';
 
 /**
- * Parses an HSL color string to its HSL components.
- *
- * This function takes an HSL color string and converts it to the equivalent HSL components.
- * It supports both HSL and HSLA formats.
+ * Parses an HSL color string and returns an object containing the hue, saturation, and lightness values.
  *
  * @param {string} color - The HSL color string to parse.
- * @returns {[number, number, number]} The HSL components as an array [h, s, l].
- * @throws {Error} Throws an error if the HSL color format is invalid.
+ * @returns {{h: number, hUnit?: string | undefined, hDeg: number, s: number, sUnit?: string | undefined, l: number, lUnit?: string | undefined}} - An object containing the hue, saturation, and lightness values along with the hue unit.
+ * @throws {Error} - Throws an error if the input color format is invalid.
  */
-export function parseHsl(color: string): [number, number, number] {
+export function parseHsl(color: string): { h: number; hUnit?: string | undefined; hDeg: number; s: number; sUnit?: string | undefined; l: number; lUnit?: string | undefined; } {
     const match = color.match(hslRegex);
     if (!match || !isValidHsl(color)) {
         throw new Error('Invalid HSL color format');
@@ -33,9 +30,13 @@ export function parseHsl(color: string): [number, number, number] {
         }
     };
 
-    const h = Math.round(parseHue(match[1], match[2]));
-    const s = parseFloat(match[3]);
-    const l = parseFloat(match[4]);
+    const h = parseFloat(match[1]);
+    const hDeg = parseHue(match[1], match[3]);
+    const hUnit = match[3];
+    const s = parseFloat(match[4]);
+    const sUnit = match[6];
+    const l = parseFloat(match[7]);
+    const lUnit = match[9];
 
-    return [h, s, l];
+    return { h, hUnit, hDeg, s, sUnit, l, lUnit };
 }
