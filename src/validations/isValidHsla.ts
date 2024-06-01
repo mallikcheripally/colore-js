@@ -10,30 +10,29 @@ export function isValidHsla(color: string): boolean {
     const match = color.match(hslaRegex);
     if (!match) return false;
 
-    const parseHue = (hue: string, unit: string | undefined): number => {
-        let hueValue = parseFloat(hue);
+    const h = parseFloat(match[1]);
+    const s = parseFloat(match[4]);
+    const l = parseFloat(match[7]);
+    const a = match[10].includes('%') ? parseFloat(match[10]) / 100 : parseFloat(match[10]);
+
+    const isValidHue = (value: number, unit: string | undefined): boolean => {
         switch (unit) {
             case 'deg':
-                return hueValue;
+                return value >= 0 && value <= 360;
             case 'rad':
-                return hueValue * (180 / Math.PI);
+                return value >= 0 && value <= 2 * Math.PI;
             case 'grad':
-                return hueValue * (9 / 10);
+                return value >= 0 && value <= 400;
             case 'turn':
-                return hueValue * 360;
+                return value >= 0 && value <= 1;
             default:
-                return hueValue;
+                return value >= 0 && value <= 360;
         }
     };
 
-    const h = parseHue(match[1], match[2]);
-    const s = parseFloat(match[3]);
-    const l = parseFloat(match[4]);
-    let a = match[5] === 'none' ? 1 : parseFloat(match[5]);
-
-    if (match[5].endsWith('%')) {
-        a = parseFloat(match[5]) / 100;
-    }
-
-    return h >= 0 && h <= 360 && s >= 0 && s <= 100 && l >= 0 && l <= 100 && a >= 0 && a <= 1;
+    return isValidHue(h, match[3]) &&
+        s >= 0 && s <= 100 &&
+        l >= 0 && l <= 100 &&
+        a >= 0 && a <= 1;
 }
+
