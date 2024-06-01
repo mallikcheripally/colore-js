@@ -29,7 +29,7 @@ export function isValidLab(color: string): boolean {
             return num >= -100 && num <= 100;
         }
         const num = parseFloat(value);
-        return num >= -128 && num <= 127;
+        return num >= -125 && num <= 125;
     };
 
     const isValidAlpha = (value: string) => {
@@ -44,3 +44,4 @@ export function isValidLab(color: string): boolean {
 
     return isValidL(l) && isValidAB(a) && isValidAB(b) && (alpha === undefined || isValidAlpha(alpha));
 }
+
