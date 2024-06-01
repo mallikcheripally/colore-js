@@ -9,7 +9,8 @@ export const hslaRegex: RegExp =
     /^hsla\(\s*(\d+(\.\d+)?)(deg|rad|grad|turn)?\s*,\s*(\d+(\.\d+)?)(%)?\s*,\s*(\d+(\.\d+)?)(%)?\s*,\s*(0|1|0?\.\d+|\d{1,3}%?)\s*\)$/i;
 
 export const labRegex: RegExp =
-    /^lab\(\s*(none|\d+(\.\d+)?%?)\s+(-?none|-?\d+(\.\d+)?%?)\s+(-?none|-?\d+(\.\d+)?%?)(?:\s*\/\s*(none|0|1|0?\.\d+|[0-9]{1,3}%))?\s*\)$/;
+    /^lab\(\s*(\d+(\.\d+)?(%)?|none)\s+(-?\d+(\.\d+)?(%)?|none)\s+(-?\d+(\.\d+)?(%)?|none)(?:\s*\/\s*(none|0|1|0?\.\d+|\d{1,3}(%)?))?\s*\)$/;
+
 
 export const lchRegex: RegExp =
     /^lch\(\s*(none|\d+(\.\d+)?%?)\s+(none|\d+(\.\d+)?%?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|\d*\.?\d+%?|0?\.\d+|\d(\.\d+)?))?\s*\)$/;

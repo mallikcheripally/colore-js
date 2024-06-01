@@ -24,7 +24,7 @@ describe('isValidLab', () => {
     test('invalid LAB colors', () => {
         expect(isValidLab('lab(101 0 0)')).toBe(false);
         expect(isValidLab('lab(50 150 0)')).toBe(false);
-        expect(isValidLab('lab(50 0 150)')).toBe(false);
+        expect(isValidLab('lab(50 0 150)'  )).toBe(false);
         expect(isValidLab('lab(50 0 0 / 1.5)')).toBe(false);
         expect(isValidLab('lab(-10 0 0)')).toBe(false);
         expect(isValidLab('lab(50 -130 0)')).toBe(false);

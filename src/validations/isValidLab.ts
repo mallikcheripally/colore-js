@@ -10,11 +10,18 @@ export function isValidLab(color: string): boolean {
     const match = color.match(labRegex);
     if (match === null) return false;
 
-    const [, l, , a, , b, , alpha] = match;
+    const l = match[1];
+    const lUnit = match[3];
+    const a = match[4];
+    const aUnit = match[6];
+    const b = match[7];
+    const bUnit = match[9];
+    const alpha = match[10];
+    const alphaUnit = match[11];
 
-    const isValidL = (value: string) => {
+    const isValidL = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === "%") {
             const num = parseFloat(value);
             return num >= 0 && num <= 100;
         }
@@ -22,9 +29,9 @@ export function isValidLab(color: string): boolean {
         return num >= 0 && num <= 100;
     };
 
-    const isValidAB = (value: string) => {
+    const isValidAB = (value: string | 'none', unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === "%") {
             const num = parseFloat(value);
             return num >= -100 && num <= 100;
         }
@@ -32,9 +39,9 @@ export function isValidLab(color: string): boolean {
         return num >= -125 && num <= 125;
     };
 
-    const isValidAlpha = (value: string) => {
+    const isValidAlpha = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === "%") {
             const num = parseFloat(value);
             return num >= 0 && num <= 100;
         }
@@ -42,6 +49,6 @@ export function isValidLab(color: string): boolean {
         return num >= 0 && num <= 1;
     };
 
-    return isValidL(l) && isValidAB(a) && isValidAB(b) && (alpha === undefined || isValidAlpha(alpha));
+    return isValidL(l, lUnit) && isValidAB(a, aUnit) && isValidAB(b, bUnit) && (alpha === undefined || isValidAlpha(alpha, alphaUnit));
 }
 

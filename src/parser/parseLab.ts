@@ -1,31 +1,48 @@
 import { labRegex } from '@/utils/regex';
+import { isValidLab } from '@/validations/isValidLab';
 
 /**
  * Parses a LAB color string.
  *
  * @param {string} color - The LAB color string to parse.
- * @returns {[number, number, number, number?]} - The LAB values.
+ * @returns {{
+ *     l: number;
+ *     lUnit?: string;
+ *     a: number;
+ *     aUnit?: string;
+ *     b: number;
+ *     bUnit?: string;
+ *     alpha?: number;
+ *     alphaUnit?: string;
+ * }} An object containing the LAB values and units.
+ * @throws {Error} If the LAB color format is invalid.
  */
-export function parseLab(color: string): [number, number, number, number?] {
+export function parseLab(color: string): {
+    l: number;
+    lUnit?: string;
+    a: number;
+    aUnit?: string;
+    b: number;
+    bUnit?: string;
+    alpha?: number;
+    alphaUnit?: string;
+} {
     const match = color.match(labRegex);
-    if (!match) throw new Error('Invalid LAB color format');
+    if (!match || !isValidLab(color)) throw new Error('Invalid LAB color format');
 
     const parseComponent = (value: string) => {
         if (value === 'none') return 0;
-        if (value.includes('%')) return parseFloat(value) * (value === match[1] ? 1 : 1); // Correctly parse percentages
         return parseFloat(value);
     };
 
     const l = parseComponent(match[1]);
-    const a = parseComponent(match[3]);
-    const b = parseComponent(match[5]);
-    const alpha = match[7]
-        ? match[7] === 'none'
-            ? 1
-            : match[7].includes('%')
-              ? parseFloat(match[7]) / 100
-              : parseFloat(match[7])
-        : undefined;
+    const lUnit = match[3];
+    const a = parseComponent(match[4]);
+    const aUnit = match[6];
+    const b = parseComponent(match[7]);
+    const bUnit = match[9];
+    const alpha = match[10] ? (match[7] === 'none' ? 1 : parseFloat(match[10])) : undefined;
+    const alphaUnit = match[11];
 
-    return alpha === undefined ? [l, a, b] : [l, a, b, alpha];
+    return { l, lUnit, a, aUnit, b, bUnit, alpha, alphaUnit };
 }
