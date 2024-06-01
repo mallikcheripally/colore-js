@@ -26,9 +26,10 @@ export function isValidHsl(color: string): boolean {
         }
     };
 
-    const h = parseHue(match[1], match[2]);
-    const s = parseFloat(match[3]);
-    const l = parseFloat(match[4]);
+
+    const h = parseHue(match[1], match[3]);
+    const s = parseFloat(match[4]);
+    const l = parseFloat(match[7]);
 
     return h >= 0 && h <= 360 && s >= 0 && s <= 100 && l >= 0 && l <= 100;
 }
