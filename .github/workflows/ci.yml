@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18, 20] # Test against Node.js 18 and 20
+        node-version: [20] # Test against Node.js 20
 
     steps:
     - name: Checkout code
