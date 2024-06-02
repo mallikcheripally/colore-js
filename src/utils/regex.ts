@@ -11,9 +11,8 @@ export const hslaRegex: RegExp =
 export const labRegex: RegExp =
     /^lab\(\s*(\d+(\.\d+)?(%)?|none)\s+(-?\d+(\.\d+)?(%)?|none)\s+(-?\d+(\.\d+)?(%)?|none)(?:\s*\/\s*(none|0|1|0?\.\d+|\d{1,3}(%)?))?\s*\)$/;
 
-
 export const lchRegex: RegExp =
-    /^lch\(\s*(none|\d+(\.\d+)?%?)\s+(none|\d+(\.\d+)?%?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|\d*\.?\d+%?|0?\.\d+|\d(\.\d+)?))?\s*\)$/;
+    /^lch\(\s*(none|\d+(\.\d+)?(%)?)\s+(none|\d+(\.\d+)?(%)?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|0|1|0?\.\d+|\d{1,3}(%)?))?\s*\)$/;
 
 export const rgbRegex: RegExp = /^rgb\(\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*\)$/i;
 

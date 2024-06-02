@@ -10,11 +10,18 @@ export function isValidLch(color: string): boolean {
     const match = color.match(lchRegex);
     if (match === null) return false;
 
-    const [, l, , c, , h, , , , alpha] = match;
+    const l = match[1];
+    const lUnit = match[3];
+    const c = match[4];
+    const cUnit = match[6];
+    const h = match[7];
+    const hUnit = match[9];
+    const alpha = match[11];
+    const alphaUnit = match[12];
 
-    const isValidL = (value: string) => {
+    const isValidL = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === '%') {
             const num = parseFloat(value);
             return num >= 0 && num <= 100;
         }
@@ -22,9 +29,9 @@ export function isValidLch(color: string): boolean {
         return num >= 0 && num <= 100;
     };
 
-    const isValidC = (value: string) => {
+    const isValidC = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === '%') {
             const num = parseFloat(value);
             return num >= 0 && num <= 100;
         }
@@ -32,18 +39,18 @@ export function isValidLch(color: string): boolean {
         return num >= 0 && num <= 230;
     };
 
-    const isValidH = (value: string) => {
+    const isValidH = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('deg') || value.includes('rad') || value.includes('turn')) {
+        if (unit === 'deg' || unit === 'rad' || unit === 'turn') {
             return true;
         }
         const num = parseFloat(value);
         return !isNaN(num);
     };
 
-    const isValidAlpha = (value: string) => {
+    const isValidAlpha = (value: string, unit: string) => {
         if (value === 'none') return true;
-        if (value.includes('%')) {
+        if (unit === '%') {
             const num = parseFloat(value);
             return num >= 0 && num <= 100;
         }
@@ -55,5 +62,10 @@ export function isValidLch(color: string): boolean {
         return num >= 0 && num <= 1;
     };
 
-    return isValidL(l) && isValidC(c) && isValidH(h) && (alpha === undefined || isValidAlpha(alpha.trim()));
+    return (
+        isValidL(l, lUnit) &&
+        isValidC(c, cUnit) &&
+        isValidH(h, hUnit) &&
+        (alpha === undefined || isValidAlpha(alpha.trim(), alphaUnit))
+    );
 }
