@@ -1,4 +1,3 @@
-import { hexToRgb } from '@/conversions/hexToRgb';
 import { hslToRgb } from '@/conversions/hslToRgb';
 import { labToRgb } from '@/conversions/labToRgb';
 import { lchToRgb } from '@/conversions/lchToRgb';
@@ -13,6 +12,7 @@ import { parseLch } from './parseLch';
 import { parseXyz } from './parseXyz';
 import { parseNamedColor } from './parseNamedColor';
 import { parseHexAlpha } from './parseHexAlpha';
+import { parseHex } from '@/parser/parseHex';
 
 /**
  * Converts any valid color format to RGB.
@@ -26,66 +26,70 @@ export function parseColorToRgba(color: string): { r: number; g: number; b: numb
 
     switch (format) {
         case 'hex': {
-            return hexToRgb(color, false);
+            const { r, g, b } = parseHex(color);
+            return { r, g, b };
         }
 
         case 'hex-alpha': {
-            const rgb = parseHexAlpha(color);
-            return { r: rgb[0], g: rgb[1], b: rgb[2], a: rgb[3] };
+            const { r, g, b, a } = parseHexAlpha(color);
+            return { r, g, b, a };
         }
 
         case 'hsl': {
-            const [h, s, l] = parseHsl(color);
-            return hslToRgb(h, s, l, false);
+            const { hDeg, s, l } = parseHsl(color);
+            return hslToRgb(hDeg, s, l, false);
         }
 
         case 'hsla': {
-            const [hslaH, hslaS, hslaL, hslaA] = parseHsla(color);
-            const rgb = hslToRgb(hslaH, hslaS, hslaL, false);
+            const { hDeg, s, l, aNum } = parseHsla(color);
+            const rgb = hslToRgb(hDeg, s, l, false);
             return {
                 r: rgb.r,
                 g: rgb.g,
                 b: rgb.b,
-                a: hslaA,
+                a: aNum,
             };
         }
 
         case 'lab': {
-            const [lVal, a, b] = parseLab(color);
-            return labToRgb(lVal, a, b, false);
+            const { l, a, b, alphaNum } = parseLab(color);
+            const rgb = labToRgb(l, a, b, false);
+            return {
+                r: rgb.r,
+                g: rgb.g,
+                b: rgb.b,
+                a: alphaNum,
+            };
         }
 
         case 'lch': {
-            const [lchL, c, hVal] = parseLch(color);
-            return lchToRgb(lchL, c, hVal, false);
+            const { l, c, hDeg, alphaNum } = parseLch(color);
+            const rgb = lchToRgb(l, c, hDeg, false);
+            return {
+                r: rgb.r,
+                g: rgb.g,
+                b: rgb.b,
+                a: alphaNum,
+            };
         }
 
         case 'xyz': {
-            const [x, y, z] = parseXyz(color);
+            const { x, y, z } = parseXyz(color);
             return xyzToRgb(x, y, z, false);
         }
 
         case 'rgb': {
-            const rgb = parseRgb(color);
-            return {
-                r: rgb[0],
-                g: rgb[1],
-                b: rgb[2],
-            };
+            const { rNum, gNum, bNum } = parseRgb(color);
+            return { r: rNum, g: gNum, b: bNum, };
         }
 
         case 'rgba': {
-            const rgba = parseRgba(color);
-            return {
-                r: rgba[0],
-                g: rgba[1],
-                b: rgba[2],
-                a: rgba[3],
-            };
+            const { rNum, gNum, bNum, aNum } = parseRgba(color);
+            return { r: rNum, g: gNum, b: bNum, a: aNum, };
         }
 
         case 'named': {
-            const [r, g, b] = parseNamedColor(color);
+            const { r, g, b } = parseNamedColor(color);
             return { r, g, b };
         }
 
