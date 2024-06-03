@@ -15,6 +15,7 @@ import { parseAlpha, parseComponent } from '@/utils/colorUtils';
  *     bUnit?: string;
  *     alpha?: number;
  *     alphaUnit?: string;
+ *     alphaNum?: number,
  * }} An object containing the LAB values and units.
  * @throws {Error} If the LAB color format is invalid.
  */
@@ -27,6 +28,7 @@ export function parseLab(color: string): {
     bUnit?: string;
     alpha?: number;
     alphaUnit?: string;
+    alphaNum?: number,
 } {
     const match = color.match(labRegex);
     if (!match || !isValidLab(color)) throw new Error('Invalid LAB color format');
@@ -39,6 +41,8 @@ export function parseLab(color: string): {
     const bUnit = match[9];
     const alpha = parseAlpha(match[10]);
     const alphaUnit = match[11];
+    const alphaNum = match[10] ? match[10].includes('%') ? parseFloat(match[10]) / 100 : parseFloat(match[10]) : undefined;
 
-    return { l, lUnit, a, aUnit, b, bUnit, alpha, alphaUnit };
+
+    return { l, lUnit, a, aUnit, b, bUnit, alpha, alphaUnit, alphaNum };
 }
