@@ -14,7 +14,7 @@ export const labRegex: RegExp =
 export const lchRegex: RegExp =
     /^lch\(\s*(none|\d+(\.\d+)?(%)?)\s+(none|\d+(\.\d+)?(%)?)\s+(none|-?\d+(\.\d+)?(deg|rad|turn)?)\s*(\/\s*(none|0|1|0?\.\d+|\d{1,3}(%)?))?\s*\)$/;
 
-export const rgbRegex: RegExp = /^rgb\(\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*,\s*(\d{1,3}%?)\s*\)$/i;
+export const rgbRegex: RegExp = /^rgb\(\s*(\d{1,3}(%)?)\s*,\s*(\d{1,3}(%)?)\s*,\s*(\d{1,3}(%)?)\s*\)$/i;
 
 export const rgbaRegex: RegExp =
     /^rgba\(\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(\d{1,3}%?|none)\s*,\s*(0|1|0?\.\d+|none|0?%|100%)\s*\)$/i;
