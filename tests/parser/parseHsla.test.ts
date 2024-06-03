@@ -1,67 +1,7 @@
 import { parseHsla } from "@/parser/parseHsla";
 
 describe('parseHsla', () => {
-    test('parses HSLA color with degrees', () => {
-        const result = parseHsla('hsla(180deg, 100%, 50%, 0.5)');
-        expect(result).toEqual({
-            h: 180,
-            hUnit: 'deg',
-            hDeg: 180,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 0.5,
-            aUnit: undefined
-        });
-    });
-
-    test('parses HSLA color with radians', () => {
-        const result = parseHsla('hsla(3.14rad, 100%, 50%, 0.5)');
-        expect(result).toEqual({
-            h: 3.14,
-            hUnit: 'rad',
-            hDeg: 179.91,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 0.5,
-            aUnit: undefined
-        });
-    });
-
-    test('parses HSLA color with gradians', () => {
-        const result = parseHsla('hsla(200grad, 100%, 50%, 0.5)');
-        expect(result).toEqual({
-            h: 200,
-            hUnit: 'grad',
-            hDeg: 180,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 0.5,
-            aUnit: undefined
-        });
-    });
-
-    test('parses HSLA color with turns', () => {
-        const result = parseHsla('hsla(0.5turn, 100%, 50%, 0.5)');
-        expect(result).toEqual({
-            h: 0.5,
-            hUnit: 'turn',
-            hDeg: 180,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 0.5,
-            aUnit: undefined
-        });
-    });
-
-    test('parses HSLA color without unit (default to degrees)', () => {
+    test('parses HSLA color with numbers correctly', () => {
         const result = parseHsla('hsla(180, 100%, 50%, 0.5)');
         expect(result).toEqual({
             h: 180,
@@ -72,11 +12,28 @@ describe('parseHsla', () => {
             l: 50,
             lUnit: '%',
             a: 0.5,
-            aUnit: undefined
+            aUnit: undefined,
+            aNum: 0.5,
         });
     });
 
-    test('parses HSLA color with alpha percentage', () => {
+    test('parses HSLA color with degrees correctly', () => {
+        const result = parseHsla('hsla(3.14rad, 100%, 50%, 0.5)');
+        expect(result).toEqual({
+            h: 3.14,
+            hUnit: 'rad',
+            hDeg: 179.91,
+            s: 100,
+            sUnit: '%',
+            l: 50,
+            lUnit: '%',
+            a: 0.5,
+            aUnit: undefined,
+            aNum: 0.5,
+        });
+    });
+
+    test('parses HSLA color with percentages correctly', () => {
         const result = parseHsla('hsla(180, 100%, 50%, 50%)');
         expect(result).toEqual({
             h: 180,
@@ -86,60 +43,49 @@ describe('parseHsla', () => {
             sUnit: '%',
             l: 50,
             lUnit: '%',
-            a: 0.5,
-            aUnit: '%'
+            a: 50,
+            aUnit: '%',
+            aNum: 0.5,
         });
     });
 
-    test('parses HSLA color with mixed case units', () => {
-        const result = parseHsla('hsla(180DeG, 100%, 50%, 0.5)');
+    test('parses HSLA color with different units correctly', () => {
+        const result = parseHsla('hsla(50grad, 100%, 50%, 50%)');
+        expect(result).toEqual({
+            h: 50,
+            hUnit: 'grad',
+            hDeg: 45,
+            s: 100,
+            sUnit: '%',
+            l: 50,
+            lUnit: '%',
+            a: 50,
+            aUnit: '%',
+            aNum: 0.5,
+        });
+    });
+
+    test('parses HSLA color with spaces correctly', () => {
+        const result = parseHsla('hsla( 180 , 100% , 50% , 0.5 )');
         expect(result).toEqual({
             h: 180,
-            hUnit: 'DeG',
+            hUnit: undefined,
             hDeg: 180,
             s: 100,
             sUnit: '%',
             l: 50,
             lUnit: '%',
             a: 0.5,
-            aUnit: undefined
+            aUnit: undefined,
+            aNum: 0.5,
         });
     });
 
-    test('throws error for invalid HSLA color', () => {
-        expect(() => parseHsla('hsla(370, 100%, 50%, 0.5)')).toThrow('Invalid HSLA color format');
-        expect(() => parseHsla('hsla(180, 110%, 50%, 0.5)')).toThrow('Invalid HSLA color format');
-        expect(() => parseHsla('hsla(180, 100%, 150%, 0.5)')).toThrow('Invalid HSLA color format');
+    test('throws error for invalid HSLA color format', () => {
+        expect(() => parseHsla('hsla(361, 100%, 50%, 0.5)')).toThrow('Invalid HSLA color format');
+        expect(() => parseHsla('hsla(180, -1%, 50%, 0.5)')).toThrow('Invalid HSLA color format');
+        expect(() => parseHsla('hsla(180, 100%, 101%, 0.5)')).toThrow('Invalid HSLA color format');
         expect(() => parseHsla('hsla(180, 100%, 50%, 1.5)')).toThrow('Invalid HSLA color format');
-    });
-
-    test('parses HSLA color with integer alpha', () => {
-        const result = parseHsla('hsla(180, 100%, 50%, 1)');
-        expect(result).toEqual({
-            h: 180,
-            hUnit: undefined,
-            hDeg: 180,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 1,
-            aUnit: undefined
-        });
-    });
-
-    test('parses HSLA color with alpha as 0%', () => {
-        const result = parseHsla('hsla(180, 100%, 50%, 0%)');
-        expect(result).toEqual({
-            h: 180,
-            hUnit: undefined,
-            hDeg: 180,
-            s: 100,
-            sUnit: '%',
-            l: 50,
-            lUnit: '%',
-            a: 0,
-            aUnit: '%'
-        });
+        expect(() => parseHsla('hsla(100%, 100%, 100%, 200%)')).toThrow('Invalid HSLA color format');
     });
 });

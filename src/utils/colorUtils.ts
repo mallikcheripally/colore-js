@@ -40,9 +40,7 @@ export function parseHue(hue: string, unit: string | undefined): number {
  * @returns {number | undefined} The parsed alpha value.
  */
 export function parseAlpha(value: string): number | undefined {
-    if (value === 'none') {
-        return 1;
-    }
+    if (value === 'none') return 1;
     return Number.isFinite(parseFloat(value)) ? parseFloat(value) : undefined;
 }
 
