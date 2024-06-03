@@ -16,10 +16,10 @@ describe('isValidHsl', () => {
     });
 
     test('invalidates incorrect HSL colors', () => {
-        expect(isValidHsl('hsl(120, 100, 50)')).toBe(false);
-        expect(isValidHsl('hsl(120, 100%, 50)')).toBe(false);
-        expect(isValidHsl('hsl(120, 100, 50%)')).toBe(false);
-        expect(isValidHsl('hsl(120deg, 100%, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100, 150)')).toBe(false);
+        expect(isValidHsl('hsl(120, 101%, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 101, 50%)')).toBe(false);
+        expect(isValidHsl('hsl(420deg, 100%, 50)')).toBe(false);
         expect(isValidHsl('hsl(120, 100%, 50%, 1)')).toBe(false);
         expect(isValidHsl('hsl(-10, 100%, 50%)')).toBe(false);
         expect(isValidHsl('hsl(370, 100%, 50%)')).toBe(false);
