@@ -7,10 +7,10 @@ import { isValidHex } from '@/validations/isValidHex';
  * It supports both 3-digit and 6-digit HEX formats.
  *
  * @param {string} color - The HEX color string to parse.
- * @returns {[number, number, number]} The RGB components as an array [r, g, b].
+ * @returns {{ r: number; g: number; b: number; }} An object containing RGB values
  * @throws {Error} Throws an error if the HEX color format is invalid.
  */
-export function parseHex(color: string): [number, number, number] {
+export function parseHex(color: string): { r: number; g: number; b: number; } {
     if (!isValidHex(color)) {
         throw new Error('Invalid HEX color format');
     }
@@ -27,5 +27,5 @@ export function parseHex(color: string): [number, number, number] {
         b = parseInt(color[5] + color[6], 16);
     }
 
-    return [r, g, b];
+    return { r, g, b };
 }
