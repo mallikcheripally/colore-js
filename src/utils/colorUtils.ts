@@ -2,11 +2,12 @@
  * Parses a color component value.
  *
  * @param {string} value - The color component value to parse.
+ * @param {boolean} asInteger - Whether to return as an integer value instead of a float
  * @returns {number} The parsed component value.
  */
-export function parseComponent(value: string): number {
+export function parseComponent(value: string, asInteger?: boolean): number {
     if (value === 'none') return 0;
-    return parseFloat(value);
+    return asInteger ? parseInt(value, 10) : parseFloat(value);
 }
 
 /**
@@ -55,4 +56,23 @@ export function parseAlpha(value: string): number | undefined {
 export function roundTo(num: number, precision: number = 3): number {
     const factor = Math.pow(10, precision);
     return Math.round(num * factor) / factor;
+}
+
+/**
+ * Parses a RGB color component value.
+ *
+ * @param {string} value - The color component value to parse.
+ * @param {boolean} isAlpha - Whether the component is an alpha value
+ * @returns {number} The parsed component value.
+ */
+export function parseRgbComponent(value: string, isAlpha?: boolean): number {
+    if (value === 'none') return isAlpha ? 1 : 0;
+    if (value.includes('%')) {
+        const percentValue = parseFloat(value) * (isAlpha ? 0.01 : 2.55);
+        const result = (percentValue * 100) / 100;
+        return isAlpha ? result : Math.round(result);
+    }
+
+    if (isAlpha) return parseFloat(value);
+    return parseInt(value, 10);
 }

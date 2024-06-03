@@ -1,5 +1,6 @@
 import { isValidRgba } from '@/validations/isValidRgba';
 import { rgbaRegex } from '@/utils/regex';
+import {parseComponent, parseRgbComponent} from "@/utils/colorUtils";
 
 /**
  * Parses an RGBA color string into its individual components.
@@ -9,26 +10,30 @@ import { rgbaRegex } from '@/utils/regex';
  * or percentages.
  *
  * @param {string} color - The RGBA color string to parse.
- * @returns {[number, number, number, number]} An array containing the red, green, blue, and alpha values.
+ * @returns {{ r: number; rUnit: string; rNum: number; g: number; gUnit: string; gNum: number; b: number; bUnit: string; bNum: number; a: number; aUnit: string; aNum: number;}} An object containing RGBA values and units
  * @throws {Error} Throws an error if the color string is not a valid RGBA format.
  */
-export function parseRgba(color: string): [number, number, number, number] {
+export function parseRgba(color: string): { r: number; rUnit: string; rNum: number; g: number; gUnit: string; gNum: number; b: number; bUnit: string; bNum: number; a: number; aUnit: string; aNum: number;} {
     const match = color.match(rgbaRegex);
     if (!match || !isValidRgba(color)) throw new Error('Invalid RGBA color format');
 
-    const parseValue = (value: string, isAlpha = false): number => {
-        if (value === 'none') return isAlpha ? 1 : 0;
-        if (value.includes('%')) {
-            const percentValue = parseFloat(value) * (isAlpha ? 0.01 : 2.55);
-            return Math.round(percentValue * 100) / 100;
-        }
-        return parseFloat(value);
+    const r = parseComponent(match[1], true);
+    const rUnit = match[2];
+    const rNum = parseRgbComponent(match[1]);
+
+    const g = parseComponent(match[3], true);
+    const gUnit = match[4];
+    const gNum = parseRgbComponent(match[3]);
+
+    const b = parseComponent(match[5], true);
+    const bUnit = match[6];
+    const bNum = parseRgbComponent(match[5]);
+
+    const a = parseComponent(match[7]);
+    const aUnit = match[8];
+    const aNum = parseRgbComponent(match[7], true);
+
+    return {
+        r, rUnit, rNum, g, gUnit, gNum, b, bUnit, bNum, a, aUnit, aNum,
     };
-
-    const r = parseValue(match[1]);
-    const g = parseValue(match[2]);
-    const b = parseValue(match[3]);
-    const a = parseValue(match[4], true);
-
-    return [r, g, b, a];
 }
