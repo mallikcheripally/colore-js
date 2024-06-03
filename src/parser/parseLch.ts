@@ -56,6 +56,7 @@ export function parseLch(color: string): {
         hDeg: parseHue(h, hUnit),
         alpha: parseAlpha(alpha),
         alphaUnit,
-        alphaNum: match[10] ? match[10].includes('%') ? parseFloat(match[10]) / 100 : parseFloat(match[10]) : undefined,
+        // @ts-ignore
+        alphaNum: Number.isFinite(parseAlpha(alpha)) ? alphaUnit === "%" ? parseAlpha(alpha) / 100 : parseAlpha(alpha) : undefined,
     };
 }

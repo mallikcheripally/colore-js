@@ -10,7 +10,8 @@ describe('parseLab', () => {
             b: 59.9971,
             bUnit: undefined,
             alpha: 0.5,
-            alphaUnit: undefined
+            alphaUnit: undefined,
+            alphaNum: 0.5,
         });
         expect(parseLab('lab(50 125 -125)')).toEqual({
             l: 50,
@@ -20,7 +21,8 @@ describe('parseLab', () => {
             b: -125,
             bUnit: undefined,
             alpha: undefined,
-            alphaUnit: undefined
+            alphaUnit: undefined,
+            alphaNum: undefined,
         });
         expect(parseLab('lab(52.2345% 40.1645 59.9971 / 50%)')).toEqual({
             l: 52.2345,
@@ -30,7 +32,8 @@ describe('parseLab', () => {
             b: 59.9971,
             bUnit: undefined,
             alpha: 50,
-            alphaUnit: '%'
+            alphaUnit: '%',
+            alphaNum: 0.5,
         });
     });
 
@@ -43,7 +46,8 @@ describe('parseLab', () => {
             b: 0,
             bUnit: undefined,
             alpha: 1,
-            alphaUnit: undefined
+            alphaUnit: undefined,
+            alphaNum: 1,
         });
         expect(parseLab('lab(50 none none)')).toEqual({
             l: 50,
@@ -53,7 +57,8 @@ describe('parseLab', () => {
             b: 0,
             bUnit: undefined,
             alpha: undefined,
-            alphaUnit: undefined
+            alphaUnit: undefined,
+            alphaNum: undefined,
         });
     });
 

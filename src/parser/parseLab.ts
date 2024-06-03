@@ -41,7 +41,8 @@ export function parseLab(color: string): {
     const bUnit = match[9];
     const alpha = parseAlpha(match[10]);
     const alphaUnit = match[11];
-    const alphaNum = match[10] ? match[10].includes('%') ? parseFloat(match[10]) / 100 : parseFloat(match[10]) : undefined;
+    // @ts-ignore
+    const alphaNum = Number.isFinite(alpha) ? alphaUnit === "%" ? alpha / 100 : alpha : undefined;
 
 
     return { l, lUnit, a, aUnit, b, bUnit, alpha, alphaUnit, alphaNum };

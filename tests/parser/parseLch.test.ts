@@ -13,6 +13,7 @@ describe('parseLch', () => {
             hDeg: 59.9971,
             alpha: undefined,
             alphaUnit: undefined,
+            alphaNum: undefined,
         });
     });
 
@@ -28,6 +29,7 @@ describe('parseLch', () => {
             hDeg: 59.9971,
             alpha: 0.5,
             alphaUnit: undefined,
+            alphaNum: 0.5,
         });
     });
 
@@ -43,6 +45,7 @@ describe('parseLch', () => {
             hDeg: 59.9971,
             alpha: 50,
             alphaUnit: '%',
+            alphaNum: 0.5,
         });
     });
 
@@ -58,6 +61,7 @@ describe('parseLch', () => {
             hDeg: 59.9971,
             alpha: undefined,
             alphaUnit: undefined,
+            alphaNum: undefined,
         });
     });
 
@@ -73,6 +77,7 @@ describe('parseLch', () => {
             hDeg: 114.59155902616465,
             alpha: undefined,
             alphaUnit: undefined,
+            alphaNum: undefined,
         });
     });
 
@@ -88,6 +93,7 @@ describe('parseLch', () => {
             hDeg: 180,
             alpha: undefined,
             alphaUnit: undefined,
+            alphaNum: undefined,
         });
     });
 
