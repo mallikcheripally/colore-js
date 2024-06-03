@@ -18,6 +18,7 @@ import { parseAlpha, parseComponent, parseHue } from '@/utils/colorUtils';
  *     hDeg: number;
  *     alpha?: number;
  *     alphaUnit?: string;
+ *     alphaNum?: number;
  * }} An object containing the LAB values and units.
  * @throws {Error} Throws an error if the LCH color string is invalid.
  */
@@ -31,6 +32,7 @@ export function parseLch(color: string): {
     hDeg: number;
     alpha?: number;
     alphaUnit?: string;
+    alphaNum?: number;
 } {
     const match = color.match(lchRegex);
     if (!match || !isValidLch(color)) throw new Error('Invalid LCH color format');
@@ -54,5 +56,6 @@ export function parseLch(color: string): {
         hDeg: parseHue(h, hUnit),
         alpha: parseAlpha(alpha),
         alphaUnit,
+        alphaNum: match[10] ? match[10].includes('%') ? parseFloat(match[10]) / 100 : parseFloat(match[10]) : undefined,
     };
 }
