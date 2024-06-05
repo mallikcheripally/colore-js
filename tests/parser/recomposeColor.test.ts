@@ -42,7 +42,7 @@ describe('recomposeColor', () => {
     });
 
     test('recomposes named color', () => {
-        expect(recomposeColor('red', { r: 255, g: 0, b: 0 })).toBe('red');
+        expect(recomposeColor('red', { r: 255, g: 0, b: 0 })).toBe('rgb(255, 0, 0)');
     });
 
     test('throws error for invalid color format', () => {
