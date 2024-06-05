@@ -47,7 +47,7 @@ export { parseHsla } from '@/parser/parseHsla';
 
 
 // Manipulations
-// export { lightenColor } from '@/manipulations/lightenColor';
+export { lightenColor } from '@/manipulations/lightenColor';
 
 // Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
