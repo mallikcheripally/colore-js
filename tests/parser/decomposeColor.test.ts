@@ -42,6 +42,6 @@ describe('decomposeColor', () => {
     });
 
     test('decomposeColor should throw an error for an unsupported color format', () => {
-        expect(() => decomposeColor('invalidColor')).toThrow('Unsupported color format: invalidColor');
+        expect(() => decomposeColor('invalidColor')).toThrow('Invalid color format invalidColor');
     });
 })

@@ -45,6 +45,6 @@ export function decomposeColor(color: string): any {
         case 'named':
             return parseNamedColor(color);
         default:
-            throw new Error(`Unsupported color format: ${color}`);
+            throw new Error(`Invalid color format ${color}`);
     }
 }
