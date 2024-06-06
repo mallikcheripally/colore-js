@@ -21,7 +21,7 @@ import {isValidHexAlpha} from "@/validations/isValidHexAlpha";
  *
  * @param {string} hex - The HEX color string with alpha (e.g., #RRGGBBAA or #RGBA).
  * @param {boolean} [asString=true] - Whether to return the result as a string.
- * @returns {string | { r: number; g: number; b: number; a: number; }} - The RGBA color components.
+ * @returns {string | { r: number; g: number; b: number; a: number; }} - The RGBA color as a string or an object.
  * @throws {Error} - Throws an error if the input color format is invalid.
  */
 export function hexAlphaToRgba(hex: string, asString?: true): string;

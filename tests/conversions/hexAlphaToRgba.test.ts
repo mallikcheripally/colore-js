@@ -12,8 +12,8 @@ describe('hexAlphaToRgba', () => {
     });
 
     test('8-digit HEX with alpha to RGBA string by default', () => {
-        expect(hexAlphaToRgba('#ff00ff80')).toEqual('rgba(255, 0, 255, 0.5019607843137255)');
-        expect(hexAlphaToRgba('#123456ff')).toEqual('rgba(18, 52, 86, 1)');
+        expect(hexAlphaToRgba('#ff00ff80')).toBe('rgba(255, 0, 255, 0.5019607843137255)');
+        expect(hexAlphaToRgba('#123456ff')).toBe('rgba(18, 52, 86, 1)');
     });
 
     test('8-digit HEX with alpha to RGBA object when asString is false', () => {
