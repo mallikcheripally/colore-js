@@ -23,7 +23,7 @@ import {isValidHexAlpha} from "@/validations/isValidHexAlpha";
  *
  * @param {string} hex - The HEX color string with alpha (e.g., #RRGGBBAA or #RGBA).
  * @param {boolean} [asString=true] - Whether to return the result as a string.
- * @returns {{ h: number; s: number; l: number; a: number; }} - The HSLA color components.
+ * @returns {string | { h: number; s: number; l: number; a: number; }} - The HSLA color components.
  * @throws {Error} - Throws an error if the input color format is invalid.
  */
 export function hexAlphaToHsla(hex: string, asString?: true): string;
