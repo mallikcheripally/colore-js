@@ -8,7 +8,7 @@
  * @param {number} s - The saturation value (0-100).
  * @param {number} l - The lightness value (0-100).
  * @param {true} [asString=true] - Whether to return the result as a string.
- * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @returns {string} - The RGB color string in the format "rgb(r, g, b)"
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
 /**
@@ -21,7 +21,7 @@
  * @param {number} s - The saturation value (0-100).
  * @param {number} l - The lightness value (0-100).
  * @param {false} [asString=false] - Whether to return the result as an object.
- * @returns {string | {r: number, g: number, b: number}} - The RGB color string in the format "rgb(r, g, b)" or in object format
+ * @returns {{r: number, g: number, b: number}} - The RGB color string in object format
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
 /**
