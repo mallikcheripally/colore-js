@@ -15,6 +15,7 @@ export { labToXyz } from '@/conversions/labToXyz';
 export { lchToLab } from '@/conversions/lchToLab';
 export { lchToRgb } from '@/conversions/lchToRgb';
 export { rgbaToHexAlpha } from '@/conversions/rgbaToHexAlpha';
+export { rgbaToHsla } from '@/conversions/rgbaToHsla';
 export { rgbToCmyk } from '@/conversions/rgbToCmyk';
 export { rgbToHex } from '@/conversions/rgbToHex';
 export { rgbToHsl } from '@/conversions/rgbToHsl';
