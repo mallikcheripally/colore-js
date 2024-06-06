@@ -9,6 +9,7 @@ export { hexToRgb } from '@/conversions/hexToRgb';
 export { hslaToRgba } from '@/conversions/hslaToRgba';
 export { hslToHex } from '@/conversions/hslToHex';
 export { hslToRgb } from '@/conversions/hslToRgb';
+export { hsvaToRgba } from '@/conversions/hsvaToRgba';
 export { hsvToHex } from '@/conversions/hsvToHex';
 export { hsvToRgb } from '@/conversions/hsvToRgb';
 export { labToRgb } from '@/conversions/labToRgb';
