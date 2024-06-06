@@ -6,6 +6,7 @@ export { hexAlphaToRgba } from '@/conversions/hexAlphaToRgba';
 export { hexToHsl } from '@/conversions/hexToHsl';
 export { hexToHsv } from '@/conversions/hexToHsv';
 export { hexToRgb } from '@/conversions/hexToRgb';
+export { hslaToRgba } from '@/conversions/hslaToRgba';
 export { hslToHex } from '@/conversions/hslToHex';
 export { hslToRgb } from '@/conversions/hslToRgb';
 export { hsvToHex } from '@/conversions/hsvToHex';
