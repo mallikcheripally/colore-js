@@ -1,5 +1,6 @@
 // Conversions
 export { cmykToRgb } from '@/conversions/cmykToRgb';
+export { hexAlphaToRgba } from '@/conversions/hexAlphaToRgba';
 export { hexToHsl } from '@/conversions/hexToHsl';
 export { hexToHsv } from '@/conversions/hexToHsv';
 export { hexToRgb } from '@/conversions/hexToRgb';
