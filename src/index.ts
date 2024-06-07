@@ -12,6 +12,7 @@ export { hslToRgb } from '@/conversions/hslToRgb';
 export { hsvaToRgba } from '@/conversions/hsvaToRgba';
 export { hsvToHex } from '@/conversions/hsvToHex';
 export { hsvToRgb } from '@/conversions/hsvToRgb';
+export { labToLch } from '@/conversions/labToLch';
 export { labToRgb } from '@/conversions/labToRgb';
 export { labToXyz } from '@/conversions/labToXyz';
 export { lchToLab } from '@/conversions/lchToLab';
@@ -57,6 +58,7 @@ export { parseHsla } from '@/parser/parseHsla';
 // Manipulations
 export { lightenColor } from '@/manipulations/lightenColor';
 export { darkenColor } from '@/manipulations/darkenColor';
+export { saturateColor } from '@/manipulations/saturateColor';
 
 // Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
