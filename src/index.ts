@@ -24,6 +24,7 @@ export { rgbToCmyk } from '@/conversions/rgbToCmyk';
 export { rgbToHex } from '@/conversions/rgbToHex';
 export { rgbToHsl } from '@/conversions/rgbToHsl';
 export { rgbToHsv } from '@/conversions/rgbToHsv';
+export { rgbToLab } from '@/conversions/rgbToLab';
 export { rgbToXyz } from '@/conversions/rgbToXyz';
 export { xyzToLab } from '@/conversions/xyzToLab';
 export { xyzToRgb } from '@/conversions/xyzToRgb';
