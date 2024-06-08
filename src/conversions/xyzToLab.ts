@@ -18,6 +18,8 @@
  * @returns { l: number; a: number; b: number; } - The LAB color in object format
  * @throws {Error} Throws an error if any of the color values are out of range.
  */
+import {roundTo} from "@/utils/colorUtils";
+
 /**
  * Converts XYZ color values to LAB color space.
  *
@@ -52,18 +54,13 @@ export function xyzToLab(x: number, y: number, z: number, asString: boolean = tr
     const a = 500 * (x - y);
     const b = 200 * (y - z);
 
-    const roundTo = (num: number, precision: number = 3) => {
-        const factor = Math.pow(10, precision);
-        return Math.round(num * factor) / factor;
-    };
-
     if (asString) {
-        return `lab(${roundTo(l)}% ${roundTo(a)} ${roundTo(b)})`;
+        return `lab(${roundTo(l, 5)}% ${roundTo(a, 5)} ${roundTo(b, 5)})`;
     }
 
     return {
-        l: roundTo(l),
-        a: roundTo(a),
-        b: roundTo(b)
+        l: roundTo(l, 5),
+        a: roundTo(a, 5),
+        b: roundTo(b, 5)
     };
 }
