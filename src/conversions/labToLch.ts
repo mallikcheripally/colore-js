@@ -1,3 +1,5 @@
+import { roundTo } from '@/utils/colorUtils';
+
 /**
  * Converts LAB color values to LCH color values.
  *
@@ -30,7 +32,12 @@
  */
 export function labToLch(l: number, a: number, b: number, asString?: true): string;
 export function labToLch(l: number, a: number, b: number, asString?: false): { l: number; c: number; h: number };
-export function labToLch(l: number, a: number, b: number, asString: boolean = true): string | { l: number; c: number; h: number } {
+export function labToLch(
+    l: number,
+    a: number,
+    b: number,
+    asString: boolean = true,
+): string | { l: number; c: number; h: number } {
     if (l < 0 || l > 100 || a < -128 || a > 127 || b < -128 || b > 127) {
         throw new Error(`Invalid LAB color values ${l}, ${a}, ${b}`);
     }
@@ -43,8 +50,12 @@ export function labToLch(l: number, a: number, b: number, asString: boolean = tr
     }
 
     if (asString) {
-        return `lch(${l}, ${c}, ${h})`;
+        return `lch(${roundTo(l, 5)}, ${roundTo(c, 5)}, ${roundTo(h, 5)})`;
     }
 
-    return { l, c, h };
+    return {
+        l: roundTo(l, 5),
+        c: roundTo(c, 5),
+        h: roundTo(h, 5),
+    };
 }
