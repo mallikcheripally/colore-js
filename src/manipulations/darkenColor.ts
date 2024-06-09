@@ -3,6 +3,7 @@ import { parseColorToRgba } from '@/parser/parseColorToRgba';
 import { recomposeColor } from '@/parser/recomposeColor';
 import { rgbToXyz } from '@/conversions/rgbToXyz';
 import { decomposeColor } from '@/parser/decomposeColor';
+import { ColorFormat, ColorFormats } from '@/utils/colorFormats';
 
 /**
  * Darkens a given color by a specified amount.
@@ -17,7 +18,7 @@ export function darkenColor(color: string, amount: number): string {
         throw new Error(`Invalid amount ${amount}. Amount should be between 0 and 100.`);
     }
 
-    const format = detectColorFormat(color);
+    const format: ColorFormat = detectColorFormat(color);
     const factor = amount / 100;
     const darken = (value: number, unit?: string) => {
         let intValue = unit === '%' ? (value / 100) * 255 : value;
@@ -27,31 +28,31 @@ export function darkenColor(color: string, amount: number): string {
     const decomposed = decomposeColor(color);
 
     switch (format) {
-        case 'hsl': {
+        case ColorFormats.HSL: {
             let { l } = decomposed;
             l = Math.max(0, l - amount);
             return recomposeColor(color, { ...decomposed, l });
         }
 
-        case 'hsla': {
+        case ColorFormats.HSLA: {
             let { l } = decomposed;
             l = Math.max(0, l - amount);
             return recomposeColor(color, { ...decomposed, l });
         }
 
-        case 'lab': {
+        case ColorFormats.LAB: {
             let { l } = decomposed;
             l = Math.max(0, l - amount);
             return recomposeColor(color, { ...decomposed, l });
         }
 
-        case 'lch': {
+        case ColorFormats.LCH: {
             let { l } = decomposed;
             l = Math.max(0, l - amount);
             return recomposeColor(color, { ...decomposed, l });
         }
 
-        case 'rgb': {
+        case ColorFormats.RGB: {
             const { r, rUnit, g, gUnit, b, bUnit } = decomposed;
             return recomposeColor(color, {
                 ...decomposed,
@@ -61,7 +62,7 @@ export function darkenColor(color: string, amount: number): string {
             });
         }
 
-        case 'rgba': {
+        case ColorFormats.RGBA: {
             const { r, rUnit, g, gUnit, b, bUnit } = decomposed;
             return recomposeColor(color, {
                 ...decomposed,
@@ -71,12 +72,12 @@ export function darkenColor(color: string, amount: number): string {
             });
         }
 
-        case 'hex': {
+        case ColorFormats.HEX: {
             const { r, rUnit, g, gUnit, b, bUnit } = decomposed;
             return recomposeColor(color, { r: darken(r, rUnit), g: darken(g, gUnit), b: darken(b, bUnit) });
         }
 
-        case 'hex-alpha': {
+        case ColorFormats.HEX_ALPHA: {
             const { r, rUnit, g, gUnit, b, bUnit, a, aUnit } = decomposed;
             return recomposeColor(color, {
                 r: darken(r, rUnit),
@@ -87,12 +88,12 @@ export function darkenColor(color: string, amount: number): string {
             });
         }
 
-        case 'xyz': {
+        case ColorFormats.XYZ: {
             const decomposed = parseColorToRgba(color);
             return rgbToXyz(darken(decomposed.r), darken(decomposed.g), darken(decomposed.b));
         }
 
-        case 'named': {
+        case ColorFormats.NAMED: {
             const decomposed = parseColorToRgba(color);
             return recomposeColor(color, {
                 r: darken(decomposed.r),
