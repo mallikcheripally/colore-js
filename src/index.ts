@@ -35,6 +35,9 @@ export { xyzToLab } from '@/conversions/xyzToLab';
 export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 
+// Harmony
+export { complementaryColor } from '@/harmony/complementaryColor';
+
 // Validations
 export { isValidHex } from '@/validations/isValidHex';
 export { isValidHexAlpha } from '@/validations/isValidHexAlpha';
@@ -69,10 +72,7 @@ export { saturateColor } from '@/manipulations/saturateColor';
 export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
 
-// Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
-//     Luminance Calculation: Calculate the luminance of a color.
-//     Contrast Ratio: Calculate the contrast ratio between two colors.
 //     Complementary Color: Find the complementary color for a given color.
 //     Triadic Colors: Find the triadic colors for a given color.
 //     Tetradic Colors: Find the tetradic colors for a given color.
