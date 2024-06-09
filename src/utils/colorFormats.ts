@@ -11,6 +11,7 @@ export const ColorFormats: {[key: string] : string} = {
     RGBA: 'rgba',
     RGB: 'rgb',
     XYZ: 'xyz',
+    NAMED: 'named',
     UNKNOWN: 'unknown',
 } as const;
 
