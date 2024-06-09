@@ -55,12 +55,14 @@ export { parseHex } from '@/parser/parseHex';
 export { parseHexAlpha } from '@/parser/parseHexAlpha';
 export { parseHsl } from '@/parser/parseHsl';
 export { parseHsla } from '@/parser/parseHsla';
+export { rebuildColorFromRgba } from '@/parser/rebuildColorFromRgba';
 
 
 // Manipulations
 export { lightenColor } from '@/manipulations/lightenColor';
 export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';
+export { blendColors } from '@/manipulations/blendColors';
 
 // Additional Color Conversion Functions
 //     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
