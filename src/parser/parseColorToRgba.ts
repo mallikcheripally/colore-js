@@ -13,6 +13,7 @@ import { parseXyz } from './parseXyz';
 import { parseNamedColor } from './parseNamedColor';
 import { parseHexAlpha } from './parseHexAlpha';
 import { parseHex } from '@/parser/parseHex';
+import { ColorFormat, ColorFormats } from '@/utils/colorFormats';
 
 /**
  * Converts any valid color format to RGB.
@@ -22,25 +23,25 @@ import { parseHex } from '@/parser/parseHex';
  * @throws {Error} - Throws an error if the input color format is invalid.
  */
 export function parseColorToRgba(color: string): { r: number; g: number; b: number; a?: number } {
-    const format = detectColorFormat(color);
+    const format: ColorFormat = detectColorFormat(color);
 
     switch (format) {
-        case 'hex': {
+        case ColorFormats.HEX: {
             const { r, g, b } = parseHex(color);
             return { r, g, b };
         }
 
-        case 'hex-alpha': {
+        case ColorFormats.HEX_ALPHA: {
             const { r, g, b, a } = parseHexAlpha(color);
             return { r, g, b, a };
         }
 
-        case 'hsl': {
+        case ColorFormats.HSL: {
             const { hDeg, s, l } = parseHsl(color);
             return hslToRgb(hDeg, s, l, false);
         }
 
-        case 'hsla': {
+        case ColorFormats.HSLA: {
             const { hDeg, s, l, aNum } = parseHsla(color);
             const rgb = hslToRgb(hDeg, s, l, false);
             return {
@@ -51,7 +52,7 @@ export function parseColorToRgba(color: string): { r: number; g: number; b: numb
             };
         }
 
-        case 'lab': {
+        case ColorFormats.LAB: {
             const { l, a, b, alphaNum } = parseLab(color);
             const rgb = labToRgb(l, a, b, false);
             return {
@@ -62,7 +63,7 @@ export function parseColorToRgba(color: string): { r: number; g: number; b: numb
             };
         }
 
-        case 'lch': {
+        case ColorFormats.LCH: {
             const { l, c, hDeg, alphaNum } = parseLch(color);
             const rgb = lchToRgb(l, c, hDeg, false);
             return {
@@ -73,22 +74,22 @@ export function parseColorToRgba(color: string): { r: number; g: number; b: numb
             };
         }
 
-        case 'xyz': {
+        case ColorFormats.XYZ: {
             const { x, y, z } = parseXyz(color);
             return xyzToRgb(x, y, z, false);
         }
 
-        case 'rgb': {
+        case ColorFormats.RGB: {
             const { rNum, gNum, bNum } = parseRgb(color);
-            return { r: rNum, g: gNum, b: bNum, };
+            return { r: rNum, g: gNum, b: bNum };
         }
 
-        case 'rgba': {
+        case ColorFormats.RGBA: {
             const { rNum, gNum, bNum, aNum } = parseRgba(color);
-            return { r: rNum, g: gNum, b: bNum, a: aNum, };
+            return { r: rNum, g: gNum, b: bNum, a: aNum };
         }
 
-        case 'named': {
+        case ColorFormats.NAMED: {
             const { r, g, b } = parseNamedColor(color);
             return { r, g, b };
         }
