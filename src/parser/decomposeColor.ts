@@ -9,6 +9,7 @@ import { parseLab } from './parseLab';
 import { parseLch } from './parseLch';
 import { parseXyz } from './parseXyz';
 import { parseNamedColor } from './parseNamedColor';
+import {ColorFormat, ColorFormats} from "@/utils/colorFormats";
 
 /**
  * Decomposes a color string into its components.
@@ -21,29 +22,39 @@ import { parseNamedColor } from './parseNamedColor';
  * @throws {Error} - Throws an error if the input color format is unsupported or invalid.
  */
 export function decomposeColor(color: string): any {
-    const format = detectColorFormat(color);
+    const format: ColorFormat = detectColorFormat(color);
 
     switch (format) {
-        case 'hex':
+        case ColorFormats.HEX:
             return parseHex(color);
-        case 'hex-alpha':
+
+        case ColorFormats.HEX_ALPHA:
             return parseHexAlpha(color);
-        case 'rgb':
+
+        case ColorFormats.RGB:
             return parseRgb(color);
-        case 'rgba':
+
+        case ColorFormats.RGBA:
             return parseRgba(color);
-        case 'hsl':
+
+        case ColorFormats.HSL:
             return parseHsl(color);
-        case 'hsla':
+
+        case ColorFormats.HSLA:
             return parseHsla(color);
-        case 'lab':
+
+        case ColorFormats.LAB:
             return parseLab(color);
-        case 'lch':
+
+        case ColorFormats.LCH:
             return parseLch(color);
-        case 'xyz':
+
+        case ColorFormats.XYZ:
             return parseXyz(color);
-        case 'named':
+
+        case ColorFormats.NAMED:
             return parseNamedColor(color);
+
         default:
             throw new Error(`Invalid color format ${color}`);
     }
