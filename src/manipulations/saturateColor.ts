@@ -7,9 +7,9 @@ import { rgbaToHsla } from '@/conversions/rgbaToHsla';
 import { hslaToRgba } from '@/conversions/hslaToRgba';
 import { hexToHsl } from '@/conversions/hexToHsl';
 import { hexAlphaToHsla } from '@/conversions/hexAlphaToHsla';
-import {lchToLab} from "@/conversions/lchToLab";
-import {labToRgb} from "@/conversions/labToRgb";
-import {labToLch} from "@/conversions/labToLch";
+import { lchToLab } from '@/conversions/lchToLab';
+import { labToLch } from '@/conversions/labToLch';
+import { ColorFormat, ColorFormats } from '@/utils/colorFormats';
 
 /**
  * Saturates a given color by a specified amount.
@@ -24,60 +24,60 @@ export function saturateColor(color: string, amount: number): string {
         throw new Error(`Invalid amount ${amount}. Amount should be between 0 and 100.`);
     }
 
-    const format = detectColorFormat(color);
+    const format: ColorFormat = detectColorFormat(color);
     const factor = amount / 100;
     const saturate = (value: number) => Math.min(100, value + (100 - value) * factor);
     const decomposed = decomposeColor(color);
 
     switch (format) {
-        case 'hsl': {
+        case ColorFormats.HSL: {
             let { s } = decomposed;
             s = saturate(s);
             return recomposeColor(color, { ...decomposed, s });
         }
 
-        case 'hsla': {
+        case ColorFormats.HSLA: {
             let { s } = decomposed;
             s = saturate(s);
             return recomposeColor(color, { ...decomposed, s });
         }
 
-        case 'rgb': {
+        case ColorFormats.RGB: {
             const hsl = rgbToHsl(decomposed.r, decomposed.g, decomposed.b, false);
             hsl.s = saturate(hsl.s);
             const rgb = hslToRgb(hsl.h, hsl.s, hsl.l, false);
             return recomposeColor(color, rgb);
         }
 
-        case 'rgba': {
+        case ColorFormats.RGBA: {
             const hsla = rgbaToHsla(decomposed.r, decomposed.g, decomposed.b, decomposed.a, false);
             hsla.s = saturate(hsla.s);
             const rgba = hslaToRgba(hsla.h, hsla.s, hsla.l, hsla.a, false);
             return recomposeColor(color, { ...rgba });
         }
 
-        case 'hex': {
+        case ColorFormats.HEX: {
             const hsl = hexToHsl(color, false);
             hsl.s = saturate(hsl.s);
             const newRgb = hslToRgb(hsl.h, hsl.s, hsl.l, false);
             return recomposeColor(color, { ...newRgb });
         }
 
-        case 'hex-alpha': {
+        case ColorFormats.HEX_ALPHA: {
             const hsla = hexAlphaToHsla(color, false);
             hsla.s = saturate(hsla.s);
             const newRgba = hslaToRgba(hsla.h, hsla.s, hsla.l, hsla.a, false);
             return recomposeColor(color, { ...newRgba });
         }
 
-        case 'lab': {
+        case ColorFormats.LAB: {
             const lch = labToLch(decomposed.l, decomposed.a, decomposed.b, false);
             lch.c = Math.min(230, lch.c + lch.c * factor);
             const newLab = lchToLab(lch.l, lch.c, lch.h, false);
             return recomposeColor(color, newLab);
         }
 
-        case 'lch': {
+        case ColorFormats.LCH: {
             let { c } = decomposed;
             c = Math.min(230, c + c * factor);
             return recomposeColor(color, { ...decomposed, c });
