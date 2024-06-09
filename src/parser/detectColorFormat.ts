@@ -24,8 +24,8 @@ export function detectColorFormat(color: string): ColorFormat {
     if (isValidHsl(color)) return ColorFormats.HSL;
     if (isValidHsla(color)) return ColorFormats.HSLA;
     if (isValidNamedColor(color)) return ColorFormats.NAMED;
+    if (isValidLab(color)) return ColorFormats.LAB;
     if (isValidLch(color)) return ColorFormats.LCH;
     if (isValidXyz(color)) return ColorFormats.XYZ;
-    if (isValidLab(color)) return ColorFormats.LAB;
     return ColorFormats.UNKNOWN;
 }

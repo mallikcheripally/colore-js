@@ -3,7 +3,7 @@ import { isValidLab } from '@/validations/isValidLab';
 describe('isValidLab', () => {
     test('valid LAB colors', () => {
         expect(isValidLab('lab(29.2345% 39.3825 20.0664)')).toBe(true);
-        expect(isValidLab('lab(52.2345% 40.1645 59.9971)')).toBe(true);
+        expect(isValidLab('lab(52.2345 40.1645 59.9971)')).toBe(true);
         expect(isValidLab('lab(52.2345% 40.1645 59.9971 / .5)')).toBe(true);
         expect(isValidLab('lab(52.2345% 40.1645 59.9971 / 0.5)')).toBe(true);
         expect(isValidLab('lab(52.2345% 40.1645 59.9971 / 50%)')).toBe(true);

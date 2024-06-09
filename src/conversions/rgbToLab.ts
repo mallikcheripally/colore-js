@@ -43,7 +43,7 @@ export function rgbToLab(
     const { l, a, b: bVal } = xyzToLab(x, y, z, false);
 
     if (asString) {
-        return `lab(${l}, ${a}, ${bVal})`;
+        return `lab(${l} ${a} ${bVal})`;
     }
     return { l, a, b: bVal };
 }
