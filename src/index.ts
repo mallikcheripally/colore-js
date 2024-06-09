@@ -1,3 +1,6 @@
+// Analysis
+export { getLuminance } from '@/analysis/getLuminance';
+
 // Conversions
 export { cmykToRgb } from '@/conversions/cmykToRgb';
 export { hexAlphaToHsla } from '@/conversions/hexAlphaToHsla';
