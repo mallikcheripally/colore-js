@@ -1,5 +1,6 @@
 // Analysis
 export { getLuminance } from '@/analysis/getLuminance';
+export { getContrastRatio } from '@/analysis/getContrastRatio';
 
 // Conversions
 export { cmykToRgb } from '@/conversions/cmykToRgb';
