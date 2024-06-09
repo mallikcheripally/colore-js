@@ -62,6 +62,7 @@ export { rebuildColorFromRgba } from '@/parser/rebuildColorFromRgba';
 export { lightenColor } from '@/manipulations/lightenColor';
 export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';
+export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
 
 // Additional Color Conversion Functions
