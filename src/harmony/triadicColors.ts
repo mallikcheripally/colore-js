@@ -5,14 +5,10 @@ import { hslToRgb } from '@/conversions/hslToRgb';
 import { hslaToRgba } from '@/conversions/hslaToRgba';
 import { hexToHsl } from '@/conversions/hexToHsl';
 import { hexAlphaToHsla } from '@/conversions/hexAlphaToHsla';
-import { labToRgb } from '@/conversions/labToRgb';
-import { lchToRgb } from '@/conversions/lchToRgb';
 import { parseColorToRgba } from '@/parser/parseColorToRgba';
 import { rebuildColorFromRgba } from '@/parser/rebuildColorFromRgba';
 import { ColorFormat, ColorFormats } from '@/utils/colorFormats';
-import {rgbToLab} from "@/conversions/rgbToLab";
-import {recomposeColor} from "@/parser/recomposeColor";
-import {rgbToLch} from "@/conversions/rgbToLch";
+import { recomposeColor } from '@/parser/recomposeColor';
 
 /**
  * Finds the triadic colors of a given color.
@@ -48,10 +44,7 @@ export function triadicColors(color: string): string[] {
             const hsl = rgbToHsl(decomposed.r, decomposed.g, decomposed.b, false);
             const h1 = (hsl.h + 120) % 360;
             const h2 = (hsl.h + 240) % 360;
-            return [
-                hslToRgb(h1, hsl.s, hsl.l),
-                hslToRgb(h2, hsl.s, hsl.l),
-            ];
+            return [hslToRgb(h1, hsl.s, hsl.l), hslToRgb(h2, hsl.s, hsl.l)];
         }
 
         case ColorFormats.RGBA: {
@@ -95,7 +88,7 @@ export function triadicColors(color: string): string[] {
                 { l, a: -a, b: -b },
                 { l, a: -a, b: -b + 120 },
             ];
-            return triadicLabColors.map(lab => recomposeColor(color, lab));
+            return triadicLabColors.map((lab) => recomposeColor(color, lab));
         }
         case ColorFormats.LCH: {
             const { l, c, h } = decomposed;
@@ -103,17 +96,14 @@ export function triadicColors(color: string): string[] {
                 { l, c, h: (h + 120) % 360 },
                 { l, c, h: (h + 240) % 360 },
             ];
-            return triadicLchColors.map(lch => recomposeColor(color, lch));
+            return triadicLchColors.map((lch) => recomposeColor(color, lch));
         }
         case ColorFormats.NAMED: {
             const rgba = parseColorToRgba(color);
             const hsl = rgbToHsl(rgba.r, rgba.g, rgba.b, false);
             const h1 = (hsl.h + 120) % 360;
             const h2 = (hsl.h + 240) % 360;
-            triadicColors = [
-                hslToRgb(h1, hsl.s, hsl.l, false),
-                hslToRgb(h2, hsl.s, hsl.l, false),
-            ];
+            triadicColors = [hslToRgb(h1, hsl.s, hsl.l, false), hslToRgb(h2, hsl.s, hsl.l, false)];
             break;
         }
         default:
