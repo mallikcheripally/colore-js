@@ -62,6 +62,10 @@ export function rebuildColorFromRgba(
             return lch;
         }
 
+        case ColorFormats.NAMED: {
+            return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a ?? 1})`;
+        }
+
         default:
             throw new Error(`Unsupported color format: ${format}`);
     }
