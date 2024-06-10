@@ -37,6 +37,7 @@ export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 // Harmony
 export { complementaryColor } from '@/harmony/complementaryColor';
+export { triadicColors } from '@/harmony/triadicColors';
 
 
 // Validations
