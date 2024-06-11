@@ -37,6 +37,7 @@ export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 // Harmony
 export { complementaryColor } from '@/harmony/complementaryColor';
+export { tetradicColors } from '@/harmony/tetradicColors';
 export { triadicColors } from '@/harmony/triadicColors';
 
 
@@ -73,9 +74,3 @@ export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';
 export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
-
-//     Named Colors to RGB/HEX: Convert named CSS colors to RGB or HEX values.
-//     Complementary Color: Find the complementary color for a given color.
-//     Triadic Colors: Find the triadic colors for a given color.
-//     Tetradic Colors: Find the tetradic colors for a given color.
-//     Analogous Colors: Find the analogous colors for a given color.
