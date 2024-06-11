@@ -2,9 +2,9 @@ import { rgbToLch } from '@/conversions/rgbToLch';
 
 describe('rgbToLch', () => {
     test('converts RGB to LCH string', () => {
-        expect(rgbToLch(255, 0, 0, true)).toBe('lch(53.24079, 104.55177, 39.99901)');
-        expect(rgbToLch(0, 255, 0, true)).toBe('lch(87.73472, 119.77588, 136.01595)');
-        expect(rgbToLch(0, 0, 255, true)).toBe('lch(32.29701, 133.80761, 306.28494)');
+        expect(rgbToLch(255, 0, 0, true)).toBe('lch(53.24079 104.55177 39.99901)');
+        expect(rgbToLch(0, 255, 0, true)).toBe('lch(87.73472 119.77588 136.01595)');
+        expect(rgbToLch(0, 0, 255, true)).toBe('lch(32.29701 133.80761 306.28494)');
     });
 
     test('converts RGB to LCH object', () => {
