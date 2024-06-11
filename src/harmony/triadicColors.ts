@@ -106,8 +106,6 @@ export function triadicColors(color: string): string[] {
             triadicColors = [hslToRgb(h1, hsl.s, hsl.l, false), hslToRgb(h2, hsl.s, hsl.l, false)];
             break;
         }
-        default:
-            throw new Error(`Unsupported color format ${color} for triadic color calculation`);
     }
 
     // @ts-ignore
