@@ -121,9 +121,6 @@ export function analogousColors(color: string): string[] {
             analogousColors = analogousRgbColors.map((rgb) => recomposeColor(color, rgb));
             break;
         }
-
-        default:
-            throw new Error(`Unsupported color format ${color} for analogous color calculation`);
     }
 
     return analogousColors;
