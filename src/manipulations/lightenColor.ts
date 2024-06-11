@@ -10,10 +10,10 @@ import { ColorFormat, ColorFormats } from '@/utils/colorFormats';
  *
  * @param {string} color - The input color string in any supported format (hex, rgb, hsl, etc.).
  * @param {number} amount - The amount to lighten the color (0-100).
- * @returns {string} - The lightened color in the original format.
+ * @returns {string | undefined} - The lightened color in the original format.
  * @throws {Error} - Throws an error if the input color format is invalid.
  */
-export function lightenColor(color: string, amount: number): string {
+export function lightenColor(color: string, amount: number): string | undefined {
     if (amount < 0 || amount > 100) {
         throw new Error(`Invalid amount ${amount}. Amount should be between 0 and 100.`);
     }
@@ -100,10 +100,6 @@ export function lightenColor(color: string, amount: number): string {
                 g: lighten(decomposed.g),
                 b: lighten(decomposed.b),
             });
-        }
-
-        default: {
-            throw new Error(`Invalid color format ${color}`);
         }
     }
 }
