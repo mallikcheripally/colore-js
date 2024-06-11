@@ -33,7 +33,11 @@ describe('desaturateColor', () => {
         expect(desaturateColor('lch(50% 30 100)', 50)).toBe('lch(50% 15 100)');
     });
 
-    // test('throws an error for unsupported color format', () => {
-    //     expect(() => desaturateColor('unsupported(0, 100%, 50%)', 50)).toThrow('Unsupported color format unsupported(0, 100%, 50%) for desaturation');
-    // });
+    test('throws an error for invalid amount', () => {
+        expect(() => desaturateColor('hsl(0, 50%, 50%)', 150)).toThrow('Invalid amount 150. Amount should be between 0 and 100.')
+    })
+
+    test('throws an error for unsupported color format', () => {
+        expect(() => desaturateColor('red', 50)).toThrow('Unsupported color format red for desaturation');
+    });
 });
