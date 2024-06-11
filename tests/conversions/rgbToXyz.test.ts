@@ -1,20 +1,14 @@
 import { rgbToXyz } from '@/conversions/rgbToXyz';
 
-// Utility function to compare XYZ values with precision
-function roundTo(num: number, precision: number) {
-    const factor = Math.pow(10, precision);
-    return Math.round(num * factor) / factor;
-}
-
 describe('rgbToXyz', () => {
     test('converts RGB to XYZ string correctly', () => {
-        expect(rgbToXyz(255, 0, 0)).toBe('xyz(41.25, 21.27, 1.93)'); // Red
-        expect(rgbToXyz(0, 255, 0)).toBe('xyz(35.76, 71.52, 11.92)'); // Green
-        expect(rgbToXyz(0, 0, 255)).toBe('xyz(18.04, 7.22, 95.03)'); // Blue
-        expect(rgbToXyz(255, 255, 0)).toBe('xyz(77, 92.78, 13.85)'); // Yellow
+        expect(rgbToXyz(255, 0, 0)).toBe('xyz(41.24564, 21.26729, 1.93339)'); // Red
+        expect(rgbToXyz(0, 255, 0)).toBe('xyz(35.75761, 71.51522, 11.9192)'); // Green
+        expect(rgbToXyz(0, 0, 255)).toBe('xyz(18.04375, 7.2175, 95.03041)'); // Blue
+        expect(rgbToXyz(255, 255, 0)).toBe('xyz(77.00325, 92.78251, 13.85259)'); // Yellow
         expect(rgbToXyz(0, 0, 0)).toBe('xyz(0, 0, 0)'); // Black
-        expect(rgbToXyz(255, 255, 255)).toBe('xyz(95.05, 100, 108.88)'); // White
-        expect(rgbToXyz(128, 128, 128)).toBe('xyz(20.52, 21.59, 23.5)'); // Grey
+        expect(rgbToXyz(255, 255, 255)).toBe('xyz(95.047, 100.00001, 108.883)'); // White
+        expect(rgbToXyz(128, 128, 128)).toBe('xyz(20.51689, 21.58605, 23.50354)'); // Grey
     });
 
     test('converts RGB to XYZ object correctly', () => {
