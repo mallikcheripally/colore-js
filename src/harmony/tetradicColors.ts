@@ -139,9 +139,6 @@ export function tetradicColors(color: string): string[] {
             tetradicColors = tetradicRgbColors.map(rgba => rebuildColorFromRgba(color, rgba));
             break;
         }
-
-        default:
-            throw new Error(`Unsupported color format ${color} for tetradic color calculation`);
     }
 
     return tetradicColors;
