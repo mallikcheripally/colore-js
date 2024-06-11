@@ -99,9 +99,6 @@ export function monochromaticColors(color: string): string[] {
             });
             break;
         }
-
-        default:
-            throw new Error(`Unsupported color format ${color} for monochromatic color calculation`);
     }
 
     return monochromaticColors;
