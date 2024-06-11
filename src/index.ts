@@ -2,6 +2,7 @@
 export { getLuminance } from '@/analysis/getLuminance';
 export { getContrastRatio } from '@/analysis/getContrastRatio';
 
+
 // Conversions
 export { cmykToRgb } from '@/conversions/cmykToRgb';
 export { hexAlphaToHsla } from '@/conversions/hexAlphaToHsla';
@@ -38,6 +39,7 @@ export { xyzToRgb } from '@/conversions/xyzToRgb';
 // Harmony
 export { analogousColors } from '@/harmony/analogousColors';
 export { complementaryColor } from '@/harmony/complementaryColor';
+export { monochromaticColors } from '@/harmony/monochromaticColors';
 export { tetradicColors } from '@/harmony/tetradicColors';
 export { triadicColors } from '@/harmony/triadicColors';
 
