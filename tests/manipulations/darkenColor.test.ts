@@ -43,7 +43,7 @@ describe('darkenColor', () => {
 
     test('darkens an XYZ color', () => {
         const result = darkenColor('xyz(41.24, 21.26, 1.93)', 20);
-        expect(result).toBe('xyz(24.91, 12.84, 1.17)');
+        expect(result).toBe('xyz(24.90525, 12.84177, 1.16743)');
     });
 
     test('darkens a named color', () => {
