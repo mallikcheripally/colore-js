@@ -8,35 +8,35 @@ function roundTo(num: number, precision: number) {
 
 describe('xyzToLab', () => {
     test('converts XYZ to LAB string correctly', () => {
-        expect(xyzToLab(41.24, 21.26, 1.93)).toBe('lab(53.233% 80.109 67.22)'); // Red
-        expect(xyzToLab(35.76, 71.52, 11.92)).toBe('lab(87.737% -86.185 83.181)'); // Green
-        expect(xyzToLab(18.05, 7.22, 95.05)).toBe('lab(32.303% 79.197 -107.864)'); // Blue
-        expect(xyzToLab(77.00, 92.78, 13.85)).toBe('lab(97.138% -21.556 94.482)'); // Yellow
+        expect(xyzToLab(41.24, 21.26, 1.93)).toBe('lab(53.23288% 80.10931 67.22007)'); // Red
+        expect(xyzToLab(35.76, 71.52, 11.92)).toBe('lab(87.73703% -86.18464 83.18116)'); // Green
+        expect(xyzToLab(18.05, 7.22, 95.05)).toBe('lab(32.30259% 79.19666 -107.86368)'); // Blue
+        expect(xyzToLab(77.00, 92.78, 13.85)).toBe('lab(97.13825% -21.55591 94.48249)'); // Yellow
         expect(xyzToLab(0.00, 0.00, 0.00)).toBe('lab(0% 0 0)'); // Black
-        expect(xyzToLab(95.05, 100.00, 108.88)).toBe('lab(100% 0.005 0.002)'); // White
-        expect(xyzToLab(20.52, 21.59, 23.32)).toBe('lab(53.589% -0.003 0.32)'); // Grey
+        expect(xyzToLab(95.05, 100.00, 108.88)).toBe('lab(100% 0.00526 0.00184)'); // White
+        expect(xyzToLab(20.52, 21.59, 23.32)).toBe('lab(53.58926% -0.00315 0.32043)'); // Grey
     });
 
     test('converts XYZ to LAB object correctly', () => {
         let result = xyzToLab(41.24, 21.26, 1.93, false);
-        expect(result.l).toBeCloseTo(53.233, 3);
-        expect(result.a).toBeCloseTo(80.109, 3);
-        expect(result.b).toBeCloseTo(67.220, 3);
+        expect(result.l).toBeCloseTo(53.23288, 3);
+        expect(result.a).toBeCloseTo(80.10931, 3);
+        expect(result.b).toBeCloseTo(67.22007, 3);
 
         result = xyzToLab(35.76, 71.52, 11.92, false);
-        expect(result.l).toBeCloseTo(87.737, 3);
-        expect(result.a).toBeCloseTo(-86.185, 3);
-        expect(result.b).toBeCloseTo(83.181, 3);
+        expect(result.l).toBeCloseTo(87.73703, 3);
+        expect(result.a).toBeCloseTo(-86.18464, 3);
+        expect(result.b).toBeCloseTo(83.18116, 3);
 
         result = xyzToLab(18.05, 7.22, 95.05, false);
-        expect(result.l).toBeCloseTo(32.303, 3);
-        expect(result.a).toBeCloseTo(79.197, 3);
-        expect(result.b).toBeCloseTo(-107.864, 3);
+        expect(result.l).toBeCloseTo(32.30259, 3);
+        expect(result.a).toBeCloseTo(79.19666, 3);
+        expect(result.b).toBeCloseTo(-107.86368, 3);
 
         result = xyzToLab(77.00, 92.78, 13.85, false);
-        expect(result.l).toBeCloseTo(97.138, 3);
-        expect(result.a).toBeCloseTo(-21.556, 3);
-        expect(result.b).toBeCloseTo(94.482, 3);
+        expect(result.l).toBeCloseTo(97.13825, 3);
+        expect(result.a).toBeCloseTo(-21.55591, 3);
+        expect(result.b).toBeCloseTo(94.48249, 3);
 
         result = xyzToLab(0.00, 0.00, 0.00, false);
         expect(result.l).toBeCloseTo(0.000, 3);
@@ -45,13 +45,13 @@ describe('xyzToLab', () => {
 
         result = xyzToLab(95.05, 100.00, 108.88, false);
         expect(result.l).toBeCloseTo(100.000, 3);
-        expect(result.a).toBeCloseTo(0.005, 3);
-        expect(result.b).toBeCloseTo(0.002, 3);
+        expect(result.a).toBeCloseTo(0.00526, 3);
+        expect(result.b).toBeCloseTo(0.00184, 3);
 
         result = xyzToLab(20.52, 21.59, 23.32, false);
-        expect(result.l).toBeCloseTo(53.589, 3);
-        expect(result.a).toBeCloseTo(-0.003, 3);
-        expect(result.b).toBeCloseTo(0.32, 3);
+        expect(result.l).toBeCloseTo(53.58926, 3);
+        expect(result.a).toBeCloseTo(-0.00315, 3);
+        expect(result.b).toBeCloseTo(0.32043, 3);
     });
 
     test('handles intermediate values correctly', () => {
