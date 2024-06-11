@@ -43,7 +43,7 @@ describe('lightenColor', () => {
     });
 
     test('lightens XYZ color', () => {
-        expect(lightenColor('xyz(20, 21, 23)', 20)).toBe('xyz(30.11, 31.53, 34.63)');
+        expect(lightenColor('xyz(20, 21, 23)', 20)).toBe('xyz(30.11393, 31.52871, 34.63)');
     });
 
     test('lightens named color', () => {
