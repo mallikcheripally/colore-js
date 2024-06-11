@@ -3,6 +3,7 @@ import { hslToRgb } from '@/conversions/hslToRgb';
 describe('hslToRgb', () => {
     test('converts HSL values to RGB color string correctly', () => {
         expect(hslToRgb(0, 100, 50)).toBe('rgb(255, 0, 0)'); // Red
+        expect(hslToRgb(360, 100, 50)).toBe('rgb(255, 0, 0)'); // Red
         expect(hslToRgb(120, 100, 50)).toBe('rgb(0, 255, 0)'); // Green
         expect(hslToRgb(240, 100, 50)).toBe('rgb(0, 0, 255)'); // Blue
         expect(hslToRgb(60, 100, 50)).toBe('rgb(255, 255, 0)'); // Yellow
@@ -11,6 +12,12 @@ describe('hslToRgb', () => {
         expect(hslToRgb(0, 0, 0)).toBe('rgb(0, 0, 0)'); // Black
         expect(hslToRgb(0, 0, 100)).toBe('rgb(255, 255, 255)'); // White
         expect(hslToRgb(0, 0, 50)).toBe('rgb(128, 128, 128)'); // Gray
+    });
+
+    test('converts HSL values to RGB color object correctly', () => {
+        expect(hslToRgb(0, 100, 50, false)).toEqual({r: 255, g: 0, b: 0});
+        expect(hslToRgb(120, 100, 50, false)).toEqual({r: 0, g: 255, b: 0});
+        expect(hslToRgb(240, 100, 50, false)).toEqual({r: 0, g: 0, b: 255});
     });
 
     test('handles gray colors correctly', () => {
