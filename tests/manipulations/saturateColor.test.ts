@@ -33,9 +33,9 @@ describe('saturateColor', () => {
         expect(saturateColor('lch(50% 30 100)', 50)).toBe('lch(50% 45 100)');
     });
 
-    // test('throws error for invalid color format', () => {
-    //     expect(() => saturateColor('invalid', 50)).toThrow('Unsupported color format invalid for saturation');
-    // });
+    test('throws error for invalid color format', () => {
+        expect(() => saturateColor('red', 50)).toThrow('Unsupported color format red for saturation');
+    });
 
     test('throws error for invalid amount', () => {
         expect(() => saturateColor('hsl(0, 50%, 50%)', 150)).toThrow('Invalid amount 150. Amount should be between 0 and 100.');
