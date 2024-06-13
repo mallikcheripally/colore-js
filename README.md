@@ -52,7 +52,7 @@ npm install colore
 Alternatively, if you use Yarn:
 
 ```bash
-npm add colore
+yarn add colore
 ```
 
 ## Getting Started
