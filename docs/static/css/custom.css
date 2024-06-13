@@ -1,0 +1,73 @@
+html[data-theme='light'] {
+    --ifm-color-primary: #147af3;
+    --ifm-color-primary-dark: #0265dc;
+    --ifm-color-primary-darker: #0054b6;
+    --ifm-color-primary-light: #59a7f6;
+    --ifm-color-primary-lighter: #b5deff;
+    --ifm-color-primary-lightest: #e0f2ff;
+
+    /* Update other color variables if needed */
+    --ifm-link-color: var(--ifm-color-primary);
+    --ifm-link-hover-color: var(--ifm-color-primary-dark);
+    --ifm-link-active-color: var(--ifm-color-primary-darker);
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] {
+    --ifm-color-primary: #54a3f6;
+    --ifm-color-primary-dark: #348ff4;
+    --ifm-color-primary-darker: #1379f3;
+    --ifm-color-primary-light: #72b7f9;
+    --ifm-color-primary-lighter: #aedbfe;
+    --ifm-color-primary-lightest: #e8f6ff;
+}
+
+/* Custom styles for details and summary tags */
+details {
+    border: 1px solid var(--ifm-color-emphasis-300) !important;
+    background-color: var(--ifm-background-color) !important;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+summary {
+    color: var(--ifm-color-content);
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--ifm-background-color);
+    outline: none;
+    font-weight: bold;
+}
+
+summary::before {
+    border-color: transparent transparent transparent var(--ifm-color-primary) !important;
+    top: 1rem !important;
+}
+
+details[open] summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+details .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
+    border-top: 1px solid var(--ifm-color-emphasis-200) !important;
+}
+
+.footer {
+    --ifm-footer-background-color: #222222 !important;
+}
+
+/* Dark mode custom styles for details and summary tags */
+html[data-theme='dark'] details {
+    border: 1px solid var(--ifm-color-primary-dark);
+    background-color: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] summary {
+    color: var(--ifm-color-content);
+    background-color: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] summary::before {
+    border-color: transparent transparent transparent var(--ifm-color-primary) !important;
+}

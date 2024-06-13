@@ -1,0 +1,44 @@
+---
+id: parseNamedColor
+title: parseNamedColor
+---
+
+# parseNamedColor
+
+The `parseNamedColor` function parses a named color and returns its RGB representation.
+
+## Syntax
+
+```typescript
+parseNamedColor(color: string): { r: number; g: number; b: number }
+```
+
+### Parameters
+
+- **`color`** (string): The named color string.
+
+### Returns
+
+- **object**: An object containing RGB values.
+
+### Throws
+
+- **Error**: Throws an error if the color is not a valid named color.
+
+## Example
+
+```typescript
+import { parseNamedColor } from 'colore';
+
+const rgb = parseNamedColor('red');
+console.log(rgb);
+// Output: { r: 255, g: 0, b: 0 }
+
+const rgbUnknown = parseNamedColor('unknown');
+console.log(rgbUnknown);
+// Output: Error: Invalid named color format
+```
+
+## Usage
+
+The `parseNamedColor` function is used to convert a named color to its RGB representation. This can be useful for color manipulation and analysis in various design and art applications.

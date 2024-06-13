@@ -1,0 +1,45 @@
+---
+id: hexToHsl
+title: hexToHsl
+---
+
+# hexToHsl
+
+The `hexToHsl` function converts a HEX color string to an HSL color string or object.
+
+## Syntax
+
+```typescript
+hexToHsl(hex: string, asString?: true): string;
+hexToHsl(hex: string, asString?: false): { h: number; s: number; l: number };
+hexToHsl(hex: string, asString: boolean = true): string | { h: number; s: number; l: number };
+```
+
+### Parameters
+
+- **`hex`** (string): The HEX color string.
+- **`asString`** (boolean, optional): Whether to return the result as a string. Defaults to `true`.
+
+### Returns
+
+- **string | Object**: The HSL color string in the format "hsl(h, s%, l%)" or an object containing HSL values.
+  - If `asString` is `true`, returns a string: `hsl(h, s%, l%)`.
+  - If `asString` is `false`, returns an object: `{ h: number; s: number; l: number }`.
+
+## Example
+
+```typescript
+import { hexToHsl } from 'colore';
+
+// Example with string output
+const hslString = hexToHsl('#ff5733');
+console.log(hslString); // Output: "hsl(14, 100%, 57%)"
+
+// Example with object output
+const hslObject = hexToHsl('#ff5733', false);
+console.log(hslObject); // Output: { h: 14, s: 100, l: 57 }
+```
+
+## Usage
+
+The `hexToHsl` function is used to convert HEX color values to HSL color values, which can be useful for color manipulation and conversions in web development.

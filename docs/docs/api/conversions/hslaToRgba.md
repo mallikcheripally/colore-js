@@ -1,0 +1,51 @@
+---
+id: hslaToRgba
+title: hslaToRgba
+---
+
+# hslaToRgba
+
+The `hslaToRgba` function converts HSLA color values to an RGBA color string or an object.
+
+## Syntax
+
+```typescript
+hslaToRgba(h: number, s: number, l: number, a: number, asString?: true): string;
+hslaToRgba(h: number, s: number, l: number, a: number, asString?: false): { r: number; g: number; b: number; a: number };
+hslaToRgba(h: number, s: number, l: number, a: number, asString: boolean = true): string | { r: number; g: number; b: number; a: number };
+```
+
+### Parameters
+
+- **`h`** (number): The hue value (0-360).
+- **`s`** (number): The saturation value (0-100).
+- **`l`** (number): The lightness value (0-100).
+- **`a`** (number): The alpha value (0-1).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string**: The RGBA color string in the format "rgba(r, g, b, a)" if `asString` is true.
+- **object**: The RGBA color as an object with properties `r`, `g`, `b`, and `a` if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if any of the color values are out of range.
+
+## Example
+
+```typescript
+import { hslaToRgba } from 'colore';
+
+// Example usage as string
+const rgbaString = hslaToRgba(360, 100, 50, 1);
+console.log(rgbaString); // Output: "rgba(255, 0, 0, 1)"
+
+// Example usage as object
+const rgbaObject = hslaToRgba(360, 100, 50, 1, false);
+console.log(rgbaObject); // Output: { r: 255, g: 0, b: 0, a: 1 }
+```
+
+## Usage
+
+The `hslaToRgba` function is useful for converting HSLA color values to RGBA, which can be beneficial for various color manipulations and adjustments in applications.

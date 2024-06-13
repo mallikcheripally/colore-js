@@ -1,0 +1,44 @@
+---
+id: parseRgba
+title: parseRgba
+---
+
+# parseRgba
+
+The `parseRgba` function parses an RGBA color string into its individual components.
+
+## Syntax
+
+```typescript
+parseRgba(color: string): { r: number; rUnit: string; rNum: number; g: number; gUnit: string; gNum: number; b: number; bUnit: string; bNum: number; a: number; aUnit: string; aNum: number; }
+```
+
+### Parameters
+
+- **`color`** (string): The RGBA color string to parse.
+
+### Returns
+
+- **object**: An object containing RGBA values and units.
+
+### Throws
+
+- **Error**: Throws an error if the color string is not a valid RGBA format.
+
+## Example
+
+```typescript
+import { parseRgba } from 'colore';
+
+const rgba = parseRgba('rgba(255, 0, 0, 0.5)');
+console.log(rgba);
+// Output: { r: 255, rUnit: '', rNum: 255, g: 0, gUnit: '', gNum: 0, b: 0, bUnit: '', bNum: 0, a: 0.5, aUnit: '', aNum: 0.5 }
+
+const rgbaPercent = parseRgba('rgba(100%, 0%, 0%, 50%)');
+console.log(rgbaPercent);
+// Output: { r: 255, rUnit: '%', rNum: 255, g: 0, gUnit: '%', gNum: 0, b: 0, bUnit: '%', bNum: 0, a: 50, aUnit: '%', aNum: 0.5 }
+```
+
+## Usage
+
+The `parseRgba` function is used to convert an RGBA color string to its individual components. This can be useful for color manipulation and analysis in various design and art applications.

@@ -1,0 +1,50 @@
+---
+id: rgbToHsl
+title: rgbToHsl
+---
+
+# rgbToHsl
+
+The `rgbToHsl` function converts RGB color values to an HSL color string or an object.
+
+## Syntax
+
+```typescript
+rgbToHsl(r: number, g: number, b: number, asString?: true): string;
+rgbToHsl(r: number, g: number, b: number, asString?: false): { h: number, s: number, l: number };
+rgbToHsl(r: number, g: number, b: number, asString: boolean = true): string | { h: number, s: number, l: number };
+```
+
+### Parameters
+
+- **`r`** (number): The red color value (0-255).
+- **`g`** (number): The green color value (0-255).
+- **`b`** (number): The blue color value (0-255).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string**: The HSL color string in the format "hsl(h, s%, l%)" if `asString` is true.
+- **object**: The HSL color as an object with properties `h`, `s`, and `l` if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if any of the color values are out of range.
+
+## Example
+
+```typescript
+import { rgbToHsl } from 'colore';
+
+// Example usage as string
+const hslString = rgbToHsl(255, 87, 51);
+console.log(hslString); // Output: "hsl(14, 100%, 60%)"
+
+// Example usage as object
+const hslObject = rgbToHsl(255, 87, 51, false);
+console.log(hslObject); // Output: { h: 14, s: 100, l: 60 }
+```
+
+## Usage
+
+The `rgbToHsl` function is useful for converting RGB color values to HSL, which can be beneficial for various color manipulations and adjustments in applications.

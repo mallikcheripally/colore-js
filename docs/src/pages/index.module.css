@@ -1,0 +1,73 @@
+/* src/pages/index.module.css */
+
+.heroBanner {
+  background: linear-gradient(135deg, #555be7, #8c41e9);
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.announcement {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.announcementContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.announcementImage {
+  max-width: 100%;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.benefits {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.benefit {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.community {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.communityLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.communityLinks .button {
+  font-size: 1.2rem;
+}

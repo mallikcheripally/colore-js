@@ -1,0 +1,44 @@
+---
+id: triadicColors
+title: triadicColors
+---
+
+# triadicColors
+
+The `triadicColors` function finds the triadic colors of a given color. Triadic colors are three colors evenly spaced around the color wheel, providing a balanced and vibrant palette.
+
+## Syntax
+
+```typescript
+triadicColors(color: string): string[]
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+
+### Returns
+
+- **string[]**: An array of triadic colors in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid.
+
+## Example
+
+```typescript
+import { triadicColors } from 'colore';
+
+const triadic = triadicColors('#ff0000');
+console.log(triadic);
+// Output: ['#00ff00', '#0000ff']
+
+const triadicRgb = triadicColors('rgb(255, 0, 0)');
+console.log(triadicRgb);
+// Output: ['rgb(0, 255, 0)', 'rgb(0, 0, 255)']
+```
+
+## Usage
+
+The `triadicColors` function is used to generate a set of three colors that are well-balanced and harmonious. This is particularly useful in design and art for creating visually appealing color schemes.

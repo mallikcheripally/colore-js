@@ -1,0 +1,52 @@
+---
+id: getContrastRatio
+title: getContrastRatio
+---
+
+# getContrastRatio
+
+The `getContrastRatio` function is used to calculate the contrast ratio between two colors. This ratio is important for ensuring that text and other elements have sufficient contrast to be readable, especially for users with visual impairments. The contrast ratio is calculated according to the [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum).
+
+## Syntax
+
+```typescript
+getContrastRatio(color1: string, color2: string): { 
+    ratio: number, 
+    ratioString: string, 
+    isAccessible: boolean, 
+    level: 'AA' | 'AAA' | 'None'
+}
+```
+
+### Parameters
+
+- **`color1`** (string): The first color.
+- **`color2`** (string): The second color.
+
+### Returns
+
+- **Object**: An object containing the contrast ratio result.
+  - **`ratio`** (number): The contrast ratio between the two colors.
+  - **`ratioString`** (string): The contrast ratio as a formatted string (e.g., "4.5:1").
+  - **`isAccessible`** (boolean): Indicates if the contrast ratio meets accessibility standards.
+  - **`level`** ('AA' | 'AAA' | 'None'): The WCAG accessibility level met by the contrast ratio.
+
+## Example
+
+```typescript
+import { getContrastRatio } from 'colore';
+
+// Example with hex colors
+const result = getContrastRatio('#ffffff', '#000000');
+console.log(result);
+// Output: { ratio: 21, ratioString: "21.00:1", isAccessible: true, level: 'AAA' }
+
+// Example with RGB colors
+const result = getContrastRatio('rgb(255, 255, 255)', 'rgb(0, 0, 0)');
+console.log(result);
+// Output: { ratio: 21, ratioString: "21.00:1", isAccessible: true, level: 'AAA' }
+```
+
+## Usage
+
+The `getContrastRatio` function is commonly used in web development to ensure that the text is legible against background colors. According to WCAG guidelines, a contrast ratio of at least 4.5:1 is required for normal text, and 3:1 for large text.

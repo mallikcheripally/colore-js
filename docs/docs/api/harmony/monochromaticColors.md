@@ -1,0 +1,44 @@
+---
+id: monochromaticColors
+title: monochromaticColors
+---
+
+# monochromaticColors
+
+The `monochromaticColors` function finds the monochromatic colors of a given color. Monochromatic colors are variations in lightness and saturation of a single color, providing a cohesive and harmonious look.
+
+## Syntax
+
+```typescript
+monochromaticColors(color: string): string[]
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+
+### Returns
+
+- **string[]**: An array of monochromatic colors in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid.
+
+## Example
+
+```typescript
+import { monochromaticColors } from 'colore';
+
+const monochromatic = monochromaticColors('#ff0000');
+console.log(monochromatic);
+// Output: ['#4c0000', '#b20000', '#ff0000', '#ff4c4c', '#ff9999']
+
+const monochromaticRgb = monochromaticColors('rgb(255, 0, 0)');
+console.log(monochromaticRgb);
+// Output: ['rgb(76, 0, 0)', 'rgb(178, 0, 0)', 'rgb(255, 0, 0)', 'rgb(255, 76, 76)', 'rgb(255, 153, 153)']
+```
+
+## Usage
+
+The `monochromaticColors` function is used to generate a range of colors that are variations of a single base color. This is particularly useful in design and art for creating color schemes that are visually consistent and pleasing.

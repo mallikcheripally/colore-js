@@ -1,0 +1,46 @@
+---
+id: cmykToRgb
+title: cmykToRgb
+---
+
+# cmykToRgb
+
+The `cmykToRgb` function converts CMYK color values to RGB values. This conversion is useful when working with color formats that require RGB values for various applications, including web development and graphic design.
+
+## Syntax
+
+```typescript
+cmykToRgb(c: number, m: number, y: number, k: number, asString?: true): string;
+cmykToRgb(c: number, m: number, y: number, k: number, asString?: false): { r: number; g: number; b: number };
+cmykToRgb(c: number, m: number, y: number, k: number, asString: boolean = true): string | { r: number; g: number; b: number };
+```
+
+### Parameters
+
+- **`c`** (number): The cyan value (0-100).
+- **`m`** (number): The magenta value (0-100).
+- **`y`** (number): The yellow value (0-100).
+- **`k`** (number): The key (black) value (0-100).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string | object**: The RGB color string in the format "rgb(r, g, b)" or an object containing the RGB values.
+
+## Example
+
+```typescript
+import { cmykToRgb } from 'colore';
+
+// Example with asString=true (default)
+const rgbString = cmykToRgb(0, 100, 100, 0);
+console.log(rgbString); // Output: "rgb(255, 0, 0)"
+
+// Example with asString=false
+const rgbObject = cmykToRgb(0, 100, 100, 0, false);
+console.log(rgbObject); // Output: { r: 255, g: 0, b: 0 }
+```
+
+## Usage
+
+The `cmykToRgb` function is useful for converting CMYK color values, commonly used in printing, to RGB values, which are commonly used in digital displays.

@@ -1,0 +1,51 @@
+---
+id: rgbaToHsva
+title: rgbaToHsva
+---
+
+# rgbaToHsva
+
+The `rgbaToHsva` function converts RGBA color values to HSVA format.
+
+## Syntax
+
+```typescript
+rgbaToHsva(r: number, g: number, b: number, a: number, asString?: true): string;
+rgbaToHsva(r: number, g: number, b: number, a: number, asString?: false): { h: number; s: number; v: number; a: number };
+rgbaToHsva(r: number, g: number, b: number, a: number, asString: boolean = true): string | { h: number; s: number; v: number; a: number };
+```
+
+### Parameters
+
+- **`r`** (number): The red value (0-255).
+- **`g`** (number): The green value (0-255).
+- **`b`** (number): The blue value (0-255).
+- **`a`** (number): The alpha value (0-1).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string**: The HSVA color string in the format "hsva(h, s%, v%, a)" if `asString` is true.
+- **object**: The HSVA color as an object with properties `h`, `s`, `v`, and `a` if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if the input color values are out of range.
+
+## Example
+
+```typescript
+import { rgbaToHsva } from 'colore';
+
+// Example usage as string
+const hsvaString = rgbaToHsva(255, 87, 51, 0.8);
+console.log(hsvaString); // Output: "hsva(14, 80%, 100%, 0.8)"
+
+// Example usage as object
+const hsvaObject = rgbaToHsva(255, 87, 51, 0.8, false);
+console.log(hsvaObject); // Output: { h: 14, s: 80, v: 100, a: 0.8 }
+```
+
+## Usage
+
+The `rgbaToHsva` function is useful for converting RGBA color values to HSVA format, which can be beneficial for various color manipulations and adjustments in applications.

@@ -1,0 +1,45 @@
+---
+id: darkenColor
+title: darkenColor
+---
+
+# darkenColor
+
+The `darkenColor` function darkens a given color by a specified amount. This is useful for creating darker shades of a color for design and art purposes.
+
+## Syntax
+
+```typescript
+darkenColor(color: string, amount: number): string | undefined
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+- **`amount`** (number): The amount to darken the color (0-100).
+
+### Returns
+
+- **string | undefined**: The darkened color in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid.
+
+## Example
+
+```typescript
+import { darkenColor } from 'colore';
+
+const darkened = darkenColor('#ff0000', 20);
+console.log(darkened);
+// Output: '#cc0000'
+
+const darkenedRgb = darkenColor('rgb(255, 0, 0)', 20);
+console.log(darkenedRgb);
+// Output: 'rgb(204, 0, 0)'
+```
+
+## Usage
+
+The `darkenColor` function is used to create darker shades of a color, which can be useful in design and art for adding depth and contrast to color schemes.

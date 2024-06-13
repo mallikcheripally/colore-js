@@ -1,0 +1,44 @@
+---
+id: tetradicColors
+title: tetradicColors
+---
+
+# tetradicColors
+
+The `tetradicColors` function finds the tetradic colors of a given color. Tetradic colors are four colors arranged into two complementary pairs, providing a rich and diverse palette.
+
+## Syntax
+
+```typescript
+tetradicColors(color: string): string[]
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+
+### Returns
+
+- **string[]**: An array of tetradic colors in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid.
+
+## Example
+
+```typescript
+import { tetradicColors } from 'colore';
+
+const tetradic = tetradicColors('#ff0000');
+console.log(tetradic);
+// Output: ['#00ff00', '#0000ff', '#ff00ff']
+
+const tetradicRgb = tetradicColors('rgb(255, 0, 0)');
+console.log(tetradicRgb);
+// Output: ['rgb(0, 255, 0)', 'rgb(0, 0, 255)', 'rgb(255, 0, 255)']
+```
+
+## Usage
+
+The `tetradicColors` function is used to generate a set of four colors that are well-balanced and vibrant. This is particularly useful in design and art for creating complex and visually appealing color schemes.
