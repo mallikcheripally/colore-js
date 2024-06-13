@@ -1,11 +1,11 @@
-<div style="text-align: center;">
+<div align="center">
   <a href="https://colore.mallikcheripally.com/">
     <img alt="colore" src="assets/images/github-poster.png" width="640" height="227" />
   </a>
 </div>
  <br /><br />
 
-<div style="text-align: center;">
+<div align="center">
   <a href="https://www.npmjs.com/package/colore">
     <img alt="npm" src="https://img.shields.io/npm/v/colore.svg?labelColor=555be7&color=8c41e9" />
   </a>
@@ -27,7 +27,7 @@
 </div>
  <br />
 
-<div style="text-align: center;">
+<div align="center">
 <strong>Colore</strong> is a powerful and versatile color manipulation library for JavaScript and TypeScript, designed to meet all your color processing needs. 
 <br />
 It provides an extensive set of features for color conversions, manipulations, and analysis, ensuring high performance and accuracy.
