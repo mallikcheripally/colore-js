@@ -29,8 +29,6 @@
 
 <div align="center">
 <strong>Colore</strong> is a powerful and versatile color manipulation library for JavaScript and TypeScript, designed to meet all your color processing needs. 
-<br />
-It provides an extensive set of features for color conversions, manipulations, and analysis, ensuring high performance and accuracy.
 </div>
 
 
