@@ -77,3 +77,8 @@ export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';
 export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
+
+
+// Utils
+export { BlendingModes } from '@/utils/blendingModes';
+export { ColorFormats } from '@/utils/colorFormats';
