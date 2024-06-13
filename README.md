@@ -73,6 +73,7 @@ console.log(rgb); // Output: rgb(255, 255, 255)
 - Named Colors strings and objects
 - RGB strings and objects
 - RGBA strings and objects
+- XYZ strings and objects
 
 ## API Reference
 Visit our [Docs](https://colore.mallikcheripally.com) for comprehensive documentation.
