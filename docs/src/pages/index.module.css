@@ -1,7 +1,8 @@
 /* src/pages/index.module.css */
 
 .heroBanner {
-  background: linear-gradient(135deg, #555be7, #8c41e9);
+  /*background: linear-gradient(135deg, #555be7, #8c41e9);*/
+  background: linear-gradient(135deg, rgb(227, 153, 18), rgb(194, 144, 19), rgb(243, 43, 82), rgb(15, 104, 140), rgb(10, 207, 217));
   color: #fff;
   padding: 4rem 0;
   text-align: center;
