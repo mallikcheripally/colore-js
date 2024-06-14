@@ -34,7 +34,7 @@ lchToRgb(l: number, c: number, h: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { lchToRgb } from 'colore';
+import { lchToRgb } from 'colore-js';
 
 // Example usage as string
 const rgbString = lchToRgb(70, 25, 120);

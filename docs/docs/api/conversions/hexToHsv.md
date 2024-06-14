@@ -32,7 +32,7 @@ hexToHsv(hex: string, asString: boolean = true): string | { h: number; s: number
 ## Example
 
 ```typescript
-import { hexToHsv } from 'colore';
+import { hexToHsv } from 'colore-js';
 
 // Example usage as string
 const hsvString = hexToHsv('#ff5733');

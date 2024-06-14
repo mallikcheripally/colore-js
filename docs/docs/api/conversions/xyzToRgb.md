@@ -34,7 +34,7 @@ xyzToRgb(x: number, y: number, z: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { xyzToRgb } from 'colore';
+import { xyzToRgb } from 'colore-js';
 
 // Example usage as string
 const rgbString = xyzToRgb(41.24, 21.26, 1.93);

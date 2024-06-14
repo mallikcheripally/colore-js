@@ -28,7 +28,7 @@ parseRgba(color: string): { r: number; rUnit: string; rNum: number; g: number; g
 ## Example
 
 ```typescript
-import { parseRgba } from 'colore';
+import { parseRgba } from 'colore-js';
 
 const rgba = parseRgba('rgba(255, 0, 0, 0.5)');
 console.log(rgba);

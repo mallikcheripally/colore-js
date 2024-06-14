@@ -24,7 +24,7 @@ isValidHexAlpha(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidHexAlpha } from 'colore';
+import { isValidHexAlpha } from 'colore-js';
 
 console.log(isValidHexAlpha('#ff0000ff')); // Output: true
 console.log(isValidHexAlpha('#f00f'));    // Output: true

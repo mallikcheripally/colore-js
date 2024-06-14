@@ -9,7 +9,7 @@ const config: Config = {
   url: 'https://colore.mallikcheripally.com',
   baseUrl: '/',
   organizationName: 'mallikcheripally',
-  projectName: 'colore',
+  projectName: 'colore-js',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   stylesheets: [

@@ -35,7 +35,7 @@ rgbaToHsva(r: number, g: number, b: number, a: number, asString: boolean = true)
 ## Example
 
 ```typescript
-import { rgbaToHsva } from 'colore';
+import { rgbaToHsva } from 'colore-js';
 
 // Example usage as string
 const hsvaString = rgbaToHsva(255, 87, 51, 0.8);

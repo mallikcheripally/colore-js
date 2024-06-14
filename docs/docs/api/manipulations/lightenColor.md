@@ -29,7 +29,7 @@ lightenColor(color: string, amount: number): string | undefined
 ## Example
 
 ```typescript
-import { lightenColor } from 'colore';
+import { lightenColor } from 'colore-js';
 
 const lightened = lightenColor('#ff0000', 20);
 console.log(lightened);

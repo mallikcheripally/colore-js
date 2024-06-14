@@ -28,7 +28,7 @@ parseColorToRgba(color: string): { r: number; g: number; b: number; a?: number }
 ## Example
 
 ```typescript
-import { parseColorToRgba } from 'colore';
+import { parseColorToRgba } from 'colore-js';
 
 const rgbaHex = parseColorToRgba('#ff0000');
 console.log(rgbaHex);

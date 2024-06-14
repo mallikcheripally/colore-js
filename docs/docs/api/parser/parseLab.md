@@ -28,7 +28,7 @@ parseLab(color: string): { l: number; lUnit?: string; a: number; aUnit?: string;
 ## Example
 
 ```typescript
-import { parseLab } from 'colore';
+import { parseLab } from 'colore-js';
 
 const lab = parseLab('lab(53.23288% 80.109309 -67.220068)');
 console.log(lab);

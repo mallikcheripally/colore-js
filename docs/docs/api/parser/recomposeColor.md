@@ -29,7 +29,7 @@ recomposeColor(color: string, decomposed: any): string
 ## Example
 
 ```typescript
-import { recomposeColor } from 'colore';
+import { recomposeColor } from 'colore-js';
 
 const decomposedRgb = { r: 255, g: 0, b: 0 };
 const recomposedRgb = recomposeColor('rgb(255, 0, 0)', decomposedRgb);

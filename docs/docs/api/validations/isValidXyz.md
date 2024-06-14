@@ -24,7 +24,7 @@ isValidXyz(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidXyz } from 'colore';
+import { isValidXyz } from 'colore-js';
 
 console.log(isValidXyz('xyz(0.4124564, 0.3575761, 0.1804375)')); // Output: true
 console.log(isValidXyz('xyz(0.412, 0.357, 0.180)')); // Output: true

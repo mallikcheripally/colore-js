@@ -28,7 +28,7 @@ parseLch(color: string): { l: number; lUnit?: string; c: number; cUnit?: string;
 ## Example
 
 ```typescript
-import { parseLch } from 'colore';
+import { parseLch } from 'colore-js';
 
 const lch = parseLch('lch(53.23288% 104.55262 40.000008)');
 console.log(lch);

@@ -34,7 +34,7 @@ rgbToLch(r: number, g: number, b: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { rgbToLch } from 'colore';
+import { rgbToLch } from 'colore-js';
 
 // Example usage as string
 const lchString = rgbToLch(255, 87, 51);

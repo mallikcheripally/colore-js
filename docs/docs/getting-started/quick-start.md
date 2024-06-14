@@ -28,7 +28,7 @@ yarn add colore-js
 Once installed, you can import and use Colore functions in your project:
 
 ```javascript
-import { blendColors, darkenColor, lightenColor } from 'colore';
+import { blendColors, darkenColor, lightenColor } from 'colore-js';
 
 // Example usage
 const blendedColor = blendColors('#ff5733', '#33aaff');

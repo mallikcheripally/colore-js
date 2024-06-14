@@ -28,7 +28,7 @@ complementaryColor(color: string): string
 ## Example
 
 ```typescript
-import { complementaryColor } from 'colore';
+import { complementaryColor } from 'colore-js';
 
 const complementary = complementaryColor('#ff0000');
 console.log(complementary);

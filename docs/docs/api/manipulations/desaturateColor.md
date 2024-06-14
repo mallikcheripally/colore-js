@@ -29,7 +29,7 @@ desaturateColor(color: string, amount: number): string
 ## Example
 
 ```typescript
-import { desaturateColor } from 'colore';
+import { desaturateColor } from 'colore-js';
 
 const desaturated = desaturateColor('#ff0000', 50);
 console.log(desaturated);

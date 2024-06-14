@@ -36,7 +36,7 @@ hexAlphaToRgba(hex: string, asString: boolean = true): string | { r: number; g: 
 ## Example
 
 ```typescript
-import { hexAlphaToRgba } from 'colore';
+import { hexAlphaToRgba } from 'colore-js';
 
 // Example with hex color and alpha as string
 const rgbaString = hexAlphaToRgba('#FF5733CC');

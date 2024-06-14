@@ -30,7 +30,7 @@ hslToHex(h: number, s: number, l: number): string;
 ## Example
 
 ```typescript
-import { hslToHex } from 'colore';
+import { hslToHex } from 'colore-js';
 
 const hexColor = hslToHex(360, 100, 50);
 console.log(hexColor); // Output: "#ff0000"

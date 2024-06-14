@@ -29,7 +29,7 @@ saturateColor(color: string, amount: number): string
 ## Example
 
 ```typescript
-import { saturateColor } from 'colore';
+import { saturateColor } from 'colore-js';
 
 const saturated = saturateColor('#ff0000', 50);
 console.log(saturated);

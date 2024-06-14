@@ -28,7 +28,7 @@ parseXyz(color: string): { x: number; y: number; z: number; }
 ## Example
 
 ```typescript
-import { parseXyz } from 'colore';
+import { parseXyz } from 'colore-js';
 
 const xyz = parseXyz('xyz(41.24, 21.26, 1.93)');
 console.log(xyz);

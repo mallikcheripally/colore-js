@@ -24,7 +24,7 @@ isValidHex(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidHex } from 'colore';
+import { isValidHex } from 'colore-js';
 
 console.log(isValidHex('#ff0000')); // Output: true
 console.log(isValidHex('#f00'));    // Output: true

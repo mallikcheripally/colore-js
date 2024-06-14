@@ -24,7 +24,7 @@ detectColorFormat(color: string): ColorFormat
 ## Example
 
 ```typescript
-import { detectColorFormat } from 'colore';
+import { detectColorFormat } from 'colore-js';
 
 const formatHex = detectColorFormat('#ff0000');
 console.log(formatHex);

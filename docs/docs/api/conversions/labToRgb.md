@@ -34,7 +34,7 @@ labToRgb(l: number, a: number, b: number, asString: boolean = true): string | {{
 ## Example
 
 ```typescript
-import { labToRgb } from 'colore';
+import { labToRgb } from 'colore-js';
 
 // Example usage as string
 const rgbString = labToRgb(50, 0, 0);

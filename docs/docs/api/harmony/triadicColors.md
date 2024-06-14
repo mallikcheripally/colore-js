@@ -28,7 +28,7 @@ triadicColors(color: string): string[]
 ## Example
 
 ```typescript
-import { triadicColors } from 'colore';
+import { triadicColors } from 'colore-js';
 
 const triadic = triadicColors('#ff0000');
 console.log(triadic);

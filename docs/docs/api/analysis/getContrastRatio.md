@@ -34,7 +34,7 @@ getContrastRatio(color1: string, color2: string): {
 ## Example
 
 ```typescript
-import { getContrastRatio } from 'colore';
+import { getContrastRatio } from 'colore-js';
 
 // Example with hex colors
 const result = getContrastRatio('#ffffff', '#000000');

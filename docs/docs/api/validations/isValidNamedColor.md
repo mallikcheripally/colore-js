@@ -24,7 +24,7 @@ isValidNamedColor(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidNamedColor } from 'colore';
+import { isValidNamedColor } from 'colore-js';
 
 console.log(isValidNamedColor('red')); // Output: true
 console.log(isValidNamedColor('blue')); // Output: true

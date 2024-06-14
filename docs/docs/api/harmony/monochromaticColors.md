@@ -28,7 +28,7 @@ monochromaticColors(color: string): string[]
 ## Example
 
 ```typescript
-import { monochromaticColors } from 'colore';
+import { monochromaticColors } from 'colore-js';
 
 const monochromatic = monochromaticColors('#ff0000');
 console.log(monochromatic);

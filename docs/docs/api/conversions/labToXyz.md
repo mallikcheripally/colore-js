@@ -34,7 +34,7 @@ labToXyz(l: number, a: number, b: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { labToXyz } from 'colore';
+import { labToXyz } from 'colore-js';
 
 // Example usage as string
 const xyzString = labToXyz(53.23288, 80.10933, 67.22006);

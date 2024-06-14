@@ -34,7 +34,7 @@ rgbToHsl(r: number, g: number, b: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { rgbToHsl } from 'colore';
+import { rgbToHsl } from 'colore-js';
 
 // Example usage as string
 const hslString = rgbToHsl(255, 87, 51);

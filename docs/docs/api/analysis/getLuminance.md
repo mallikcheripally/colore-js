@@ -24,7 +24,7 @@ getLuminance(color: string): number
 ## Example
 
 ```typescript
-import { getLuminance } from 'colore';
+import { getLuminance } from 'colore-js';
 
 const luminance = getLuminance('#ffffff');
 console.log(luminance);

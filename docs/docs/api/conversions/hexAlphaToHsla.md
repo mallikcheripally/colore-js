@@ -33,7 +33,7 @@ hexAlphaToHsla(hex: string, asString: boolean = true): string | { h: number; s: 
 ## Example
 
 ```typescript
-import { hexAlphaToHsla } from 'colore';
+import { hexAlphaToHsla } from 'colore-js';
 
 // Example with HEX color and alpha
 const hslaColor = hexAlphaToHsla('#ff5733cc');

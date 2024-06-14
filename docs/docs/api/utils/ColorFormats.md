@@ -27,7 +27,7 @@ The `ColorFormats` object provides a list of standardized color formats that can
 ## Example
 
 ```typescript
-import {ColorFormats, ColorFormat, detectColorFormat} from 'colore';
+import {ColorFormats, ColorFormat, detectColorFormat} from 'colore-js';
 
 const format: ColorFormat = detectColorFormat('rgb(255, 255, 255)');
 

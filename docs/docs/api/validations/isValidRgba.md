@@ -24,7 +24,7 @@ isValidRgba(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidRgba } from 'colore';
+import { isValidRgba } from 'colore-js';
 
 console.log(isValidRgba('rgba(255, 0, 0, 1)')); // Output: true
 console.log(isValidRgba('rgba(100%, 0%, 0%, 0.5)')); // Output: true

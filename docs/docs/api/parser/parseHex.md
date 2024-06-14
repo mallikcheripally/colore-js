@@ -28,7 +28,7 @@ parseHex(color: string): { r: number; g: number; b: number; }
 ## Example
 
 ```typescript
-import { parseHex } from 'colore';
+import { parseHex } from 'colore-js';
 
 const rgb = parseHex('#ff0000');
 console.log(rgb);

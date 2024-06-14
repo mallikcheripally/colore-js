@@ -27,7 +27,7 @@ The `BlendingMode` type represents the type of blending mode and is defined as o
 ## Example
 
 ```typescript
-import { BlendingModes, BlendingMode, blendColors } from 'colore';
+import { BlendingModes, BlendingMode, blendColors } from 'colore-js';
 
 const blended = blendColors('#ff0000', '#0000ff', BlendingModes.MULTIPLY);
 console.log(blended);

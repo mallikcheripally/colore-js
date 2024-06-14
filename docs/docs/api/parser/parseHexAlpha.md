@@ -28,7 +28,7 @@ parseHexAlpha(color: string): { r: number; g: number; b: number; a: number }
 ## Example
 
 ```typescript
-import { parseHexAlpha } from 'colore';
+import { parseHexAlpha } from 'colore-js';
 
 const rgba = parseHexAlpha('#ff000080');
 console.log(rgba);

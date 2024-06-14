@@ -35,7 +35,7 @@ hslaToRgba(h: number, s: number, l: number, a: number, asString: boolean = true)
 ## Example
 
 ```typescript
-import { hslaToRgba } from 'colore';
+import { hslaToRgba } from 'colore-js';
 
 // Example usage as string
 const rgbaString = hslaToRgba(360, 100, 50, 1);

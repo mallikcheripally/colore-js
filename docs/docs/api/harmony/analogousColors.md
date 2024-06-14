@@ -28,7 +28,7 @@ analogousColors(color: string): string[]
 ## Example
 
 ```typescript
-import { analogousColors } from 'colore';
+import { analogousColors } from 'colore-js';
 
 const analogous = analogousColors('#ff0000');
 console.log(analogous);

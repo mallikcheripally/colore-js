@@ -31,7 +31,7 @@ hexAlphaToHsva(hex: string, asString?: false): { h: number; s: number; v: number
 ## Example
 
 ```typescript
-import { hexAlphaToHsva } from 'colore';
+import { hexAlphaToHsva } from 'colore-js';
 
 const hsvaString = hexAlphaToHsva('#ff5733cc');
 console.log(hsvaString);

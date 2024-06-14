@@ -25,7 +25,7 @@ isValidLab(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidLab } from 'colore';
+import { isValidLab } from 'colore-js';
 
 console.log(isValidLab('lab(50% 0% 0%)')); // Output: true
 console.log(isValidLab('lab(50% 0% 0)'));  // Output: false

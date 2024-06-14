@@ -29,7 +29,7 @@ darkenColor(color: string, amount: number): string | undefined
 ## Example
 
 ```typescript
-import { darkenColor } from 'colore';
+import { darkenColor } from 'colore-js';
 
 const darkened = darkenColor('#ff0000', 20);
 console.log(darkened);

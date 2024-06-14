@@ -33,7 +33,7 @@ rebuildColorFromRgba(originalColor: string, rgba: { r: number; g: number; b: num
 ## Example
 
 ```typescript
-import { rebuildColorFromRgba } from 'colore';
+import { rebuildColorFromRgba } from 'colore-js';
 
 const rgba = { r: 255, g: 0, b: 0, a: 0.5 };
 const hexColor = rebuildColorFromRgba('#ff0000', rgba);

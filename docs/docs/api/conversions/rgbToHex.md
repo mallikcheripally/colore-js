@@ -30,7 +30,7 @@ rgbToHex(r: number, g: number, b: number): string;
 ## Example
 
 ```typescript
-import { rgbToHex } from 'colore';
+import { rgbToHex } from 'colore-js';
 
 // Example usage
 const hexColor = rgbToHex(255, 87, 51);

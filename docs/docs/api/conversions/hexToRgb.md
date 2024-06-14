@@ -32,7 +32,7 @@ hexToRgb(hex: string, asString: boolean = true): string | { r: number; g: number
 ## Example
 
 ```typescript
-import { hexToRgb } from 'colore';
+import { hexToRgb } from 'colore-js';
 
 // Example usage as string
 const rgbString = hexToRgb('#ff5733');

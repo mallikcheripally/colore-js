@@ -57,7 +57,7 @@ yarn add colore-js
 
 ## Getting Started
 ```javascript
-import { hexToRgb } from 'colore';
+import { hexToRgb } from 'colore-js';
 
 const rgb = hexToRgb('#ffffff');
 console.log(rgb); // Output: rgb(255, 255, 255)

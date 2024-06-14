@@ -31,7 +31,7 @@ blendColors(color1: string, color2: string, mode: BlendingMode = BlendingModes.N
 ## Example
 
 ```typescript
-import { blendColors, BlendingModes } from 'colore';
+import { blendColors, BlendingModes } from 'colore-js';
 
 const blended = blendColors('#ff0000', '#0000ff', BlendingModes.MULTIPLY);
 console.log(blended);

@@ -34,7 +34,7 @@ rgbToCmyk(r: number, g: number, b: number, asString: boolean = true): string | {
 ## Example
 
 ```typescript
-import { rgbToCmyk } from 'colore';
+import { rgbToCmyk } from 'colore-js';
 
 // Example usage as string
 const cmykString = rgbToCmyk(255, 0, 0);

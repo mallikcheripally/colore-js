@@ -34,7 +34,7 @@ lchToLab(l: number, c: number, h: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { lchToLab } from 'colore';
+import { lchToLab } from 'colore-js';
 
 // Example usage as string
 const labString = lchToLab(70, 25, 180);

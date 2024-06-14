@@ -24,7 +24,7 @@ isValidHsla(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidHsla } from 'colore';
+import { isValidHsla } from 'colore-js';
 
 console.log(isValidHsla('hsla(120, 100%, 50%, 0.5)')); // Output: true
 console.log(isValidHsla('hsla(120, 100%, 50, 0.5)'));  // Output: false

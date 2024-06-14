@@ -30,7 +30,7 @@ cmykToRgb(c: number, m: number, y: number, k: number, asString: boolean = true):
 ## Example
 
 ```typescript
-import { cmykToRgb } from 'colore';
+import { cmykToRgb } from 'colore-js';
 
 // Example with asString=true (default)
 const rgbString = cmykToRgb(0, 100, 100, 0);

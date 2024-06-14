@@ -28,7 +28,7 @@ parseNamedColor(color: string): { r: number; g: number; b: number }
 ## Example
 
 ```typescript
-import { parseNamedColor } from 'colore';
+import { parseNamedColor } from 'colore-js';
 
 const rgb = parseNamedColor('red');
 console.log(rgb);

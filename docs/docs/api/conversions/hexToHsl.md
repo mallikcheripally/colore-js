@@ -29,7 +29,7 @@ hexToHsl(hex: string, asString: boolean = true): string | { h: number; s: number
 ## Example
 
 ```typescript
-import { hexToHsl } from 'colore';
+import { hexToHsl } from 'colore-js';
 
 // Example with string output
 const hslString = hexToHsl('#ff5733');

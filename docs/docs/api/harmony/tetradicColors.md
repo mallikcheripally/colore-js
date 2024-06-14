@@ -28,7 +28,7 @@ tetradicColors(color: string): string[]
 ## Example
 
 ```typescript
-import { tetradicColors } from 'colore';
+import { tetradicColors } from 'colore-js';
 
 const tetradic = tetradicColors('#ff0000');
 console.log(tetradic);

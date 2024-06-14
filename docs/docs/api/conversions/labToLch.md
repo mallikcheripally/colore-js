@@ -34,7 +34,7 @@ labToLch(l: number, a: number, b: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { labToLch } from 'colore';
+import { labToLch } from 'colore-js';
 
 // Example usage as string
 const lchString = labToLch(75, 20, -30);

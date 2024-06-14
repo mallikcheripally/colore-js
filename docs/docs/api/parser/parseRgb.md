@@ -28,7 +28,7 @@ parseRgb(color: string): { r: number; rUnit: string; rNum: number; g: number; gU
 ## Example
 
 ```typescript
-import { parseRgb } from 'colore';
+import { parseRgb } from 'colore-js';
 
 const rgb = parseRgb('rgb(255, 0, 0)');
 console.log(rgb);

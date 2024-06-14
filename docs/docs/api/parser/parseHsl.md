@@ -28,7 +28,7 @@ parseHsl(color: string): { h: number; hUnit?: string; hDeg: number; s: number; s
 ## Example
 
 ```typescript
-import { parseHsl } from 'colore';
+import { parseHsl } from 'colore-js';
 
 const hsl = parseHsl('hsl(120, 100%, 50%)');
 console.log(hsl);

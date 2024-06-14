@@ -24,7 +24,7 @@ isValidLch(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidLch } from 'colore';
+import { isValidLch } from 'colore-js';
 
 console.log(isValidLch('lch(50% 0 0)')); // Output: true
 console.log(isValidLch('lch(50% 0 0 / 1)')); // Output: true

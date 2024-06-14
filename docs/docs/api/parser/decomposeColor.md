@@ -28,7 +28,7 @@ decomposeColor(color: string): any
 ## Example
 
 ```typescript
-import { decomposeColor } from 'colore';
+import { decomposeColor } from 'colore-js';
 
 const decomposedHex = decomposeColor('#ff0000');
 console.log(decomposedHex);

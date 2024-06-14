@@ -24,7 +24,7 @@ isValidRgb(color: string): boolean
 ## Example
 
 ```typescript
-import { isValidRgb } from 'colore';
+import { isValidRgb } from 'colore-js';
 
 console.log(isValidRgb('rgb(255, 0, 0)')); // Output: true
 console.log(isValidRgb('rgb(100%, 0%, 0%)')); // Output: true

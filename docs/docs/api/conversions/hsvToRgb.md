@@ -34,7 +34,7 @@ hsvToRgb(h: number, s: number, v: number, asString: boolean = true): string | { 
 ## Example
 
 ```typescript
-import { hsvToRgb } from 'colore';
+import { hsvToRgb } from 'colore-js';
 
 // Example usage as string
 const rgbString = hsvToRgb(360, 100, 100);

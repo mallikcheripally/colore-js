@@ -30,7 +30,7 @@ hsvToHex(h: number, s: number, v: number): string;
 ## Example
 
 ```typescript
-import { hsvToHex } from 'colore';
+import { hsvToHex } from 'colore-js';
 
 // Example usage
 const hexColor = hsvToHex(200, 50, 75);

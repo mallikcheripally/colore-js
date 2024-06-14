@@ -31,7 +31,7 @@ rgbaToHexAlpha(r: number, g: number, b: number, a: number): string;
 ## Example
 
 ```typescript
-import { rgbaToHexAlpha } from 'colore';
+import { rgbaToHexAlpha } from 'colore-js';
 
 const hexColor = rgbaToHexAlpha(255, 87, 51, 0.5);
 console.log(hexColor); // Output: "#ff57337f"
