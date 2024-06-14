@@ -130,7 +130,7 @@ export default function Home(): JSX.Element {
     return (
         <Layout
             title={`Welcome to ${siteConfig.title}`}
-            description="A comprehensive color manipulation library for modern web applications.">
+            description="A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.">
             <HomepageHeader />
             <main>
                 <BenefitsSection />

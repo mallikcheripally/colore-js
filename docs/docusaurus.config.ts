@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Colore',
-  tagline: 'A JS library for color conversion, manipulation, accessibility analysis and more.',
+  tagline: 'A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.',
   favicon: 'img/favicon.ico',
   url: 'https://colore.mallikcheripally.com',
   baseUrl: '/',
@@ -114,6 +114,30 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    customFields: {
+      meta: [
+        {
+          name: 'description',
+          content: 'Colore is a powerful and versatile color manipulation library for JavaScript and TypeScript.',
+        },
+        {
+          name: 'keywords',
+          content: 'Colore, Color, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast, CSS, color library',
+        },
+      ],
+    },
+    metadata: [
+      { name: 'description', content: 'A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.' },
+      { name: 'keywords', content: 'Colore, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast ratio, CSS, color library, Color Validation, hex, hsl, hsla, rgb, rgba, lch, lab, xyz', },
+      { property: 'og:title', content: 'Colore - Color Generation, Conversion, Manipulation and Validation Library' },
+      { property: 'og:description', content: 'A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.' },
+      { property: 'og:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
+      { property: 'og:url', content: 'https://colore.mallikcheripally.com' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Colore - Color Generation, Conversion, Manipulation and Validation Library' },
+      { name: 'twitter:description', content: 'A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.' },
+      { name: 'twitter:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
+    ],
   } satisfies Preset.ThemeConfig,
   plugins: [
     [
@@ -123,6 +147,20 @@ const config: Config = {
         indexBlog: false,
         indexPages: true,
         language: 'en',
+      },
+    ],
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'UA-XXXXXX-1', // Replace with your actual Google Analytics tracking ID
+        anonymizeIP: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
       },
     ],
   ],
