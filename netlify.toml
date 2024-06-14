@@ -1,0 +1,13 @@
+[build]
+  base = "docs"
+  command = "yarn build"
+  publish = "build"
+
+[context.production.environment]
+  NODE_VERSION = "12"
+  YARN_VERSION = "1.22.10"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
