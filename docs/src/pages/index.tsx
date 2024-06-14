@@ -129,7 +129,7 @@ export default function Home(): JSX.Element {
     const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            title={`Welcome to ${siteConfig.title}`}
+            title={`JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing`}
             description="A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.">
             <HomepageHeader />
             <main>

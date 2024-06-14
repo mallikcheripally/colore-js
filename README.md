@@ -46,13 +46,13 @@
 To install the Colore library, use the follow command:
 
 ```bash
-npm install colore
+npm install colore-js
 ```
 
 Alternatively, if you use Yarn:
 
 ```bash
-yarn add colore
+yarn add colore-js
 ```
 
 ## Getting Started

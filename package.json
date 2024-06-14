@@ -1,7 +1,7 @@
 {
-  "name": "colore",
+  "name": "colore-js",
   "version": "1.0.0",
-  "description": "A JavaScript library for advanced color manipulation and conversion.",
+  "description": "A JS library for Color Conversions, Manipulations, Harmony Generations, Accessibility Analysis and Parsing.",
   "repository": {
     "type": "git",
     "url": "https://github.com/mallikcheripally/colore.git"

@@ -14,13 +14,13 @@ If you haven't already installed Colore, follow the installation instructions:
 #### Using npm
 
 ```bash
-npm install colore
+npm install colore-js
 ```
 
 #### Using Yarn
 
 ```bash
-yarn add colore
+yarn add colore-js
 ```
 
 ### Step 2: Import Colore Functions

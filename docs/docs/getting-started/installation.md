@@ -16,7 +16,7 @@ Before installing Colore, ensure that you have the following prerequisites:
 To install Colore via npm, run the following command in your project directory:
 
 ```bash
-npm install colore
+npm install colore-js
 ```
 
 ### Installing via Yarn
@@ -24,7 +24,7 @@ npm install colore
 If you prefer using Yarn, you can install Colore by running the following command:
 
 ```bash
-yarn add colore
+yarn add colore-js
 ```
 
 ### Compatibility

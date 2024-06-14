@@ -1,3 +1,8 @@
+.github/
+.idea/
+assets/
+coverage/
+docs/
+node_modules/
 src/
 tests/
-node_modules/

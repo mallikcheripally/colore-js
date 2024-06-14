@@ -16,8 +16,8 @@ title: FAQ
   <summary>How do I install the library?</summary>
   <div class="summary-content">
     You can install the library using npm or yarn:
-    <pre><code>npm install colore</code></pre>
-    <pre><code>yarn add colore</code></pre>
+    <pre><code>npm install colore-js</code></pre>
+    <pre><code>yarn add colore-js</code></pre>
   </div>
 </details>
 

@@ -21,11 +21,11 @@ Colore is a comprehensive color manipulation library designed to simplify color 
 To install Colore, you can use npm or yarn:
 
 ```bash
-npm install colore
+npm install colore-js
 ```
 or
 ```bash
-yarn add colore
+yarn add colore-js
 ```
 
 ### Contributing
