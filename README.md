@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://colore.mallikcheripally.com/">
-    <img alt="colore" src="assets/images/github-poster.png" width="640" height="227" />
+    <img alt="colore" src="assets/images/github-poster.png" width="560" height="220" />
   </a>
 </div>
  <br /><br />
