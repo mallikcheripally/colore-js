@@ -3,7 +3,7 @@
     <img alt="colore" src="assets/images/github-poster.png" width="280" height="110" />
   </a>
 </div>
- <br /><br />
+ <br />
 
 <div align="center">
   <a href="https://www.npmjs.com/package/colore">
