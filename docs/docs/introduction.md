@@ -38,7 +38,7 @@ Colore is licensed under the [MIT License](https://github.com/mallikcheripally/c
 
 ### Getting Started
 
-To get started with Colore, follow the installation and quick-start guides in the [Getting Started](./getting-started/installation) section.
+To get started with Colore, follow the installation and quick-start guides in the [Getting Started](getting-started/installation) section.
 
 ### Staying Informed
 

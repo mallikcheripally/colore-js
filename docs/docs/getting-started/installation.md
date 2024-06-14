@@ -43,4 +43,4 @@ If you encounter any issues during installation, consider the following steps:
 2. **Clear npm cache**: Run `npm cache clean --force` to clear the npm cache.
 3. **Install dependencies**: Run `npm install` or `yarn install` to install all dependencies.
 
-For further assistance, refer to the [FAQ](./faq) or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore).
+For further assistance, refer to the [FAQ](../faq) or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore).

@@ -30,12 +30,12 @@ const config: Config = {
           path: './docs', // Ensure this path is correct
           sidebarPath: require.resolve('./sidebars.ts'),
           editUrl: 'https://github.com/mallikcheripally/colore/edit/main/website/',
-          versions: {
-            current: {
-              label: 'Next',
-              path: 'next',
-            },
-          },
+          // versions: {
+          //   current: {
+          //     label: 'Next',
+          //     path: 'next',
+          //   },
+          // },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

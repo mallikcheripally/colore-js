@@ -53,8 +53,7 @@ Explore the comprehensive features of Colore by referring to the detailed API do
 
 For more detailed information, examples, and advanced usage, refer to the following sections:
 
-- [API Reference](./api-reference)
-- [Examples](./examples)
-- [FAQ](./faq)
+- [API Reference](../api/analysis/getContrastRatio)
+- [FAQ](../faq.md)
 
 Happy coding with Colore!
