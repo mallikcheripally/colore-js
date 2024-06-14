@@ -147,7 +147,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-google-analytics',
       {
-        trackingID: 'UA-XXXXXX-1', // Replace with your actual Google Analytics tracking ID
+        trackingID: 'G-N7DZEKLZNY',
         anonymizeIP: true,
       },
     ]
