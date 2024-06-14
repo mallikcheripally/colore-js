@@ -4,7 +4,7 @@
   publish = "build"
 
 [context.production.environment]
-  NODE_VERSION = "12"
+  NODE_VERSION = "20"
   YARN_VERSION = "1.22.10"
 
 [[redirects]]
