@@ -28,6 +28,24 @@ module.exports = {
         resolve(),
         commonjs(),
         typescript({ tsconfig: './tsconfig.json' }),
-        terser(),
+        terser({
+            ecma: 2015,
+            module: true,
+            toplevel: true,
+            compress: {
+                drop_console: true,
+                drop_debugger: true,
+                passes: 2,
+                dead_code: true,
+            },
+            mangle: {
+                properties: {
+                    regex: /^_/,
+                },
+            },
+            output: {
+                comments: false,
+            },
+        }),
     ],
 };
