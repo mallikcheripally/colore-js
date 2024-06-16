@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://colore.mallikcheripally.com/">
-    <img alt="colore" src="assets/images/github-poster.png" width="280" height="110" />
+    <img alt="colore" src="https://raw.githubusercontent.com/mallikcheripally/colore-js/main/assets/images/github-poster.png" width="280" height="110" />
   </a>
 </div>
  <br />
@@ -9,10 +9,10 @@
   <a href="https://www.npmjs.com/package/colore-js">
     <img alt="npm" src="https://img.shields.io/npm/v/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
-  <a href="https://github.com/mallikcheripally/colore-js-js/actions">
+  <a href="https://github.com/mallikcheripally/colore-js/actions">
     <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore/build.yml?labelColor=555be7&color=8c41e9" />
   </a>
-  <a href="https://github.com/mallikcheripally/colore-js-js/blob/main/LICENSE">
+  <a href="https://github.com/mallikcheripally/colore-js/blob/main/LICENSE">
     <img alt="build" src="https://img.shields.io/npm/l/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://www.npmjs.com/package/colore-js">
@@ -79,10 +79,10 @@ console.log(rgb); // Output: rgb(255, 255, 255)
 Visit our [Docs](https://colore.mallikcheripally.com) for comprehensive documentation.
 
 ## Contributing
-We welcome contributions from the community to make Colore better. If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js-js).
+We welcome contributions from the community to make Colore better. If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Something Missing?
-If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js-js). We welcome contributions from the community to make Colore better.
+If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js). We welcome contributions from the community to make Colore better.
