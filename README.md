@@ -6,17 +6,17 @@
  <br />
 
 <div align="center">
-  <a href="https://www.npmjs.com/package/colore">
-    <img alt="npm" src="https://img.shields.io/npm/v/colore.svg?labelColor=555be7&color=8c41e9" />
+  <a href="https://www.npmjs.com/package/colore-js">
+    <img alt="npm" src="https://img.shields.io/npm/v/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://github.com/mallikcheripally/colore/actions">
     <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore/build.yml?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://github.com/mallikcheripally/colore/blob/main/LICENSE">
-    <img alt="build" src="https://img.shields.io/npm/l/colore.svg?labelColor=555be7&color=8c41e9" />
+    <img alt="build" src="https://img.shields.io/npm/l/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
-  <a href="https://www.npmjs.com/package/colore">
-    <img alt="downloads" src="https://img.shields.io/npm/dm/colore.svg?labelColor=555be7&color=8c41e9" />
+  <a href="https://www.npmjs.com/package/colore-js">
+    <img alt="downloads" src="https://img.shields.io/npm/dm/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://github.com/prettier/prettier">
     <img alt="prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?labelColor=555be7&color=8c41e9" />
