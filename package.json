@@ -1,6 +1,6 @@
 {
   "name": "colore-js",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A JS library for Color Conversions, Manipulations, Harmony Generations, Accessibility Analysis and Parsing.",
   "repository": {
     "type": "git",

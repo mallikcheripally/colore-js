@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/mallikcheripally/colore-js/compare/v1.1.4...v1.1.5) (2024-06-16)
+
+
+### Features
+
+* Update repository URLs in multiple files ([41ceda9](https://github.com/mallikcheripally/colore-js/commit/41ceda902f364b9ae0de1091024d4488955e5206))
+
 ### [1.1.4](https://github.com/mallikcheripally/colore-js/compare/v1.1.3...v1.1.4) (2024-06-16)
 
 
