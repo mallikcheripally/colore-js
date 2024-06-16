@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/mallikcheripally/colore-js-js/compare/v1.1.3...v1.1.4) (2024-06-16)
+
+
+### Features
+
+* Add assets/images to package files ([730c65b](https://github.com/mallikcheripally/colore-js-js/commit/730c65b2c6e7130e53e708e65c894f00ae6b5d71))
+
 ### [1.1.3](https://github.com/mallikcheripally/colore-js-js/compare/v1.1.2...v1.1.3) (2024-06-16)
 
 ### [1.1.2](https://github.com/mallikcheripally/colore-js-js/compare/v1.1.1...v1.1.2) (2024-06-16)
