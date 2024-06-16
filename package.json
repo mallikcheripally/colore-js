@@ -24,7 +24,8 @@
   "module": "dist/colore.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "assets/images"
   ],
   "sideEffects": false,
   "scripts": {
