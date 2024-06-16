@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/mallikcheripally/colore-js/compare/v1.1.5...v1.1.6) (2024-06-16)
+
+
+### Chores
+
+* **package.json:** Remove assets/images from files array ([66e7645](https://github.com/mallikcheripally/colore-js/commit/66e76451ad75279a264169b7e2af5e20922c9b18))
+
 ### [1.1.5](https://github.com/mallikcheripally/colore-js/compare/v1.1.4...v1.1.5) (2024-06-16)
 
 
