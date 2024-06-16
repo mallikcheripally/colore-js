@@ -1,6 +1,5 @@
 .github/
 .idea/
-assets/
 coverage/
 docs/
 node_modules/
