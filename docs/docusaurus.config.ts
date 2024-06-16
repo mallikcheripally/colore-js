@@ -29,7 +29,7 @@ const config: Config = {
         docs: {
           path: './docs', // Ensure this path is correct
           sidebarPath: require.resolve('./sidebars.ts'),
-          editUrl: 'https://github.com/mallikcheripally/colore/edit/main/website/',
+          editUrl: 'https://github.com/mallikcheripally/colore-js/edit/main/website/',
           // versions: {
           //   current: {
           //     label: 'Next',
@@ -59,7 +59,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/mallikcheripally/colore',
+          href: 'https://github.com/mallikcheripally/colore-js',
           label: 'GitHub',
           position: 'right',
         },
@@ -89,7 +89,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/mallikcheripally/colore/discussions',
+              href: 'https://github.com/mallikcheripally/colore-js/discussions',
             }
           ],
         },
@@ -98,7 +98,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/mallikcheripally/colore',
+              href: 'https://github.com/mallikcheripally/colore-js',
             },
           ],
         },

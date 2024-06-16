@@ -4,7 +4,7 @@
   "description": "A JS library for Color Conversions, Manipulations, Harmony Generations, Accessibility Analysis and Parsing.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mallikcheripally/colore.git"
+    "url": "https://github.com/mallikcheripally/colore-js-js.git"
   },
   "keywords": [
     "color",
@@ -16,9 +16,9 @@
   "author": "Mallik Cheripally",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mallikcheripally/colore/issues"
+    "url": "https://github.com/mallikcheripally/colore-js-js/issues"
   },
-  "homepage": "https://github.com/mallikcheripally/colore#readme",
+  "homepage": "https://github.com/mallikcheripally/colore-js-js#readme",
   "type": "module",
   "main": "dist/colore.cjs.js",
   "module": "dist/colore.esm.js",

@@ -30,11 +30,11 @@ yarn add colore-js
 
 ### Contributing
 
-We welcome contributions to Colore! If you have suggestions for new features or have found a bug, please open an issue or submit a pull request on our [GitHub Repository](https://github.com/mallikcheripally/colore). For more details, check out our [contributing guide](https://github.com/your-repo/CONTRIBUTING.md).
+We welcome contributions to Colore! If you have suggestions for new features or have found a bug, please open an issue or submit a pull request on our [GitHub Repository](https://github.com/mallikcheripally/colore-js). For more details, check out our [contributing guide](https://github.com/your-repo/CONTRIBUTING.md).
 
 ### License
 
-Colore is licensed under the [MIT License](https://github.com/mallikcheripally/colore/LICENSE).
+Colore is licensed under the [MIT License](https://github.com/mallikcheripally/colore-js/LICENSE).
 
 ### Getting Started
 
@@ -44,8 +44,8 @@ To get started with Colore, follow the installation and quick-start guides in th
 
 Stay updated with the latest developments and releases of the Colore library:
 
-- ⭐ **GitHub Repository**: [Colore on GitHub](https://github.com/mallikcheripally/colore)
+- ⭐ **GitHub Repository**: [Colore on GitHub](https://github.com/mallikcheripally/colore-js)
 
 ### Something Missing?
 
-If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore). We welcome contributions from the community to make Colore better.
+If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js). We welcome contributions from the community to make Colore better.

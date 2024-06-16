@@ -9,10 +9,10 @@
   <a href="https://www.npmjs.com/package/colore-js">
     <img alt="npm" src="https://img.shields.io/npm/v/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
-  <a href="https://github.com/mallikcheripally/colore/actions">
+  <a href="https://github.com/mallikcheripally/colore-js-js/actions">
     <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore/build.yml?labelColor=555be7&color=8c41e9" />
   </a>
-  <a href="https://github.com/mallikcheripally/colore/blob/main/LICENSE">
+  <a href="https://github.com/mallikcheripally/colore-js-js/blob/main/LICENSE">
     <img alt="build" src="https://img.shields.io/npm/l/colore-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://www.npmjs.com/package/colore-js">
@@ -79,10 +79,10 @@ console.log(rgb); // Output: rgb(255, 255, 255)
 Visit our [Docs](https://colore.mallikcheripally.com) for comprehensive documentation.
 
 ## Contributing
-We welcome contributions from the community to make Colore better. If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore).
+We welcome contributions from the community to make Colore better. If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js-js).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Something Missing?
-If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore). We welcome contributions from the community to make Colore better.
+If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js-js). We welcome contributions from the community to make Colore better.

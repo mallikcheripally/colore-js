@@ -84,6 +84,6 @@ console.log(blendedColor); // Output: the resulting blended color
 <details>
   <summary>How do I report a bug or request a feature?</summary>
   <div class="summary-content">
-    You can report bugs or request features by opening an issue on our <a href="https://github.com/mallikcheripally/colore">GitHub repository</a>.
+    You can report bugs or request features by opening an issue on our <a href="https://github.com/mallikcheripally/colore-js">GitHub repository</a>.
   </div>
 </details>

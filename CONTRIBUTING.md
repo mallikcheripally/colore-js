@@ -11,7 +11,7 @@ If you find a bug in the source code, you can help by submitting an issue to the
 
 ### Suggesting Enhancements
 
-If you have an idea to improve Colore, we would love to hear about it! Please check the [existing enhancement issues](https://github.com/mallikcheripally/colore/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) to see if a similar suggestion has already been made. If not, feel free to create a new enhancement issue.
+If you have an idea to improve Colore, we would love to hear about it! Please check the [existing enhancement issues](https://github.com/mallikcheripally/colore-js-js/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) to see if a similar suggestion has already been made. If not, feel free to create a new enhancement issue.
 
 ### Pull Requests
 
