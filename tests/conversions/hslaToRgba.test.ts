@@ -3,6 +3,7 @@ import { hslaToRgba } from '@/conversions/hslaToRgba';
 describe('hslaToRgba', () => {
     test('converts HSLA to RGBA and returns string representation', () => {
         expect(hslaToRgba(0, 100, 50, 0.5)).toBe('rgba(255, 0, 0, 0.5)');
+        expect(hslaToRgba(360, 100, 50, 0.5)).toBe('rgba(255, 0, 0, 0.5)');
         expect(hslaToRgba(120, 100, 50, 0.25)).toBe('rgba(0, 255, 0, 0.25)');
         expect(hslaToRgba(240, 100, 50, 1)).toBe('rgba(0, 0, 255, 1)');
         expect(hslaToRgba(0, 0, 50, 0)).toBe('rgba(128, 128, 128, 0)');

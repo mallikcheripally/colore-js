@@ -40,6 +40,10 @@ export function hslaToRgba(h: number, s: number, l: number, a: number, asString:
         throw new Error(`Invalid HSLA color value ${h}, ${s}, ${l}, ${a}`);
     }
 
+    if (h === 360) {
+        h = h % 360;
+    }
+
     const { r, g, b } = hslToRgb(h, s, l, false);
 
     if (asString) {
