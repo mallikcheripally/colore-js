@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/mallikcheripally/colore-js/compare/v1.1.6...v1.2.0) (2024-06-19)
+
+
+### Features
+
+* add color inversion functionality ([d425f33](https://github.com/mallikcheripally/colore-js/commit/d425f33d0136d50e347688374b057e80f06d96a5))
+* Add HSLA to Hex Alpha conversion function ([84d497c](https://github.com/mallikcheripally/colore-js/commit/84d497cb0ff587892f936ca40316d2ec36bf8ab0))
+* Add hslaToHexAlpha and invertColor in API documentation ([dd7b62e](https://github.com/mallikcheripally/colore-js/commit/dd7b62e9a14b4ed6124d08cfb6545c60200ced90))
+* Handle H value of 360 in hslaToRgba conversion ([5d6c5c0](https://github.com/mallikcheripally/colore-js/commit/5d6c5c0f41c180e97a108381609fbffbbf33ac40))
+
 ### [1.1.6](https://github.com/mallikcheripally/colore-js/compare/v1.1.5...v1.1.6) (2024-06-16)
 
 
