@@ -13,7 +13,7 @@
     <img alt="documentation" src="https://img.shields.io/badge/Visit-Documentation-js.svg?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://github.com/mallikcheripally/colore-js/actions">
-    <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore-js/build.yml?labelColor=555be7&color=8c41e9" />
+    <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore-js/ci.yml?labelColor=555be7&color=8c41e9" />
   </a>
   <a href="https://github.com/mallikcheripally/colore-js/blob/main/LICENSE">
     <img alt="build" src="https://img.shields.io/npm/l/colore-js.svg?labelColor=555be7&color=8c41e9" />
