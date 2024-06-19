@@ -33,13 +33,8 @@ hslaToHexAlpha(h: number, s: number, l: number, a: number): string;
 ```typescript
 import { hslaToHexAlpha } from 'colore-js';
 
-// Example usage as string
 const hexAlphaString = hslaToHexAlpha(360, 100, 50, 1);
 console.log(hexAlphaString); // Output: "#FF0000FF"
-
-// Example usage as object
-const hexAlphaObject = hslaToHexAlpha(360, 100, 50, 1, false);
-console.log(hexAlphaObject); // Output: { hex: "#FF0000", alpha: 1 }
 ```
 
 ## Usage

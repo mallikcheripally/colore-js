@@ -34,7 +34,8 @@
     "release": "standard-version",
     "prepublishOnly": "yarn build",
     "test": "jest",
-    "analyze-code": "source-map-explorer dist/colore.cjs.js"
+    "analyze-code": "source-map-explorer dist/colore.cjs.js",
+    "publish": "npm publish --access=public"
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
