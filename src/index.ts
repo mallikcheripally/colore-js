@@ -11,6 +11,7 @@ export { hexAlphaToRgba } from '@/conversions/hexAlphaToRgba';
 export { hexToHsl } from '@/conversions/hexToHsl';
 export { hexToHsv } from '@/conversions/hexToHsv';
 export { hexToRgb } from '@/conversions/hexToRgb';
+export { hslaToHexAlpha } from '@/conversions/hslaToHexAlpha';
 export { hslaToRgba } from '@/conversions/hslaToRgba';
 export { hslToHex } from '@/conversions/hslToHex';
 export { hslToRgb } from '@/conversions/hslToRgb';
@@ -77,6 +78,7 @@ export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';
 export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
+export { invertColor } from '@/manipulations/invertColor';
 
 
 // Utils
