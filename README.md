@@ -75,10 +75,7 @@ console.log(rgb); // Output: rgb(255, 255, 255)
 - XYZ strings and objects
 
 ## API Reference
-Visit our [Docs](https://colore.mallikcheripally.com) for comprehensive documentation.
-
-<a href="https://colore.mallikcheripally.com" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #555be7; text-align: center; text-decoration: none; border-radius: 5px;">View Documentation</a>
-
+See [Documentation](https://colore.mallikcheripally.com) for complete API reference.
 
 ## Contributing
 We welcome contributions from the community to make Colore better. If you find any issues or have suggestions for improvements, feel free to contribute or open an issue on our [GitHub Repository](https://github.com/mallikcheripally/colore-js).
