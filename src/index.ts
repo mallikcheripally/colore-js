@@ -84,3 +84,4 @@ export { invertColor } from '@/manipulations/invertColor';
 // Utils
 export { BlendingModes } from '@/utils/blendingModes';
 export { ColorFormats } from '@/utils/colorFormats';
+export { generateRandomColor } from '@/utils/generateRandomColor';
