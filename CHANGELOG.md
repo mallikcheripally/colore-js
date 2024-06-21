@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/mallikcheripally/colore-js/compare/v1.2.0...v1.3.0) (2024-06-21)
+
+
+### Features
+
+* Add documentation badge to README ([f5b7bf2](https://github.com/mallikcheripally/colore-js/commit/f5b7bf2f9f944ece5eebdda439f6915fff6e77c6))
+* Add documentation button to README ([2e9f6ad](https://github.com/mallikcheripally/colore-js/commit/2e9f6ad7de4bdaf774bf9bae706c1a046b9637e7))
+* Add documentation for color generator functions ([3fd916a](https://github.com/mallikcheripally/colore-js/commit/3fd916aa421fcdd6d686055153b9ff9d70fcac74))
+* add generateInterpolatedColors function ([a064b36](https://github.com/mallikcheripally/colore-js/commit/a064b361592cb239d809111bdd5bf05b279b0dff))
+* Add generateRandomColor utility and tests ([fb9a6a9](https://github.com/mallikcheripally/colore-js/commit/fb9a6a9b7d53c2fc623867b6e1bff4d303455a4e))
+* Add publish script and update doc ([4096372](https://github.com/mallikcheripally/colore-js/commit/4096372a6dff4d0b0ed91356dd4990e8490543cc))
+* **generators:** enhance generateInterpolatedColors function ([8226e56](https://github.com/mallikcheripally/colore-js/commit/8226e56c5875243aa1aa49403420b46d5ab0c99e))
+* Update badges and README details ([434ecae](https://github.com/mallikcheripally/colore-js/commit/434ecae6d738d3a2c94405bd39edfca64ac6541b))
+* Update project title and descriptions in docusaurus config ([cfca828](https://github.com/mallikcheripally/colore-js/commit/cfca82812c09ac31c984332ecdc597b44743456c))
+* update README.md with dark theme image support ([000c0da](https://github.com/mallikcheripally/colore-js/commit/000c0da869f15c3a97dd8e6edafd9ac2ba3b17ba))
+
+
+### Bug Fixes
+
+* correct alt text for license badge in README ([178ed9b](https://github.com/mallikcheripally/colore-js/commit/178ed9b1c8431dbe9202c54cd539f45d550db495))
+* update build badge link in README ([cebfa2b](https://github.com/mallikcheripally/colore-js/commit/cebfa2be92fb274c7b044848beeeead92ef0c6e1))
+
+
+### Chores
+
+* **deps:** bump ws from 7.5.9 to 7.5.10 in /docs ([74ed307](https://github.com/mallikcheripally/colore-js/commit/74ed307aea679629d686c2f2e0ebbff290a7c891))
+
+
+### Code Refactoring
+
+* Move generateRandomColor to generators directory ([ae0ec45](https://github.com/mallikcheripally/colore-js/commit/ae0ec45f6f08639d4c422c407a139a9704ffc457))
+* Move generateRandomColor to generators directory ([4d6a284](https://github.com/mallikcheripally/colore-js/commit/4d6a2847e0446cec03b0d4f99a59971587f76a99))
+
 ## [1.2.0](https://github.com/mallikcheripally/colore-js/compare/v1.1.6...v1.2.0) (2024-06-19)
 
 
