@@ -19,7 +19,7 @@
     <img alt="build" src="https://img.shields.io/github/actions/workflow/status/mallikcheripally/colore-js/ci.yml" />
   </a>
   <a href="https://github.com/mallikcheripally/colore-js/blob/main/LICENSE">
-    <img alt="build" src="https://img.shields.io/npm/l/colore-js.svg" />
+    <img alt="license" src="https://img.shields.io/npm/l/colore-js.svg" />
   </a>
   <a href="https://www.npmjs.com/package/colore-js">
     <img alt="downloads" src="https://img.shields.io/npm/dm/colore-js.svg" />
