@@ -37,6 +37,10 @@ export { xyzToLab } from '@/conversions/xyzToLab';
 export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 
+// Generators
+export { generateInterpolatedColors } from '@/generators/generateInterpolatedColors';
+
+
 // Harmony
 export { analogousColors } from '@/harmony/analogousColors';
 export { complementaryColor } from '@/harmony/complementaryColor';
