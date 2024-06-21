@@ -1,6 +1,6 @@
-import { generateRandomColor } from '@/utils/generateRandomColor';
-import { ColorFormats } from '@/utils/colorFormats';
-import {hexAlphaRegex, hexRegex, hslaRegex, hslRegex, labRegex, lchRegex, rgbaRegex, rgbRegex} from '@/utils/regex';
+import { generateRandomColor } from '../../src/generators/generateRandomColor';
+import { ColorFormats } from '../../src/utils/colorFormats';
+import {hexAlphaRegex, hexRegex, hslaRegex, hslRegex, labRegex, lchRegex, rgbaRegex, rgbRegex} from '../../src/utils/regex';
 
 describe('generateRandomColor', () => {
     test('generates a random RGB color as a string', () => {

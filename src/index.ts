@@ -39,6 +39,7 @@ export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 // Generators
 export { generateInterpolatedColors } from '@/generators/generateInterpolatedColors';
+export { generateRandomColor } from '@/generators/generateRandomColor';
 
 
 // Harmony
@@ -88,4 +89,3 @@ export { invertColor } from '@/manipulations/invertColor';
 // Utils
 export { BlendingModes } from '@/utils/blendingModes';
 export { ColorFormats } from '@/utils/colorFormats';
-export { generateRandomColor } from '@/utils/generateRandomColor';
