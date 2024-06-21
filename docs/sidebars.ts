@@ -62,6 +62,14 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: 'Generators',
+          items: [
+              'api/generators/generateInterpolatedColors',
+              'api/generators/generateRandomColor',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Harmony',
           items: [
             'api/harmony/analogousColors',

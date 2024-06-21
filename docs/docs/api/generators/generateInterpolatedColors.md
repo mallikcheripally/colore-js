@@ -1,0 +1,54 @@
+---
+id: generateInterpolatedColors
+title: generateInterpolatedColors
+---
+
+# generateInterpolatedColors
+
+The `generateInterpolatedColors` function generates interpolated colors between two given colors.
+
+## Syntax
+
+```typescript
+generateInterpolatedColors(color1: string, color2: string, steps: number, asString?: true): Array<string>;
+generateInterpolatedColors(color1: string, color2: string, steps: number, asString?: false): Array<Object>;
+generateInterpolatedColors(color1: string, color2: string, steps: number, asString: boolean = true): Array<string | Object>;
+```
+
+### Parameters
+
+- **`color1`** (string): The starting color in any supported format.
+- **`color2`** (string): The ending color in same format as `color1`.
+- **`steps`** (number): The number of steps (including start and end colors).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **Array(string)**: The interpolated colors as an array of strings if `asString` is true.
+- **Array(Object)**: The interpolated colors as an array of objects if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if the input color formats do not match or are unsupported.
+
+## Example
+
+```typescript
+import { generateInterpolatedColors } from 'colore-js';
+
+const color1 = '#ff0000';
+const color2 = '#00ff00';
+const steps = 5;
+
+// Example usage as strings
+const interpolatedColorsStrings = generateInterpolatedColors(color1, color2, steps);
+console.log(interpolatedColorsStrings);
+
+// Example usage as objects
+const interpolatedColorsObjects = generateInterpolatedColors(color1, color2, steps, false);
+console.log(interpolatedColorsObjects);
+```
+
+## Usage
+
+The `generateInterpolatedColors` function is useful for generating a gradient or a series of colors transitioning from one color to another. This can be beneficial in various design and visualization applications.

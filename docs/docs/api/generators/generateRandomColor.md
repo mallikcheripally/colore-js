@@ -1,0 +1,46 @@
+---
+id: generateRandomColor
+title: generateRandomColor
+---
+
+# generateRandomColor
+
+The `generateRandomColor` function generates a random color in the specified format.
+
+## Syntax
+
+```typescript
+generateRandomColor(format: ColorFormat, asString?: true): string;
+generateRandomColor(format: ColorFormat, asString?: false): object;
+generateRandomColor(format: ColorFormat = ColorFormats.RGB, asString: boolean = true): string | object;
+```
+
+### Parameters
+
+- **`format`** (ColorFormat): The desired color format (default is RGB).
+- **`asString`** (boolean, optional): Whether to return the color as a string (default is true).
+
+### Returns
+
+- **string | object**: The generated color as a string or an object.
+
+### Throws
+- **Error**: Throws an error if the color format is unsupported.
+
+## Example
+
+```typescript
+import { generateRandomColor, ColorFormats } from 'colore-js';
+
+// Example usage as string
+const randomHexColor = generateRandomColor(ColorFormats.HEX);
+console.log(randomHexColor); // Output: "#a1b2c3" (example)
+
+// Example usage as object
+const randomRgbObject = generateRandomColor(ColorFormats.RGB, false);
+console.log(randomRgbObject); // Output: { r: 123, g: 234, b: 45 } (example)
+```
+
+## Usage
+
+The `getRandomColor` function is useful for generating random colors in various formats, such as RGB, HEX, HSL, and more. This can be helpful in creating dynamic color themes, randomizing visual elements, or testing color manipulations.
