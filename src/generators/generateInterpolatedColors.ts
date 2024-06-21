@@ -1,10 +1,6 @@
 import { detectColorFormat } from '@/parser/detectColorFormat';
 import { decomposeColor } from '@/parser/decomposeColor';
 import { recomposeColor } from '@/parser/recomposeColor';
-import { rgbToHsl } from '@/conversions/rgbToHsl';
-import { hslToRgb } from '@/conversions/hslToRgb';
-import { rgbaToHsla } from '@/conversions/rgbaToHsla';
-import { hslaToRgba } from '@/conversions/hslaToRgba';
 import { hexToRgb } from '@/conversions/hexToRgb';
 import { rgbToHex } from '@/conversions/rgbToHex';
 import { hexAlphaToRgba } from '@/conversions/hexAlphaToRgba';
@@ -17,11 +13,48 @@ import { ColorFormats } from '@/utils/colorFormats';
  * @param {string} color1 - The starting color.
  * @param {string} color2 - The ending color.
  * @param {number} steps - The number of steps (including start and end colors).
+ * @param {true} [asString] - Whether to return the result as a string.
+ * @returns {string[]} - The interpolated colors.
+ * @throws {Error} Throws an error if the input color format is invalid.
+ */
+/**
+ * Generates interpolated colors between two colors.
+ *
+ * @param {string} color1 - The starting color.
+ * @param {string} color2 - The ending color.
+ * @param {number} steps - The number of steps (including start and end colors).
+ * @param {false} [asString] - Whether to return the result as an object.
+ * @returns {object[]} - The interpolated colors.
+ * @throws {Error} Throws an error if the input color format is invalid.
+ */
+/**
+ * Generates interpolated colors between two colors.
+ *
+ * @param {string} color1 - The starting color.
+ * @param {string} color2 - The ending color.
+ * @param {number} steps - The number of steps (including start and end colors).
  * @param {boolean} [asString=true] - Whether to return the result as a string.
  * @returns {string[] | object[]} - The interpolated colors.
  * @throws {Error} Throws an error if the input color format is invalid.
  */
-export function generateInterpolatedColors(color1: string, color2: string, steps: number, asString: boolean = true) {
+export function generateInterpolatedColors(
+    color1: string,
+    color2: string,
+    steps: number,
+    asString?: true,
+): Array<string>;
+export function generateInterpolatedColors(
+    color1: string,
+    color2: string,
+    steps: number,
+    asString?: false,
+): Array<Object>;
+export function generateInterpolatedColors(
+    color1: string,
+    color2: string,
+    steps: number,
+    asString: boolean = true,
+): Array<string | Object> {
     const format1 = detectColorFormat(color1);
     const format2 = detectColorFormat(color2);
 
@@ -68,7 +101,9 @@ export function generateInterpolatedColors(color1: string, color2: string, steps
                     s: Math.round(interpolate(startColor.s, endColor.s, factor)),
                     l: Math.round(interpolate(startColor.l, endColor.l, factor)),
                 };
-                colors.push(asString ? recomposeColor(color1, { ...startColor, ...interpolatedColor }) : interpolatedColor);
+                colors.push(
+                    asString ? recomposeColor(color1, { ...startColor, ...interpolatedColor }) : interpolatedColor,
+                );
                 break;
             }
 
@@ -79,7 +114,9 @@ export function generateInterpolatedColors(color1: string, color2: string, steps
                     l: Math.round(interpolate(startColor.l, endColor.l, factor)),
                     a: interpolate(startColor.a, endColor.a, factor),
                 };
-                colors.push(asString ? recomposeColor(color1, { ...startColor, ...interpolatedColor }) : interpolatedColor);
+                colors.push(
+                    asString ? recomposeColor(color1, { ...startColor, ...interpolatedColor }) : interpolatedColor,
+                );
                 break;
             }
 
