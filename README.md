@@ -1,6 +1,9 @@
 <div align="center">
   <a href="https://colore.mallikcheripally.com/">
-    <img alt="colore" src="https://raw.githubusercontent.com/mallikcheripally/colore-js/main/assets/images/github-poster.png" width="280" height="110" />
+    <picture>
+      <source srcset="https://raw.githubusercontent.com/mallikcheripally/colore-js/main/assets/images/github-poster-dark-theme.png" media="(prefers-color-scheme: dark)">
+      <img src="https://raw.githubusercontent.com/mallikcheripally/colore-js/main/assets/images/github-poster.png" alt="colore-js">
+    </picture>
   </a>
 </div>
  <br />
