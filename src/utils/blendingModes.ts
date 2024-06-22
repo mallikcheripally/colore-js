@@ -7,6 +7,8 @@ export const BlendingModes: {[key: string] : string} = {
     LIGHTEN: 'lighten',
     DIFFERENCE: 'difference',
     EXCLUSION: 'exclusion',
+    SOFT_LIGHT: 'soft_light',
+    HARD_LIGHT: 'hard_light'
 } as const;
 
 export type BlendingMode = typeof BlendingModes[keyof typeof BlendingModes];

@@ -19,6 +19,8 @@ The `BlendingModes` object contains the following properties:
 - **`LIGHTEN`**: Represents lighten blending mode.
 - **`DIFFERENCE`**: Represents difference blending mode.
 - **`EXCLUSION`**: Represents exclusion blending mode.
+- **`SOFT_LIGHT`**: Represents soft light blending mode.
+- **`HARD_LIGHT`**: Represents hard light blending mode.
 
 ## BlendingMode
 
