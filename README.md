@@ -6,7 +6,6 @@
     </picture>
   </a>
 </div>
- <br />
 
 <div align="center">
   <a href="https://www.npmjs.com/package/colore-js">
@@ -40,7 +39,7 @@ An Advanced, High-Performance JavaScript Library for Color Conversions, Color Ma
 ## Features
 
 -   🎨 **Color Conversions**: Supports a wide range of color conversions including RGB, RGBA, HEX, HEX Alpha, HSL, HSLA, LAB, LCH, XYZ, and more.
--   🔄 **Color Manipulations**: Easily manipulate colors with functions to lighten, darken, saturate, desaturate, and blend colors.
+-   🔄 **Color Manipulations**: Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.
 -   📊 **Color Analysis**: Calculate contrast ratios, luminance, and other color metrics for accessibility.
 -   🌈 **Color Harmony**: Generate complementary, triadic, tetradic, analogous, and monochromatic color schemes.
 -   🛠️ **Utility Functions**: A set of utility functions for common color operations, including color parsing and recomposition.
