@@ -116,7 +116,7 @@ function CommunitySection() {
                     improve!
                 </p>
                 <div className={styles.communityLinks}>
-                    <Link className="button button--primary button--lg" to="https://github.com/mallikcheripally">
+                    <Link className="button button--secondary button--lg" to="https://github.com/mallikcheripally">
                         GitHub Repository
                     </Link>
                 </div>
