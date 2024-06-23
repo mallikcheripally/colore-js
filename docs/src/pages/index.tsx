@@ -10,7 +10,10 @@ function HomepageHeader() {
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
                 <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
-                <p className={styles.heroSubtitle}>A JS library for Color Conversions, Manipulations, Harmony Generations, Accessibility Analysis and Parsing.</p>
+                <p className={styles.heroSubtitle}>
+                    A robust JavaScript library for color conversions, manipulations, and validations. <br />
+                    Generate harmonious schemes, enhance accessibility, and perform precise analysis.
+                </p>
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
@@ -28,31 +31,28 @@ function BenefitsSection() {
         <section className={styles.benefits}>
             <div className="container">
                 <div className="row">
-                    <div className="col col--4">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🎨 Color Conversions</h3>
-                            <p>
-                                Easily convert between HEX, RGB, HSL, HSV, LAB, LCH, CMYK, and XYZ color formats.
-                            </p>
+                            <p>Easily convert between HEX, RGB, HSL, HSV, LAB, LCH, CMYK, and XYZ color formats.</p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>✅ Validations</h3>
-                            <p>
-                                Ensure correct color values with comprehensive color format validation functions.
-                            </p>
+                            <p>Ensure correct color values with comprehensive color format validation functions.</p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                </div>
+
+                <div className="row">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🔄 Manipulations</h3>
-                            <p>
-                                Perform various color manipulations like blending, darkening, lightening, and more.
-                            </p>
+                            <p>Perform various color manipulations like blending, darkening, lightening, and more.</p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🚀 High Performance</h3>
                             <p>
@@ -61,7 +61,10 @@ function BenefitsSection() {
                             </p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                </div>
+
+                <div className="row">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🎨 Comprehensive Color Manipulation</h3>
                             <p>
@@ -70,7 +73,7 @@ function BenefitsSection() {
                             </p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🌍 Active Community</h3>
                             <p>
@@ -79,25 +82,22 @@ function BenefitsSection() {
                             </p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                </div>
+
+                <div className="row">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
-                            <h3>📚 Extensive Documentation</h3>
-                            <p>Well-documented API and tutorials to help you get started quickly and efficiently.</p>
+                            <h3>🔧 Constantly Improving</h3>
+                            <p>Regular updates and improvements based on community feedback and contributions.</p>
                         </div>
                     </div>
-                    <div className="col col--4">
+                    <div className="col col--6">
                         <div className={styles.benefit}>
                             <h3>🔄 Seamless Integration</h3>
                             <p>
                                 Easy to integrate with any JavaScript or TypeScript project, making it highly versatile
                                 for different use cases.
                             </p>
-                        </div>
-                    </div>
-                    <div className="col col--4">
-                        <div className={styles.benefit}>
-                            <h3>🔧 Constantly Improving</h3>
-                            <p>Regular updates and improvements based on community feedback and contributions.</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@ function CommunitySection() {
                     improve!
                 </p>
                 <div className={styles.communityLinks}>
-                    <Link className="button button--primary button--lg" to="https://github.com/mallikcheripally">
+                    <Link className="button button--secondary button--lg" to="https://github.com/mallikcheripally">
                         GitHub Repository
                     </Link>
                 </div>
@@ -129,8 +129,9 @@ export default function Home(): JSX.Element {
     const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            title={`JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing`}
-            description="A JS library for Color Conversions, Color Manipulations, Generating Harmony Colors, Accessibility Analysis and Color Parsing.">
+            title={`colore-js | Color Generation, Conversion, Manipulation and Validation Library`}
+            description="A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis."
+        >
             <HomepageHeader />
             <main>
                 <BenefitsSection />

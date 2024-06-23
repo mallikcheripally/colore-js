@@ -2,10 +2,22 @@
 
 .heroBanner {
   /*background: linear-gradient(135deg, #555be7, #8c41e9);*/
-  background: linear-gradient(135deg, rgb(227, 153, 18), rgb(194, 144, 19), rgb(243, 43, 82), rgb(15, 104, 140), rgb(10, 207, 217));
+  background: linear-gradient(135deg, rgb(227, 153, 18), rgb(194, 144, 19), rgb(243, 43, 82), rgb(15, 104, 140), rgb(10, 207, 217), rgb(15, 104, 140), rgb(243, 43, 82), rgb(194, 144, 19), rgb(227, 153, 18));
   color: #fff;
   padding: 4rem 0;
   text-align: center;
+  background-size: 500% 500%;
+  will-change: background-position;
+  animation: gradientShift 10s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 .heroTitle {
@@ -41,22 +53,22 @@
 }
 
 .benefits {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 2rem 0;
+  /*text-align: center;*/
 }
 
 .benefit {
-  border: 1px solid var(--ifm-color-emphasis-200);
+  /*border: 1px solid var(--ifm-color-emphasis-200);*/
   border-radius: 10px;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.benefit:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+/*.benefit:hover {*/
+  /*transform: scale(1.05);*/
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
 .community {
   padding: 4rem 0;

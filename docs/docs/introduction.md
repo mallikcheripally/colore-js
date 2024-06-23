@@ -7,14 +7,15 @@ Colore is a comprehensive color manipulation library designed to simplify color 
 
 ### Key Features
 
-- 🎨 **Color Conversions**: Easily convert between different color formats including HEX, RGB, HSL, HSV, LAB, LCH, CMYK, and XYZ.
-- ✅ **Validations**: Validate color formats to ensure correct color values before applying transformations.
-- 🔄 **Manipulations**: Perform various color manipulations like blending, darkening, lightening, and more.
-- 🌈 **Color Harmony**: Generate harmonious color schemes such as complementary, analogous, and triadic colors.
-- 📊 **Analysis**: Calculate color contrast ratios and luminance for accessibility and design standards.
+- 🎨 **Color Conversions**: Supports a wide range of color conversions including RGB, RGBA, HEX, HEX Alpha, HSL, HSLA, LAB, LCH, XYZ, and more.
+- 🔄 **Manipulations**: Easily manipulate colors with functions to lighten, darken, invert, saturate, desaturate, and blend colors.
+- 🌈 **Color Harmony**: Generate complementary, triadic, tetradic, analogous, and monochromatic color schemes.
+- 📊 **Accessibility**: Calculate color contrast ratios and luminance for accessibility and design standards.
 - 🛠️ **Utility Functions**: A set of utility functions for common color operations, including color parsing and recomposition.
+- 🔍 **Validations**: Validate color formats to ensure correct color values before applying transformations.
 - 🚀 **High Performance**: Optimized for performance to handle large sets of color transformations efficiently.
-- 📚 **Well-Documented**: Comprehensive documentation to help you get started quickly and utilize all features effectively.
+- ✅ **No Dependencies**: Designed to be lean and efficient without any external dependencies.
+- 📦 **Small Size**: 10 KB gzipped
 
 ### Installation
 
