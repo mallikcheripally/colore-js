@@ -1,10 +1,10 @@
 html[data-theme='light'] {
-    --ifm-color-primary: #147af3;
-    --ifm-color-primary-dark: #0265dc;
-    --ifm-color-primary-darker: #0054b6;
-    --ifm-color-primary-light: #59a7f6;
-    --ifm-color-primary-lighter: #b5deff;
-    --ifm-color-primary-lightest: #e0f2ff;
+    --ifm-color-primary-lightest: #cdfcbf;
+    --ifm-color-primary-lighter: #96ee85;
+    --ifm-color-primary-light: #27bb36;
+    --ifm-color-primary: #009112;
+    --ifm-color-primary-dark: #007c0f;
+    --ifm-color-primary-darker: #00670f;
 
     /* Update other color variables if needed */
     --ifm-link-color: var(--ifm-color-primary);
@@ -14,12 +14,12 @@ html[data-theme='light'] {
 
 /* Dark mode adjustments */
 html[data-theme='dark'] {
-    --ifm-color-primary: #54a3f6;
-    --ifm-color-primary-dark: #348ff4;
-    --ifm-color-primary-darker: #1379f3;
-    --ifm-color-primary-light: #72b7f9;
-    --ifm-color-primary-lighter: #aedbfe;
-    --ifm-color-primary-lightest: #e8f6ff;
+    --ifm-color-primary-lightest: #b4f7a2;
+    --ifm-color-primary-lighter: #73e06b;
+    --ifm-color-primary-light: #2dbf3a;
+    --ifm-color-primary: #0dab25;
+    --ifm-color-primary-dark: #009714;
+    --ifm-color-primary-darker: #00840f;
 }
 
 /* Custom styles for details and summary tags */
