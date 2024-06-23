@@ -23,6 +23,22 @@ const blendingModeFunctions: { [key: string]: (c1: number, c2: number) => number
     [BlendingModes.LIGHTEN]: (c1, c2) => Math.max(c1, c2),
     [BlendingModes.DIFFERENCE]: (c1, c2) => Math.abs(c1 - c2),
     [BlendingModes.EXCLUSION]: (c1, c2) => c1 + c2 - (c1 * c2) / 128,
+    [BlendingModes.SOFT_LIGHT]: (c1, c2) => {
+        const C_b = c1 / 255;
+        const C_s = c2 / 255;
+        const result = C_s < 0.5
+            ? 2 * C_b * C_s + C_b * C_b * (1 - 2 * C_s)
+            : 2 * C_b * (1 - C_s) + Math.sqrt(C_b) * (2 * C_s - 1);
+        return Math.round(result * 255);
+    },
+    [BlendingModes.HARD_LIGHT]: (c1, c2) => {
+        const C_b = c1 / 255;
+        const C_s = c2 / 255;
+        const result = C_s < 0.5
+            ? 2 * C_b * C_s
+            : 1 - 2 * (1 - C_b) * (1 - C_s);
+        return Math.round(result * 255);
+    },
 };
 
 /**

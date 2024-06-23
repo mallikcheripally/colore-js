@@ -34,6 +34,14 @@ describe('blendColors', () => {
         expect(blendColors('rgb(255, 0, 0)', 'rgb(0, 0, 255)', BlendingModes.EXCLUSION)).toBe('rgb(255, 0, 255)');
     });
 
+    test('blends two colors using SOFT_LIGHT mode', () => {
+        expect(blendColors('rgb(128, 128, 128)', 'rgb(64, 64, 64)', BlendingModes.SOFT_LIGHT)).toBe('rgb(96, 96, 96)');
+    });
+
+    test('blends two colors using HARD_LIGHT mode', () => {
+        expect(blendColors('rgb(128, 128, 128)', 'rgb(64, 64, 64)', BlendingModes.HARD_LIGHT)).toBe('rgb(64, 64, 64)');
+    });
+
     test('throws error for unsupported blending mode', () => {
         expect(() => blendColors('rgb(255, 0, 0)', 'rgb(0, 0, 255)', 'unsupported')).toThrow('Unsupported blending mode: unsupported');
     });
