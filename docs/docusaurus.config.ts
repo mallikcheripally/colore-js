@@ -44,6 +44,11 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     image: 'img/social-card.jpg',
     navbar: {
       title: 'colore-js',
@@ -59,9 +64,9 @@ const config: Config = {
         },
         {
           position: 'right',
-          label: 'Analysis',
+          label: 'Contrast Ratio',
           to: 'docs/api/analysis/getContrastRatio',
-          activeBasePath: 'docs/api/analysis/',
+          activeBasePath: 'docs/api/analysis/getContrastRatio',
         },
         {
           position: 'right',
@@ -71,9 +76,9 @@ const config: Config = {
         },
         {
           position: 'right',
-          label: 'Manipulations',
+          label: 'Blending',
           to: 'docs/api/manipulations/blendColors',
-          activeBasePath: 'docs/api/manipulations/',
+          activeBasePath: 'docs/api/manipulations/blendColors',
         },
         {
           position: 'right',
@@ -90,6 +95,11 @@ const config: Config = {
         {
           href: 'https://github.com/mallikcheripally/colore-js',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://www.npmjs.com/package/colore-js',
+          label: 'npm',
           position: 'right',
         },
         {
