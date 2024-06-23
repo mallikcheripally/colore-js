@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Colore JS',
-  tagline: 'Colore JS - Color Generation, Conversion, Manipulation and Validation Library',
+  title: 'colore-js',
+  tagline: 'colore-js - Color Generation, Conversion, Manipulation and Validation Library',
   favicon: 'img/favicon.ico',
   url: 'https://colore.mallikcheripally.com',
   baseUrl: '/',
@@ -46,17 +46,46 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.jpg',
     navbar: {
-      title: 'Colore JS',
+      title: 'colore-js',
       logo: {
         alt: 'Colore Logo',
         src: 'img/logo.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docs',
           position: 'right',
-          label: 'Docs',
+          label: 'Installation',
+          to: 'docs/getting-started/installation',
+        },
+        {
+          position: 'right',
+          label: 'Analysis',
+          to: 'docs/api/analysis/getContrastRatio',
+          activeBasePath: 'docs/api/analysis/',
+        },
+        {
+          position: 'right',
+          label: 'Conversions',
+          to: 'docs/api/conversions/cmykToRgb',
+          activeBasePath: 'docs/api/conversions/',
+        },
+        {
+          position: 'right',
+          label: 'Manipulations',
+          to: 'docs/api/manipulations/blendColors',
+          activeBasePath: 'docs/api/manipulations/',
+        },
+        {
+          position: 'right',
+          label: 'Parser',
+          to: 'docs/api/parser/decomposeColor',
+          activeBasePath: 'docs/api/parser/',
+        },
+        {
+          position: 'right',
+          label: 'Validations',
+          to: 'docs/api/validations/isValidHex',
+          activeBasePath: 'docs/api/validations/',
         },
         {
           href: 'https://github.com/mallikcheripally/colore-js',
@@ -111,13 +140,13 @@ const config: Config = {
     },
     metadata: [
       { name: 'description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
-      { name: 'keywords', content: 'Colore, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast ratio, CSS, color library, Color Validation, hex, hsl, hsla, rgb, rgba, lch, lab, xyz', },
-      { property: 'og:title', content: 'Colore JS - Color Generation, Conversion, Manipulation and Validation Library' },
+      { name: 'keywords', content: 'Colore, colore js, colore-js, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast ratio, CSS, color library, Color Validation, hex, hsl, hsla, rgb, rgba, lch, lab, xyz', },
+      { property: 'og:title', content: 'colore-js | Color Generation, Conversion, Manipulation and Validation Library' },
       { property: 'og:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { property: 'og:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
       { property: 'og:url', content: 'https://colore.mallikcheripally.com' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Colore JS - Color Generation, Conversion, Manipulation and Validation Library' },
+      { name: 'twitter:title', content: 'colore-js | Color Generation, Conversion, Manipulation and Validation Library' },
       { name: 'twitter:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { name: 'twitter:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
     ],
