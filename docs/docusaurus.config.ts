@@ -199,13 +199,18 @@ const config: Config = {
         logo: 'https://colore.mallikcheripally.com/img/logo.png',
       },
       website: {
-        datePublished: '2023-01-01', // default is the current date
+        datePublished: '2024-06-16', // default is the current date
         inLanguage: 'en-US', // default: en-US
       },
       webpage: {
-        datePublished: '2023-01-01', // default is the current date
+        datePublished: '2023-06-16', // default is the current date
         inLanguage: 'en-US', // default: en-US
       },
+      breadcrumbLabelMap: {
+        'introduction': 'Introduction',
+        'getting-started/installation': 'Installation',
+        'getting-started/quick-start': 'Quick Start',
+      }
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
