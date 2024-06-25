@@ -159,7 +159,59 @@ const config: Config = {
       { name: 'twitter:title', content: 'colore-js | Color Generation, Conversion, Manipulation and Validation Library' },
       { name: 'twitter:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { name: 'twitter:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
+      {
+        type: 'application/ld+json',
+        content: `{
+          "@context": "https://schema.org",
+          "@type": "SoftwareSourceCode",
+          "name": "Colore JS",
+          "description": "A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.",
+          "codeRepository": "https://github.com/mallikcheripally/colore-js",
+          "programmingLanguage": "JavaScript",
+          "license": "https://opensource.org/licenses/MIT",
+          "keywords": ["colore-js", "colore", "colore js", "color conversion", "color manipulation", "color validation", "color harmony", "color utility", "color contrast ratio", "accessibility", "high performance", "no dependencies", "small size"],
+          "author": {
+            "@type": "Person",
+            "name": "Mallik Cheripally"
+          },
+          "datePublished": "2024-06-16",
+        }`,
+      },
     ],
+    structuredData: {
+      excludedRoutes: [], // array of routes to exclude from structured data generation
+      verbose: false, // print verbose output to console
+      featuredImageDimensions: {
+        width: 1200,
+        height: 630,
+      },
+      authors: {
+        author_name: {
+          authorId: 'mallikcheripally',
+          url: 'https://mallikcheripally.com',
+          imageUrl: 'https://your-author-image-url.com',
+          sameAs: ['https://github.com/mallikcheripally', 'https://www.linkedin.com/in/mallikcheripally/', 'https://www.npmjs.com/~mallikcheripally'],
+        },
+      },
+      organization: {
+        name: 'Colore JS',
+        url: 'https://colore.mallikcheripally.com',
+        logo: 'https://colore.mallikcheripally.com/img/logo.png',
+      },
+      website: {
+        datePublished: '2024-06-16', // default is the current date
+        inLanguage: 'en-US', // default: en-US
+      },
+      webpage: {
+        datePublished: '2023-06-16', // default is the current date
+        inLanguage: 'en-US', // default: en-US
+      },
+      breadcrumbLabelMap: {
+        'introduction': 'Introduction',
+        'getting-started/installation': 'Installation',
+        'getting-started/quick-start': 'Quick Start',
+      }
+    },
   } satisfies Preset.ThemeConfig,
   plugins: [
     [
@@ -177,7 +229,8 @@ const config: Config = {
         trackingID: 'G-N7DZEKLZNY',
         anonymizeIP: true,
       },
-    ]
+    ],
+    '@stackql/docusaurus-plugin-structured-data',
   ],
 };
 

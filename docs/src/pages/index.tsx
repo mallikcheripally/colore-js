@@ -2,6 +2,9 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+
+import Breadcrumbs from "@site/src/components/Breadcrumbs";
+
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -132,6 +135,7 @@ export default function Home(): JSX.Element {
             title={`colore-js | Color Generation, Conversion, Manipulation and Validation Library`}
             description="A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis."
         >
+            <Breadcrumbs />
             <HomepageHeader />
             <main>
                 <BenefitsSection />
