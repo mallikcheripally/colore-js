@@ -16,18 +16,33 @@ import StructuredData from '@site/src/components/StructuredData';
 
 <StructuredData json={{
     "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "Colore JS",
-    "description": "A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.",
-    "codeRepository": "https://github.com/mallikcheripally/colore-js",
-    "programmingLanguage": "JavaScript",
-    "license": "https://opensource.org/licenses/MIT",
-    "keywords": ["colore-js", "colore", "colore js", "color conversion", "color manipulation", "color validation", "color harmony", "color utility", "color contrast ratio", "accessibility"],
-    "author": {
-        "@type": "Person",
-        "name": "Mallik Cheripally"
-    },
-    "datePublished": "2024-06-16",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is Colore JS?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Colore JS is a comprehensive JavaScript library for color conversions, manipulations, and validations. It helps in generating harmonious color schemes, parsing and converting colors, manipulating and blending colors, enhancing accessibility, and performing precise color analysis."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I install Colore JS?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can install Colore JS using npm or yarn. Use the command `npm install colore-js` or `yarn add colore-js`."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I use Colore JS to convert colors?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Colore JS provides various functions for color conversions. For example, you can use `hexToRgb('#ffffff')` to convert a HEX color to RGB format. Refer to the documentation for a full list of conversion functions."
+            }
+        },
+    ]
 }} />
 
 # FAQ
