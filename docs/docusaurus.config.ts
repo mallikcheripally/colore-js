@@ -189,7 +189,6 @@ const config: Config = {
         author_name: {
           authorId: 'mallikcheripally',
           url: 'https://mallikcheripally.com',
-          imageUrl: 'https://your-author-image-url.com',
           sameAs: ['https://github.com/mallikcheripally', 'https://www.linkedin.com/in/mallikcheripally/', 'https://www.npmjs.com/~mallikcheripally'],
         },
       },
