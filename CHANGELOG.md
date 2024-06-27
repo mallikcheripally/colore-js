@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/mallikcheripally/colore-js/compare/v1.3.0...v1.3.1) (2024-06-27)
+
+
+### Features
+
+* Add SOFT_LIGHT and HARD_LIGHT blending modes ([0a1fcd0](https://github.com/mallikcheripally/colore-js/commit/0a1fcd0aa6c274a046a2305bc395a2cd2665e5a2))
+* Add structured data and breadcrumbs components ([217e7c4](https://github.com/mallikcheripally/colore-js/commit/217e7c4f99392c6f30b1d7f32a5c85e07211b70c))
+* Convert installation doc to mdx and enhance SEO ([b7c0093](https://github.com/mallikcheripally/colore-js/commit/b7c0093ac387aa9b6e39a7e38d953982a407f76d))
+* Convert Quick Start guide to MDX and add metadata ([c4e72a2](https://github.com/mallikcheripally/colore-js/commit/c4e72a2e90609e584c8be029785c2bdb5b94077c))
+* **faq.mdx:** Add detailed metadata for SEO ([1db5b18](https://github.com/mallikcheripally/colore-js/commit/1db5b185d5e756dc75830e5df1f71f9fb96028f3))
+* Update docusaurus config for more structured navigation ([a0de6c6](https://github.com/mallikcheripally/colore-js/commit/a0de6c67fe5c202d0245d93cfd46650645922aa7))
+* Update Docusaurus config for theme and navbar ([5632dca](https://github.com/mallikcheripally/colore-js/commit/5632dcaa3246a98c4c156669b42e4bf53d1eb2e4))
+* Update heroBanner and benefits styles in CSS ([e54db22](https://github.com/mallikcheripally/colore-js/commit/e54db22edd0645a0b5e71636255ba071811678dd))
+* Update homepage content and layout ([19d1ca2](https://github.com/mallikcheripally/colore-js/commit/19d1ca2e0688f50a67721ffa8c81c82c540c7cfb))
+* Update primary color palettes in CSS ([4dfece0](https://github.com/mallikcheripally/colore-js/commit/4dfece01f1b9d83a2a349fbdd0a4a2b7b4b4f159))
+* Update published dates and add breadcrumb labels ([3f0878b](https://github.com/mallikcheripally/colore-js/commit/3f0878bb979d9774271a327f7c0710789686c2cb))
+
+
+### Bug Fixes
+
+* remove duplicate 'description' from installation docs ([277ca48](https://github.com/mallikcheripally/colore-js/commit/277ca48c65df6ac80eedb89109aeef1481307a44))
+
+
+### Code Refactoring
+
+* Rename FAQ file extension from .md to .mdx ([6976d87](https://github.com/mallikcheripally/colore-js/commit/6976d872813f52c087e5b197861f3a7239c87816))
+
+
+### Documentation
+
+* Remove advanced and basic usage examples ([84e1732](https://github.com/mallikcheripally/colore-js/commit/84e17327816c32a90797bb02b53b5db76538e45c))
+* remove source code from xyzToLab documentation ([bf73c35](https://github.com/mallikcheripally/colore-js/commit/bf73c354d4eadbbcefd3d2fe512bc636e80f41b5))
+* Update code snippets in faq.mdx ([5580625](https://github.com/mallikcheripally/colore-js/commit/55806251aadd2a67df8aa64c895f355bf87699ae))
+* update FAQ link in quick-start guide ([7a5b109](https://github.com/mallikcheripally/colore-js/commit/7a5b1093b5bd770646089fb6db8324d94cb69da0))
+* Update introduction text and keywords in documentation ([2908f3e](https://github.com/mallikcheripally/colore-js/commit/2908f3e98151c8eab35a8b677fca2f88e4d28ee7))
+* update key features in introduction.md ([6458d2e](https://github.com/mallikcheripally/colore-js/commit/6458d2ec668685ac8d5a5965141445e119e57f7c))
+* update key features in introduction.md ([529d526](https://github.com/mallikcheripally/colore-js/commit/529d5266cc39f48134bcc4891e651d63d402cf76))
+* Update README.md ([db17be4](https://github.com/mallikcheripally/colore-js/commit/db17be40627cdd2adcea9102d2f5be3eda8547a4))
+* Update the FAQ's structured data ([e8af149](https://github.com/mallikcheripally/colore-js/commit/e8af149507da5b25d6cebd8d18f76a75ddfc1d7c))
+
 ## [1.3.0](https://github.com/mallikcheripally/colore-js/compare/v1.2.0...v1.3.0) (2024-06-21)
 
 
