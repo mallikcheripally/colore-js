@@ -132,7 +132,7 @@ export default function Home(): JSX.Element {
     const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            title={`colore-js | Color Generation, Conversion, Manipulation and Validation Library`}
+            title={`Colore JS | Tiny but Comprehensive library for Color Management`}
             description="A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis."
         >
             <Breadcrumbs />
