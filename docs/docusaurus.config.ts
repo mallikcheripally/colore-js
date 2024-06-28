@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'colore-js',
-  tagline: 'colore-js - Color Generation, Conversion, Manipulation and Validation Library',
+  title: 'Colore JS',
+  tagline: 'Colore JS | Tiny but Comprehensive library for Color Management',
   favicon: 'img/favicon.ico',
   url: 'https://colore.mallikcheripally.com',
   baseUrl: '/',
@@ -151,12 +151,12 @@ const config: Config = {
     metadata: [
       { name: 'description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { name: 'keywords', content: 'Colore, colore js, colore-js, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast ratio, CSS, color library, Color Validation, hex, hsl, hsla, rgb, rgba, lch, lab, xyz', },
-      { property: 'og:title', content: 'colore-js | Color Generation, Conversion, Manipulation and Validation Library' },
+      { property: 'og:title', content: 'Colore JS | Tiny but Comprehensive library for Color Management' },
       { property: 'og:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { property: 'og:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
       { property: 'og:url', content: 'https://colore.mallikcheripally.com' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'colore-js | Color Generation, Conversion, Manipulation and Validation Library' },
+      { name: 'twitter:title', content: 'Colore JS | Tiny but Comprehensive library for Color Management' },
       { name: 'twitter:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
       { name: 'twitter:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
       {
