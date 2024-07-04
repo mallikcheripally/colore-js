@@ -10,7 +10,7 @@ const StructuredData = ({
                                 "codeRepository": "https://github.com/mallikcheripally/colore-js",
                                 "programmingLanguage": "JavaScript",
                                 "license": "https://opensource.org/licenses/MIT",
-                                "keywords": ["colore-js", "colore", "colore js", "color conversion", "color manipulation", "color validation", "color harmony", "color utility", "color contrast ratio", "accessibility"],
+                                "keywords": ["colore-js", "colore", "colore js", "javascript color library", "js color library", "color conversion", "color manipulation", "color validation", "color harmony", "color utility", "color contrast ratio", "accessibility", "color management library", "javascript color management"],
                                 "author": {
                                     "@type": "Person",
                                     "name": "Mallik Cheripally"
