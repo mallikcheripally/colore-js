@@ -8,6 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   url: 'https://colore.mallikcheripally.com',
   baseUrl: '/',
+  trailingSlash: false,
   organizationName: 'mallikcheripally',
   projectName: 'colore-js',
   onBrokenLinks: 'throw',
