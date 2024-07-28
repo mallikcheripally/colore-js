@@ -1,0 +1,59 @@
+---
+id: getCssVariableValue
+title: getCssVariableValue
+description: "Learn how to use the getCssVariableValue function in Colore JS to retrieve the value of a CSS variable. This guide covers the syntax, parameters, examples, and practical applications for accessing CSS variable values in your projects."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - getCssVariableValue
+  - css variable
+  - javascript css variable
+  - retrieve css variable
+  - css custom property
+  - css variable value
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# getCssVariableValue
+
+The `getCssVariableValue` function retrieves the value of a specified CSS variable from a given element or the root document if no element is provided.
+
+## Syntax
+
+```typescript
+getCssVariableValue(element: HTMLElement | null = null, variableName: string, defaultValue: string = ''): string;
+```
+
+### Parameters
+
+- **`element`** (HTMLElement | null): The HTML element from which to get the CSS variable value. Defaults to the root document.
+- **`variableName`** (string): The name of the CSS variable (e.g., --my-variable).
+- **`defaultValue`** (string, optional): The default value to return if the variable does not exist. Defaults to an empty string.
+
+### Returns
+
+- **string**: The value of the CSS variable or the default value if the variable does not exist.
+
+### Throws
+
+- **Error**: Throws an error if the CSS variable name does not start with "--".
+
+## Example
+
+```typescript
+import { getCssVariableValue } from 'colore-js';
+
+// Assuming you have an element with a CSS variable defined
+const element = document.querySelector('.my-element');
+const variableValue = getCssVariableValue(element, '--my-variable');
+console.log(variableValue);
+// Output: 'your-css-variable-value'
+```
+
+## Usage
+
+The `getCssVariableValue` function is useful for dynamically accessing CSS variables defined in your stylesheets. This can be particularly helpful when you need to read and use these values within your JavaScript code for further manipulations or calculations.

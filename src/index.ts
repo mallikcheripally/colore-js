@@ -37,6 +37,10 @@ export { xyzToLab } from '@/conversions/xyzToLab';
 export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 
+//CSS Variables
+export { getCssVariableValue } from '@/cssVariables/getCssVariableValue';
+
+
 // Generators
 export { generateInterpolatedColors } from '@/generators/generateInterpolatedColors';
 export { generateRandomColor } from '@/generators/generateRandomColor';

@@ -62,6 +62,13 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: 'CSS Variables',
+          items: [
+            'api/cssVariables/getCssVariableValue',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Generators',
           items: [
               'api/generators/generateInterpolatedColors',
