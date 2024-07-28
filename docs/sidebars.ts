@@ -98,8 +98,9 @@ const sidebars: SidebarsConfig = {
             'api/manipulations/darkenColor',
             'api/manipulations/desaturateColor',
             'api/manipulations/invertColor',
-            'api/manipulations/saturateColor',
             'api/manipulations/lightenColor',
+            'api/manipulations/saturateColor',
+            'api/manipulations/setAlphaValue',
           ],
         },
         {
