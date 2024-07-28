@@ -1,0 +1,61 @@
+---
+id: hexToHexAlpha
+title: hexToHexAlpha
+description: "Learn how to use the hexToHexAlpha function in Colore JS to convert a HEX color string to a HEX color string with alpha. This guide covers the syntax, parameters, examples, and practical applications for adding alpha values to HEX colors."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - hexToHexAlpha
+  - hex color
+  - hex with alpha
+  - color conversion
+  - css color
+  - javascript color conversion
+  - color manipulation
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# hexToHexAlpha
+
+The `hexToHexAlpha` function converts a HEX color string to a HEX color string with alpha. This is useful for adding transparency to HEX colors.
+
+## Syntax
+
+```typescript
+hexToHexAlpha(hex: string, alpha: number): string;
+```
+
+### Parameters
+
+- **`hex`** (string): The HEX color string (e.g., #RRGGBB or #RGB).
+- **`alpha`** (number): The alpha value (0-1).
+
+### Returns
+
+- **string**: The HEX color string with alpha in the format #RRGGBBAA.
+
+### Throws
+
+- **Error**: Throws an error if the provided string is not a valid HEX color or if the alpha value is out of range.
+
+## Example
+
+```typescript
+import { hexToHexAlpha } from 'colore-js';
+
+const hexWithAlpha = hexToHexAlpha('#ff0000', 0.5);
+console.log(hexWithAlpha);
+// Output: '#ff000080'
+
+const hexWithAlphaShorthand = hexToHexAlpha('#f00', 0.75);
+console.log(hexWithAlphaShorthand);
+// Output: '#ff0000bf'
+```
+
+## Usage
+
+The `hexToHexAlpha` function is used to add transparency to HEX colors, making it useful for web design and other applications where color manipulation is needed.

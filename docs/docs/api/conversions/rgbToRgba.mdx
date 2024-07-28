@@ -1,0 +1,67 @@
+---
+id: rgbToRgba
+title: rgbToRgba
+description: "Learn how to use the rgbToRgba function in Colore JS to convert RGB color values to an RGBA color string or object. This guide covers the syntax, parameters, examples, and practical applications for working with RGBA colors."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - rgbToRgba
+  - rgb color
+  - rgba color
+  - color conversion
+  - css color
+  - javascript color conversion
+  - color manipulation
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# rgbToRgba
+
+The `rgbToRgba` function converts RGB color values to an RGBA color string or object. This is useful for adding an alpha (transparency) component to RGB colors.
+
+## Syntax
+
+```typescript
+rgbToRgba(r: number, g: number, b: number, a: number, asString?: true): string;
+rgbToRgba(r: number, g: number, b: number, a: number, asString?: false): { r: number; g: number; b: number; a: number };
+rgbToRgba(r: number, g: number, b: number, a: number, asString: boolean = true): string | { r: number; g: number; b: number; a: number };
+```
+
+### Parameters
+
+- **`r`** (number): The red color value (0-255).
+- **`g`** (number): The green color value (0-255).
+- **`b`** (number): The blue color value (0-255).
+- **`a`** (number): The alpha value (0-1).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string**: The RGBA color string in the format `rgba(r, g, b, a)` if `asString` is true.
+- **object**: The RGBA color as an object with properties `r`, `g`, `b`, and `a` if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if any of the color values are out of range.
+
+## Example
+
+```typescript
+import { rgbToRgba } from 'colore-js';
+
+// Example usage as string
+const rgbaString = rgbToRgba(255, 0, 0, 0.5);
+console.log(rgbaString); // Output: 'rgba(255, 0, 0, 0.5)'
+
+// Example usage as object
+const rgbaObject = rgbToRgba(255, 0, 0, 0.5, false);
+console.log(rgbaObject); // Output: { r: 255, g: 0, b: 0, a: 0.5 }
+```
+
+## Usage
+
+The `rgbToRgba` function is useful for converting RGB color values to RGBA, allowing you to add transparency to RGB colors in web design and other applications.
