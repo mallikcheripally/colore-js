@@ -1,0 +1,65 @@
+---
+id: setAlphaValue
+title: setAlphaValue
+description: "Learn how to use the setAlphaValue function in Colore JS to set the alpha value of a given color in various formats. This guide covers the syntax, parameters, examples, and practical applications for adjusting color transparency in your projects."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - setAlphaValue
+  - alpha value
+  - set alpha
+  - color transparency
+  - css color
+  - javascript color manipulation
+  - color manipulation
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# setAlphaValue
+
+The `setAlphaValue` function sets the alpha value of a given color in various formats. This is useful for adjusting the transparency of colors.
+
+## Syntax
+
+```typescript
+setAlphaValue(color: string, alpha: number): string;
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+- **`alpha`** (number): The alpha value to set (0-1).
+
+### Returns
+
+- **string**: The color with the new alpha value in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid or if the alpha value is out of range.
+
+## Example
+
+```typescript
+import { setAlphaValue } from 'colore-js';
+
+const rgbaColor = setAlphaValue('#ff0000', 0.5);
+console.log(rgbaColor);
+// Output: '#ff000080'
+
+const rgbaColorFromRgb = setAlphaValue('rgb(255, 0, 0)', 0.5);
+console.log(rgbaColorFromRgb);
+// Output: 'rgba(255, 0, 0, 0.5)'
+
+const hslaColor = setAlphaValue('hsl(0, 100%, 50%)', 0.5);
+console.log(hslaColor);
+// Output: 'hsla(0, 100%, 50%, 0.5)'
+```
+
+## Usage
+
+The `setAlphaValue` function is used to adjust the transparency of colors in various formats. This can be useful in web design, data visualization, and other applications where color manipulation is required.

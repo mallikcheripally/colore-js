@@ -92,6 +92,7 @@ export { saturateColor } from '@/manipulations/saturateColor';
 export { desaturateColor } from '@/manipulations/desaturateColor';
 export { blendColors } from '@/manipulations/blendColors';
 export { invertColor } from '@/manipulations/invertColor';
+export { setAlphaValue } from '@/manipulations/setAlphaValue';
 
 
 // Utils
