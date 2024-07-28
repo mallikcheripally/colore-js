@@ -65,6 +65,7 @@ const sidebars: SidebarsConfig = {
           label: 'CSS Variables',
           items: [
             'api/cssVariables/getCssVariableValue',
+            'api/cssVariables/setCssVariableValue',
           ],
         },
         {

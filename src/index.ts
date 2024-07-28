@@ -39,6 +39,7 @@ export { xyzToRgb } from '@/conversions/xyzToRgb';
 
 //CSS Variables
 export { getCssVariableValue } from '@/cssVariables/getCssVariableValue';
+export { setCssVariableValue } from '@/cssVariables/setCssVariableValue';
 
 
 // Generators
