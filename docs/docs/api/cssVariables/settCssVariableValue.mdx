@@ -1,0 +1,56 @@
+---
+id: setCssVariableValue
+title: setCssVariableValue
+description: "Learn how to use the setCssVariableValue function in Colore JS to set the value of a CSS variable on an element or the document. This guide covers the syntax, parameters, examples, and practical applications for updating CSS variable values in your projects."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - setCssVariableValue
+  - css variable
+  - javascript css variable
+  - set css variable
+  - css custom property
+  - css variable value
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# setCssVariableValue
+
+The `setCssVariableValue` function sets the value of a specified CSS variable on a given element or the document.
+
+## Syntax
+
+```typescript
+setCssVariableValue(element: HTMLElement | null, variableName: string, value: string): void;
+```
+
+### Parameters
+
+- **`element`** (HTMLElement | null): The element on which to set the CSS variable value. If null, the CSS variable will be set on the document.
+- **`variableName`** (string): The name of the CSS variable (e.g., --my-variable).
+- **`value`** (string): The value to set for the CSS variable.
+
+### Throws
+
+- **Error**: Throws an error if the CSS variable name does not start with "--".
+
+## Example
+
+```typescript
+import { setCssVariableValue } from 'colore-js';
+
+// Setting a CSS variable on a specific element
+const element = document.querySelector('.my-element');
+setCssVariableValue(element, '--my-variable', 'blue');
+
+// Setting a CSS variable on the document
+setCssVariableValue(null, '--global-variable', 'red');
+```
+
+## Usage
+
+The `setCssVariableValue` function is useful for dynamically updating CSS variables defined in your stylesheets. This can be particularly helpful when you need to change these values within your JavaScript code to affect styling dynamically.
