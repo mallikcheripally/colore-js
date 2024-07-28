@@ -1,0 +1,67 @@
+---
+id: hslToHsla
+title: hslToHsla
+description: "Learn how to use the hslToHsla function in Colore JS to convert HSL color values to an HSLA color string or object. This guide covers the syntax, parameters, examples, and practical applications for working with HSLA colors."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - hslToHsla
+  - hsl color
+  - hsla color
+  - color conversion
+  - css color
+  - javascript color conversion
+  - color manipulation
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# hslToHsla
+
+The `hslToHsla` function converts HSL color values to an HSLA color string or object. This is useful for adding an alpha (transparency) component to HSL colors.
+
+## Syntax
+
+```typescript
+hslToHsla(h: number, s: number, l: number, a: number, asString?: true): string;
+hslToHsla(h: number, s: number, l: number, a: number, asString?: false): { h: number; s: number; l: number; a: number };
+hslToHsla(h: number, s: number, l: number, a: number, asString: boolean = true): string | { h: number; s: number; l: number; a: number };
+```
+
+### Parameters
+
+- **`h`** (number): The hue value (0-360).
+- **`s`** (number): The saturation value (0-100).
+- **`l`** (number): The lightness value (0-100).
+- **`a`** (number): The alpha value (0-1).
+- **`asString`** (boolean, optional): Whether to return the result as a string (default is true).
+
+### Returns
+
+- **string**: The HSLA color string in the format `hsla(h, s%, l%, a)` if `asString` is true.
+- **object**: The HSLA color as an object with properties `h`, `s`, `l`, and `a` if `asString` is false.
+
+### Throws
+
+- **Error**: Throws an error if any of the color values are out of range.
+
+## Example
+
+```typescript
+import { hslToHsla } from 'colore-js';
+
+// Example usage as string
+const hslaString = hslToHsla(120, 50, 50, 0.5);
+console.log(hslaString); // Output: 'hsla(120, 50%, 50%, 0.5)'
+
+// Example usage as object
+const hslaObject = hslToHsla(120, 50, 50, 0.5, false);
+console.log(hslaObject); // Output: { h: 120, s: 50, l: 50, a: 0.5 }
+```
+
+## Usage
+
+The hslToHsla function is useful for converting HSL color values to HSLA, allowing you to add transparency to HSL colors in web design and other applications.
