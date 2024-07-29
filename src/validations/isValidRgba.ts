@@ -16,7 +16,7 @@ export function isValidRgba(color: string): boolean {
     if (!match) return false;
 
     const isValidComponent = (value: number, isAlpha?: boolean) => {
-        if (isAlpha) return value >=0 && value <= 1;
+        if (isAlpha) return (typeof value === 'undefined') || (value >=0 && value <= 1);
         return value >= 0 && value <= 255;
     }
 

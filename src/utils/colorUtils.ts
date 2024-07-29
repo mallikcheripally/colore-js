@@ -7,6 +7,7 @@
  */
 export function parseComponent(value: string, asInteger?: boolean): number {
     if (value === 'none') return 0;
+    if (typeof value === 'undefined') return value;
     return asInteger ? parseInt(value, 10) : parseFloat(value);
 }
 
@@ -65,12 +66,15 @@ export function roundTo(num: number, precision: number = 3): number {
  */
 export function parseRgbComponent(value: string, isAlpha?: boolean): number {
     if (value === 'none') return isAlpha ? 1 : 0;
-    if (value.includes('%')) {
+    if (value?.includes('%')) {
         const percentValue = parseFloat(value) * (isAlpha ? 0.01 : 2.55);
         const result = (percentValue * 100) / 100;
         return isAlpha ? result : Math.round(result);
     }
 
-    if (isAlpha) return parseFloat(value);
+    if (isAlpha) {
+        if (typeof value === 'undefined') return value;
+        return parseFloat(value);
+    }
     return parseInt(value, 10);
 }

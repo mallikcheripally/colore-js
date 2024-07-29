@@ -2,7 +2,7 @@ import { parseRgba } from '@/parser/parseRgba';
 
 describe('parseRgba', () => {
     test('parses RGBA color with numbers correctly', () => {
-        const result = parseRgba('rgba(255, 0, 0, 0.5)');
+        const result = parseRgba('rgba(255, 0, 0)');
         expect(result).toEqual({
             r: 255,
             rUnit: undefined,
@@ -13,9 +13,9 @@ describe('parseRgba', () => {
             b: 0,
             bUnit: undefined,
             bNum: 0,
-            a: 0.5,
+            a: undefined,
             aUnit: undefined,
-            aNum: 0.5,
+            aNum: undefined,
         });
     });
 
