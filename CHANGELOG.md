@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/mallikcheripally/colore-js/compare/v1.4.0...v1.4.1) (2024-07-29)
+
+
+### Features
+
+* **docs:** update sidebar to include setAlphaValue API ([4c380a7](https://github.com/mallikcheripally/colore-js/commit/4c380a7f5e9c4714f478efa70ac19eb03070fb16))
+
+
+### Bug Fixes
+
+* support optional alpha value in RGBA parsing ([6935d36](https://github.com/mallikcheripally/colore-js/commit/6935d36a53db770007796e3b6c1c5b1452c6ee8f))
+
 ## [1.4.0](https://github.com/mallikcheripally/colore-js/compare/v1.3.1...v1.4.0) (2024-07-28)
 
 
