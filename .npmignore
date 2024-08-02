@@ -11,3 +11,4 @@ tests/
 rollup.config.cjs
 tsconfig.json
 yarn.lock
+*/.DS_Store

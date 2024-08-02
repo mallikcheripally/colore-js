@@ -39,13 +39,13 @@ A High-Performance JavaScript Library for Color Management.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
 
 ### 🌈 Color Harmony
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generate harmonious colors using complementary, triadic, tetradic, analogous, and monochromatic color schemes.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generate harmonious colors using monochromatic, complementary, triadic, tetradic, and more color schemes.</p>
 
 ### 🔍 Color Validation
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Validate color formats to ensure correct color values before applying transformations.</p>
 
 ### 🎨 Color Conversions
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert colors between different color formats RGB, RGBA, HEX, HEX Alpha, HSL, HSLA, LAB, LCH, XYZ, and more.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert colors between all popular color formats such as RGB, HEX, HSL, LAB, LCH, and more.</p>
 
 ### 📊 Accessibility
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Calculate contrast ratios, luminance, and other color metrics for accessibility.</p>
@@ -60,7 +60,7 @@ A High-Performance JavaScript Library for Color Management.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Designed to be lean and efficient without any external dependencies.</p>
 
 ### 📦 Small Size
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~10 KB gzipped</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~10 KB gzipped.</p>
 
 
 # Installation
@@ -77,7 +77,7 @@ Alternatively, if you use Yarn:
 yarn add colore-js
 ```
 
-## Getting Started
+# Getting Started
 
 ```javascript
 import { hexToRgb, lightenColor, saturateColor, setCssVariableValue } from 'colore-js';
@@ -100,18 +100,6 @@ setCssVariableValue(element, '--my-variable', 'blue');
 
 ```
 
-### Supported Color Formats
-
--   Hex strings
--   Hex Alpha strings
--   HSL strings and objects
--   HSV strings and objects
--   LAB strings and objects
--   LCH strings and objects
--   Named Colors strings and objects
--   RGB strings and objects
--   RGBA strings and objects
--   XYZ strings and objects
 
 # API Reference
 
@@ -231,6 +219,21 @@ setCssVariableValue(element, '--my-variable', 'blue');
 <p>and more..</p>
 
 > See **[Documentation](https://colore.mallikcheripally.com)** for complete API reference.
+
+
+### Supported Color Formats
+
+-   Hex strings
+-   Hex Alpha strings
+-   HSL strings and objects
+-   HSV strings and objects
+-   LAB strings and objects
+-   LCH strings and objects
+-   Named Colors strings and objects
+-   RGB strings and objects
+-   RGBA strings and objects
+-   XYZ strings and objects
+
 
 ### Contributing
 
