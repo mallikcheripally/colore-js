@@ -86,6 +86,7 @@ export { rebuildColorFromRgba } from '@/parser/rebuildColorFromRgba';
 
 
 // Manipulations
+export { enhanceColor } from '@/manipulations/enhanceColor';
 export { lightenColor } from '@/manipulations/lightenColor';
 export { darkenColor } from '@/manipulations/darkenColor';
 export { saturateColor } from '@/manipulations/saturateColor';

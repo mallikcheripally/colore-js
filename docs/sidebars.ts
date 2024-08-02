@@ -97,6 +97,7 @@ const sidebars: SidebarsConfig = {
             'api/manipulations/blendColors',
             'api/manipulations/darkenColor',
             'api/manipulations/desaturateColor',
+            'api/manipulations/enhanceColor',
             'api/manipulations/invertColor',
             'api/manipulations/lightenColor',
             'api/manipulations/saturateColor',
