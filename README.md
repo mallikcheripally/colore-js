@@ -471,19 +471,19 @@ console.log(isValidLab('lab(50% 0% 0%)')); // Output: true
 
 ### Supported Color Formats
 
-| Format    | String Format | Object Format |
-|-----------|---------------|---------------|
-| Hex       | ✅ Yes         | ❌ No          |
-| Hex Alpha | ✅ Yes           | ❌ No          |
-| HSL       | ✅ Yes           | ✅ Yes           |
-| HSLA      | ✅ Yes           | ✅ Yes           |
-| HSV       | ✅ Yes           | ✅ Yes           |
-| LAB       | ✅ Yes           | ✅ Yes           |
-| LCH       | ✅ Yes           | ✅ Yes           |
-| Named     | ✅ Yes           | ✅ Yes           |
-| RGB       | ✅ Yes           | ✅ Yes           |
-| RGBA      | ✅ Yes           | ✅ Yes           |
-| XYZ       | ✅ Yes           | ✅ Yes           |
+| Format    | As String | As Object |
+|-----------|------------------|-----------|
+| Hex       | ✅ Yes            | ❌ No      |
+| Hex Alpha | ✅ Yes            | ❌ No      |
+| HSL       | ✅ Yes            | ✅ Yes     |
+| HSLA      | ✅ Yes            | ✅ Yes     |
+| HSV       | ✅ Yes            | ✅ Yes     |
+| LAB       | ✅ Yes            | ✅ Yes     |
+| LCH       | ✅ Yes            | ✅ Yes     |
+| Named     | ✅ Yes            | ✅ Yes     |
+| RGB       | ✅ Yes            | ✅ Yes     |
+| RGBA      | ✅ Yes            | ✅ Yes     |
+| XYZ       | ✅ Yes            | ✅ Yes     |
 
 ### Contributing
 
