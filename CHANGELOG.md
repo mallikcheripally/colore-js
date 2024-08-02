@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/mallikcheripally/colore-js/compare/v1.4.1...v1.4.2) (2024-08-02)
+
+
+### Features
+
+* add enhanceColor function for color manipulation ([aedf1cb](https://github.com/mallikcheripally/colore-js/commit/aedf1cbfb53ef7e40eaa931593da90339652ecc5))
+
+
+### Chores
+
+* add .DS_Store to .npmignore ([8caef0a](https://github.com/mallikcheripally/colore-js/commit/8caef0ab47b6c8395c2431c0235f02d47366be0c))
+
+
+### Documentation
+
+* expand README with new API methods and examples ([8cf7df8](https://github.com/mallikcheripally/colore-js/commit/8cf7df84f844a62b55a13347b741535da7e244d9))
+* update README for better clarity and organization ([fc330eb](https://github.com/mallikcheripally/colore-js/commit/fc330ebcc84ccea702edfb9e52192270a784fa7b))
+* update README section headings to improve structure ([81b9e3a](https://github.com/mallikcheripally/colore-js/commit/81b9e3a813b37dc1d9bd13a87ecac3f2244f0c38))
+* update README with detailed feature sections ([4f02b46](https://github.com/mallikcheripally/colore-js/commit/4f02b469c81d5fd7ee2730de30b523bb0b2ea2ea))
+
 ### [1.4.1](https://github.com/mallikcheripally/colore-js/compare/v1.4.0...v1.4.1) (2024-07-29)
 
 

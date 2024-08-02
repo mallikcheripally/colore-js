@@ -36,31 +36,31 @@ A High-Performance JavaScript Library for Color Management.
 ## Features
 
 ### 🔄 Color Manipulations
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
+<p>Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
 
 ### 🌈 Color Harmony
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generate harmonious colors using monochromatic, complementary, triadic, tetradic, and more color schemes.</p>
+<p>Generate harmonious colors using monochromatic, complementary, triadic, tetradic, and more color schemes.</p>
 
 ### 🔍 Color Validation
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Validate color formats to ensure correct color values before applying transformations.</p>
+<p>Validate color formats to ensure correct color values before applying transformations.</p>
 
 ### 🎨 Color Conversions
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert colors between all popular color formats such as RGB, HEX, HSL, LAB, LCH, and more.</p>
+<p>Convert colors between all popular color formats such as RGB, HEX, HSL, LAB, LCH, and more.</p>
 
 ### 📊 Accessibility
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Calculate contrast ratios, luminance, and other color metrics for accessibility.</p>
+<p>Calculate contrast ratios, luminance, and other color metrics for accessibility.</p>
 
 ### 🛠 Color Parsing
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parse individual components of colors, decompose and recompose colors.</p>
+<p>Parse individual components of colors, decompose and recompose colors.</p>
 
 ### 🚀 High Performance
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Optimized for performance with a small footprint.</p>
+<p>Optimized for performance with a small footprint.</p>
 
 ### ✅ No Dependencies
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Designed to be lean and efficient without any external dependencies.</p>
+<p>Designed to be lean and efficient without any external dependencies.</p>
 
 ### 📦 Small Size
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~10 KB gzipped.</p>
+<p>~10 KB gzipped.</p>
 
 
 ## Installation
@@ -469,20 +469,21 @@ console.log(isValidLab('lab(50% 0% 0%)')); // Output: true
 
 > See **[Documentation](https://colore.mallikcheripally.com)** for complete API reference.
 
-
 ### Supported Color Formats
 
--   Hex strings
--   Hex Alpha strings
--   HSL strings and objects
--   HSV strings and objects
--   LAB strings and objects
--   LCH strings and objects
--   Named Colors strings and objects
--   RGB strings and objects
--   RGBA strings and objects
--   XYZ strings and objects
-
+| Format    | String Format | Object Format |
+|-----------|---------------|---------------|
+| Hex       | ✅ Yes         | ❌ No          |
+| Hex Alpha | ✅ Yes           | ❌ No          |
+| HSL       | ✅ Yes           | ✅ Yes           |
+| HSLA      | ✅ Yes           | ✅ Yes           |
+| HSV       | ✅ Yes           | ✅ Yes           |
+| LAB       | ✅ Yes           | ✅ Yes           |
+| LCH       | ✅ Yes           | ✅ Yes           |
+| Named     | ✅ Yes           | ✅ Yes           |
+| RGB       | ✅ Yes           | ✅ Yes           |
+| RGBA      | ✅ Yes           | ✅ Yes           |
+| XYZ       | ✅ Yes           | ✅ Yes           |
 
 ### Contributing
 
