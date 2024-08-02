@@ -103,95 +103,89 @@ setCssVariableValue(element, '--my-variable', 'blue');
 
 # API Reference
 
+### Analysis
+
 <details>
 <summary>getContrastRatio</summary>
 
 ```javascript
 import { getContrastRatio } from 'colore-js';
 
-// Example with hex colors
 const result = getContrastRatio('#ffffff', '#000000');
-console.log(result);
-// Output: { ratio: 21, ratioString: "21.00:1", isAccessible: true, level: 'AAA' }
+console.log(result); // Output: { ratio: 21, ratioString: "21.00:1", isAccessible: true, level: 'AAA' }
 ```
 </details>
 
 <details>
-<summary>generateRandomColor</summary>
+<summary>getLuminance</summary>
 
 ```javascript
-import { generateRandomColor, ColorFormats } from 'colore-js';
+import { getLuminance } from 'colore-js';
 
-const randomHexColor = generateRandomColor(ColorFormats.HEX);
-console.log(randomHexColor); // Output: "#a1b2c3" (example)
+const luminance = getLuminance('#ffffff');
+console.log(luminance); // Output: 1
+```
+</details>
+
+### Conversions
+
+<details>
+<summary>cmykToRgb</summary>
+
+```javascript
+import { cmykToRgb } from 'colore-js';
+
+const rgbString = cmykToRgb(0, 100, 100, 0);
+console.log(rgbString); // Output: "rgb(255, 0, 0)"
 ```
 </details>
 
 <details>
-<summary>blendColors</summary>
+<summary>hexAlphaToHsla</summary>
 
 ```javascript
-import { blendColors, BlendingModes } from 'colore-js';
+import { hexAlphaToHsla } from 'colore-js';
 
-const blendedNormal = blendColors('rgb(255, 0, 0)', 'rgb(0, 0, 255)', BlendingModes.NORMAL, 0.5);
-console.log(blendedNormal); // Output: 'rgb(128, 0, 128)'
+const hslaColor = hexAlphaToHsla('#ff5733cc');
+console.log(hslaColor); // Output: "hsla(14, 100%, 60%, 0.8)"
 ```
 </details>
 
 <details>
-<summary>darkenColor</summary>
+<summary>hexAlphaToHsva</summary>
 
 ```javascript
-import { darkenColor } from 'colore-js';
+import { hexAlphaToHsva } from 'colore-js';
 
-const darkened = darkenColor('#ff0000', 20);
-console.log(darkened); // Output: '#cc0000'
+const hsvaString = hexAlphaToHsva('#ff5733cc');
+console.log(hsvaString); // Output: "hsva(11, 0.8, 1, 0.8)"
 ```
 </details>
 
 <details>
-<summary>lightenColor</summary>
+<summary>hexAlphaToRgba</summary>
 
 ```javascript
-import { lightenColor } from 'colore-js';
+import { hexAlphaToRgba } from 'colore-js';
 
-const lightened = lightenColor('#ff0000', 20);
-console.log(lightened); // Output: '#ff6666'
+const rgbaString = hexAlphaToRgba('#FF5733CC');
+console.log(rgbaString); // Output: "rgba(255, 87, 51, 0.8)"
 ```
 </details>
 
 <details>
-<summary>saturateColor</summary>
+<summary>hexToHexAlpha</summary>
 
 ```javascript
-import { saturateColor } from 'colore-js';
+import { hexToHexAlpha } from 'colore-js';
 
-const saturated = saturateColor('#ff0000', 50);
-console.log(saturated); // Output: '#ff3333'
+const hexWithAlpha = hexToHexAlpha('#ff0000', 0.5);
+console.log(hexWithAlpha); // Output: '#ff000080'
 ```
 </details>
+<p>See all <a href="https://colore.mallikcheripally.com/docs/api/conversions/cmykToRgb">Conversions</a>.</p>
 
-<details>
-<summary>setAlphaValue</summary>
-
-```javascript
-import { setAlphaValue } from 'colore-js';
-
-const rgbaColorFromRgb = setAlphaValue('rgb(255, 0, 0)', 0.5);
-console.log(rgbaColorFromRgb); // Output: 'rgba(255, 0, 0, 0.5)'
-```
-</details>
-
-<details>
-<summary>decomposeColor</summary>
-
-```javascript
-import { decomposeColor } from 'colore-js';
-
-const decomposedRgb = decomposeColor('rgb(255, 0, 0)');
-console.log(decomposedRgb); // Output: { r: 255, g: 0, b: 0 }
-```
-</details>
+### CSS Variables
 
 <details>
 <summary>getCssVariableValue</summary>
@@ -216,7 +210,262 @@ setCssVariableValue(element, '--my-variable', 'blue');
 ```
 </details>
 
-<p>and more..</p>
+### Generators
+
+<details>
+<summary>generateInterpolatedColors</summary>
+
+```javascript
+import { generateInterpolatedColors } from 'colore-js';
+
+const color1 = '#ff0000';
+const color2 = '#00ff00';
+const steps = 5;
+
+const interpolatedColorsStrings = generateInterpolatedColors(color1, color2, steps);
+console.log(interpolatedColorsStrings);
+```
+</details>
+
+<details>
+<summary>generateRandomColor</summary>
+
+```javascript
+import { generateRandomColor, ColorFormats } from 'colore-js';
+
+const randomHexColor = generateRandomColor(ColorFormats.HEX);
+console.log(randomHexColor); // Output: "#a1b2c3" (example)
+```
+</details>
+
+### Harmony
+
+<details>
+<summary>analogousColors</summary>
+
+```javascript
+import { analogousColors } from 'colore-js';
+
+const analogous = analogousColors('#ff0000');
+console.log(analogous); // Output: ['#ff8000', '#ff0080']
+```
+</details>
+
+<details>
+<summary>complementaryColor</summary>
+
+```javascript
+import { complementaryColor } from 'colore-js';
+
+const complementary = complementaryColor('#ff0000');
+console.log(complementary); // Output: '#00ffff'
+```
+</details>
+
+<details>
+<summary>monochromaticColors</summary>
+
+```javascript
+import { monochromaticColors } from 'colore-js';
+
+const monochromatic = monochromaticColors('#ff0000');
+console.log(monochromatic); // Output: ['#4c0000', '#b20000', '#ff0000', '#ff4c4c', '#ff9999']
+```
+</details>
+
+<details>
+<summary>tetradicColors</summary>
+
+```javascript
+import { tetradicColors } from 'colore-js';
+
+const tetradic = tetradicColors('#ff0000');
+console.log(tetradic); // Output: ['#00ff00', '#0000ff', '#ff00ff']
+```
+</details>
+
+<details>
+<summary>triadicColors</summary>
+
+```javascript
+import { triadicColors } from 'colore-js';
+
+const triadic = triadicColors('#ff0000');
+console.log(triadic); // Output: ['#00ff00', '#0000ff']
+```
+</details>
+
+### Manipulations
+
+<details>
+<summary>blendColors</summary>
+
+```javascript
+import { blendColors, BlendingModes } from 'colore-js';
+
+const blended = blendColors('#ff0000', '#0000ff', BlendingModes.MULTIPLY);
+console.log(blended); // Output: '#000000'
+```
+</details>
+
+<details>
+<summary>darkenColor</summary>
+
+```javascript
+import { darkenColor } from 'colore-js';
+
+const darkened = darkenColor('#ff0000', 20);
+console.log(darkened); // Output: '#cc0000'
+```
+</details>
+
+<details>
+<summary>desaturateColor</summary>
+
+```javascript
+import { desaturateColor } from 'colore-js';
+
+const desaturated = desaturateColor('#ff0000', 50);
+console.log(desaturated); // Output: '#804040'
+```
+</details>
+
+<details>
+<summary>invertColor</summary>
+
+```javascript
+import { invertColor } from 'colore-js';
+
+const invertedColor = invertColor("#ff5733");
+console.log(invertedColor); // Output: "#00a8cc"
+```
+</details>
+
+<details>
+<summary>lightenColor</summary>
+
+```javascript
+import { lightenColor } from 'colore-js';
+
+const lightened = lightenColor('#ff0000', 20);
+console.log(lightened); // Output: '#ff6666'
+```
+</details>
+
+<p>See all <a href="https://colore.mallikcheripally.com/docs/api/manipulations/blendColors">Manipulations</a>.</p>
+
+### Parser
+
+<details>
+<summary>decomposeColor</summary>
+
+```javascript
+import { decomposeColor } from 'colore-js';
+
+const decomposedHex = decomposeColor('#ff0000');
+console.log(decomposedHex); // Output: { r: 255, g: 0, b: 0 }
+```
+</details>
+
+<details>
+<summary>detectColorFormat</summary>
+
+```javascript
+import { detectColorFormat } from 'colore-js';
+
+const formatHex = detectColorFormat('#ff0000');
+console.log(formatHex); // Output: 'HEX'
+```
+</details>
+
+<details>
+<summary>parseColorToRgba</summary>
+
+```javascript
+import { parseColorToRgba } from 'colore-js';
+
+const rgbaHex = parseColorToRgba('#ff0000');
+console.log(rgbaHex); // Output: { r: 255, g: 0, b: 0 }
+```
+</details>
+
+<details>
+<summary>parseHex</summary>
+
+```javascript
+import { parseHex } from 'colore-js';
+
+const rgb = parseHex('#ff0000');
+console.log(rgb); // Output: { r: 255, g: 0, b: 0 }
+```
+</details>
+
+<details>
+<summary>parseHexAlpha</summary>
+
+```javascript
+import { parseHexAlpha } from 'colore-js';
+
+const rgba = parseHexAlpha('#ff000080');
+console.log(rgba); // Output: { r: 255, g: 0, b: 0, a: 0.502 }
+```
+</details>
+
+<p>See all <a href="https://colore.mallikcheripally.com/docs/api/parser/decomposeColor">Parsers</a>.</p>
+
+### Validations
+
+<details>
+<summary>isValidHex</summary>
+
+```javascript
+import { isValidHex } from 'colore-js';
+
+console.log(isValidHex('#ff0000')); // Output: true
+```
+</details>
+
+<details>
+<summary>isValidHexAlpha</summary>
+
+```javascript
+import { isValidHexAlpha } from 'colore-js';
+
+console.log(isValidHexAlpha('#ff0000ff')); // Output: true
+```
+</details>
+
+<details>
+<summary>isValidHsl</summary>
+
+```javascript
+import { isValidHsl } from 'colore-js';
+
+console.log(isValidHsl('hsl(120, 100%, 50%)')); // Output: true
+```
+</details>
+
+<details>
+<summary>isValidHsla</summary>
+
+```javascript
+import { isValidHsla } from 'colore-js';
+
+console.log(isValidHsla('hsla(120, 100%, 50%, 0.5)')); // Output: true
+```
+</details>
+
+<details>
+<summary>isValidLab</summary>
+
+```javascript
+import { isValidLab } from 'colore-js';
+
+console.log(isValidLab('lab(50% 0% 0%)')); // Output: true
+```
+</details>
+
+<p>See all <a href="https://colore.mallikcheripally.com/docs/api/validations/isValidHex">Validations</a>.</p>
 
 > See **[Documentation](https://colore.mallikcheripally.com)** for complete API reference.
 
