@@ -35,32 +35,32 @@ A High-Performance JavaScript Library for Color Management.
 
 ## Features
 
-> ### 🔄 Color Manipulations
-> <p>Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
+### 🔄 Color Manipulations
+<p>Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
 
-> ### 🌈 Color Harmony
-> <p>Generate harmonious colors using monochromatic, complementary, triadic, tetradic, and more color schemes.</p>
+### 🌈 Color Harmony
+<p>Generate harmonious colors using monochromatic, complementary, triadic, tetradic, and more color schemes.</p>
 
-> ### 🔍 Color Validation
-> <p>Validate color formats to ensure correct color values before applying transformations.</p>
+### 🔍 Color Validation
+<p>Validate color formats to ensure correct color values before applying transformations.</p>
 
-> ### 🎨 Color Conversions
-> <p>Convert colors between all popular color formats such as RGB, HEX, HSL, LAB, LCH, and more.</p>
+### 🎨 Color Conversions
+<p>Convert colors between all popular color formats such as RGB, HEX, HSL, LAB, LCH, and more.</p>
 
-> ### 📊 Accessibility
-> <p>Calculate contrast ratios, luminance, and other color metrics for accessibility.</p>
+### 📊 Accessibility
+<p>Calculate contrast ratios, luminance, and other color metrics for accessibility.</p>
 
-> ### 🛠 Color Parsing
-> <p>Parse individual components of colors, decompose and recompose colors.</p>
+### 🛠 Color Parsing
+<p>Parse individual components of colors, decompose and recompose colors.</p>
 
-> ### 🚀 High Performance
-> <p>Optimized for performance with a small footprint.</p>
+### 🚀 High Performance
+<p>Optimized for performance with a small footprint.</p>
 
-> ### ✅ No Dependencies
-> <p>Designed to be lean and efficient without any external dependencies.</p>
+### ✅ No Dependencies
+<p>Designed to be lean and efficient without any external dependencies.</p>
 
-> ### 📦 Small Size
-> <p>~10 KB gzipped.</p>
+### 📦 Small Size
+<p>~10 KB gzipped.</p>
 
 
 ## Installation
