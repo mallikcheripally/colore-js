@@ -1,0 +1,61 @@
+---
+id: enhanceColor
+title: enhanceColor
+description: "Learn how to use the enhanceColor function in Colore JS to automatically lighten or darken colors based on luminance. This guide covers the syntax, parameters, examples, and practical applications for enhancing color brightness and contrast."
+keywords:
+  - colore-js
+  - colore
+  - colore js
+  - enhanceColor
+  - color enhancement
+  - color lighten
+  - color darken
+  - css color manipulation
+  - javascript color manipulation
+  - color transformation
+---
+
+import StructuredData from '@site/src/components/StructuredData';
+
+<StructuredData />
+
+# enhanceColor
+
+The `enhanceColor` function enhances a given color by automatically lightening or darkening it based on its luminance. This is useful for adjusting the brightness and contrast of colors to improve visual aesthetics or accessibility.
+
+## Syntax
+
+```typescript
+enhanceColor(color: string, amount: number): string | undefined
+```
+
+### Parameters
+
+- **`color`** (string): The input color string in any supported format (hex, rgb, hsl, etc.).
+- **`amount`** (number): The amount to lighten the color (0-100).
+
+### Returns
+
+- **string | undefined**: The enhanced color in the original format.
+
+### Throws
+
+- **Error**: Throws an error if the input color format is invalid.
+
+## Example
+
+```typescript
+import { enhanceColor } from 'colore-js';
+
+const enhancedColor = enhanceColor('#333333', 20);
+console.log(enhancedColor);
+// Output: '#5c5c5c'
+
+const darkenedColor = enhanceColor('rgb(200, 200, 200)', 20);
+console.log(darkenedColor);
+// Output: 'rgb(160, 160, 160)'
+```
+
+## Usage
+
+The `enhanceColor` function is used to automatically adjust the brightness and contrast of colors based on their luminance. This can be useful in web design, data visualization, and other applications where dynamic color adjustments are required.
