@@ -33,7 +33,7 @@
 A High-Performance JavaScript Library for Color Management.
 </div>
 
-# Features
+## Features
 
 ### 🔄 Color Manipulations
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Easily manipulate colors with functions to lighten, darken, saturate, desaturate, invert, and blend colors.</p>
@@ -63,7 +63,7 @@ A High-Performance JavaScript Library for Color Management.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~10 KB gzipped.</p>
 
 
-# Installation
+## Installation
 
 To install the Colore library, use the follow command:
 
@@ -77,7 +77,7 @@ Alternatively, if you use Yarn:
 yarn add colore-js
 ```
 
-# Getting Started
+## Getting Started
 
 ```javascript
 import { hexToRgb, lightenColor, saturateColor, setCssVariableValue } from 'colore-js';
@@ -101,7 +101,7 @@ setCssVariableValue(element, '--my-variable', 'blue');
 ```
 
 
-# API Reference
+## API Reference
 
 ### Analysis
 
