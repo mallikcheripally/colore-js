@@ -467,7 +467,7 @@ console.log(isValidLab('lab(50% 0% 0%)')); // Output: true
 
 <p>See all <a href="https://colore.mallikcheripally.com/docs/api/validations/isValidHex">Validations</a>.</p>
 
-> See **[Documentation](https://colore.mallikcheripally.com)** for complete API reference.
+> #### See **[Documentation](https://colore.mallikcheripally.com)** for complete API reference.
 
 ### Supported Color Formats
 
