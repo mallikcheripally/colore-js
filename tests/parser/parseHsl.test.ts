@@ -86,18 +86,10 @@ describe('parseHsl', () => {
         });
     });
 
-    test('parses HSL color with no units for saturation and lightness', () => {
-        const result = parseHsl('hsl(180, 100, 50)');
-        expect(result).toEqual({
-            h: 180,
-            hUnit: undefined,
-            hDeg: 180,
-            s: 100,
-            sUnit: undefined,
-            l: 50,
-            lUnit: undefined
-        });
+    test('throws for HSL color without percentage units on saturation or lightness', () => {
+        expect(() => parseHsl('hsl(180, 100, 50)')).toThrow('Invalid HSL color format');
+        expect(() => parseHsl('hsl(180, 100%, 50)')).toThrow('Invalid HSL color format');
+        expect(() => parseHsl('hsl(180, 100, 50%)')).toThrow('Invalid HSL color format');
     });
 });
-
 
