@@ -90,4 +90,11 @@ describe('generateInterpolatedColors', () => {
             "lch(80 20 200)",
         ]);
     });
+
+    test('throws when steps is not a positive integer', () => {
+        expect(() => generateInterpolatedColors('rgb(0, 0, 0)', 'rgb(255, 255, 255)', 0)).toThrow(
+            'Steps must be a positive integer',
+        );
+        expect(() => generateInterpolatedColors('rgb(0, 0, 0)', 'rgb(255, 255, 255)', -1)).toThrow();
+    });
 });

@@ -55,6 +55,10 @@ export function generateInterpolatedColors(
     steps: number,
     asString: boolean = true,
 ): Array<string | Object> {
+    if (!Number.isInteger(steps) || steps <= 0) {
+        throw new Error(`Invalid steps value ${steps}. Steps must be a positive integer.`);
+    }
+
     const format1 = detectColorFormat(color1);
     const format2 = detectColorFormat(color2);
 
