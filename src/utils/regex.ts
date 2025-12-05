@@ -20,6 +20,6 @@ export const rgbRegex: RegExp = /^rgb\(\s*(\d{1,3}(%)?)\s*,\s*(\d{1,3}(%)?)\s*,\
 //     /^rgba\(\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*,\s*(none|0|1|0?\.\d+|\d{1,3}(%)?)\s*\)$/i;
 
 export const rgbaRegex: RegExp =
-    /^rgba\(\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*(?:,\s*(none|0|1|0?\.\d+|\d{1,3}(%)?)\s*)?\)$/i;
+    /^rgba\(\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*,\s*(\d{1,3}(%)?|none)\s*,\s*(none|0|1|0?\.\d+|\d{1,3}(%)?)\s*\)$/i;
 
 export const xyzRegex: RegExp = /^xyz\(\s*(-?\d+(\.\d+)?)\s*,\s*(-?\d+(\.\d+)?)\s*,\s*(-?\d+(\.\d+)?)\s*\)$/;

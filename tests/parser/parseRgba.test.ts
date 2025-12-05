@@ -2,7 +2,7 @@ import { parseRgba } from '@/parser/parseRgba';
 
 describe('parseRgba', () => {
     test('parses RGBA color with numbers correctly', () => {
-        const result = parseRgba('rgba(255, 0, 0)');
+        const result = parseRgba('rgba(255, 0, 0, 1)');
         expect(result).toEqual({
             r: 255,
             rUnit: undefined,
@@ -13,9 +13,9 @@ describe('parseRgba', () => {
             b: 0,
             bUnit: undefined,
             bNum: 0,
-            a: undefined,
+            a: 1,
             aUnit: undefined,
-            aNum: undefined,
+            aNum: 1,
         });
     });
 
@@ -96,5 +96,6 @@ describe('parseRgba', () => {
         expect(() => parseRgba('rgba(255, -1, 0, 0.5)')).toThrow('Invalid RGBA color format');
         expect(() => parseRgba('rgba(255, 0, 0, 1.5)')).toThrow('Invalid RGBA color format');
         expect(() => parseRgba('rgba(100%, 100%, 100%, 200%)')).toThrow('Invalid RGBA color format');
+        expect(() => parseRgba('rgba(255, 0, 0)')).toThrow('Invalid RGBA color format');
     });
 });

@@ -26,5 +26,6 @@ describe('isValidRgba', () => {
         expect(isValidRgba('rgba(255, 0, 0, 1 /)')).toBe(false);
         expect(isValidRgba('rgba255, 0, 0, 1')).toBe(false);
         expect(isValidRgba('rgba(255, 0, 0 0)')).toBe(false);
+        expect(isValidRgba('rgba(255, 0, 0)')).toBe(false);
     });
 });

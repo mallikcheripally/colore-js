@@ -16,8 +16,8 @@ export function isValidRgba(color: string): boolean {
     if (!match) return false;
 
     const isValidComponent = (value: number, isAlpha?: boolean) => {
-        if (isAlpha) return (typeof value === 'undefined') || (value >=0 && value <= 1);
-        return value >= 0 && value <= 255;
+        if (!Number.isFinite(value)) return false;
+        return isAlpha ? value >= 0 && value <= 1 : value >= 0 && value <= 255;
     }
 
     const r = parseRgbComponent(match[1]);
