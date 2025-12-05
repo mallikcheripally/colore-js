@@ -27,6 +27,8 @@ describe('isValidHsl', () => {
         expect(isValidHsl('hsl(120, 110%, 50%)')).toBe(false);
         expect(isValidHsl('hsl(120, 100%, -10%)')).toBe(false);
         expect(isValidHsl('hsl(120, 100%, 110%)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100%, 50)')).toBe(false);
+        expect(isValidHsl('hsl(120, 100, 50%)')).toBe(false);
     });
 });
-

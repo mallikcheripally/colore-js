@@ -10,6 +10,11 @@ export function isValidHsl(color: string): boolean {
     const match = color.match(hslRegex);
     if (!match) return false;
 
+    // Saturation and lightness must be percentages in this legacy comma syntax.
+    const sUnit = match[6];
+    const lUnit = match[9];
+    if (sUnit !== '%' || lUnit !== '%') return false;
+
     const parseHue = (hue: string, unit: string | undefined): number => {
         let hueValue = parseFloat(hue);
         switch (unit) {
