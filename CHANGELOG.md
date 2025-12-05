@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/mallikcheripally/colore-js/compare/v1.4.2...v1.4.3) (2025-12-05)
+
+
+### Bug Fixes
+
+* add support for XYZ color format in `setAlphaValue` ([89dbc0f](https://github.com/mallikcheripally/colore-js/commit/89dbc0f18ae3caf94fd6173835a089fe820ac4f7))
+* added tslib to devDependencies in package.json so Rollup/@rollup/plugin-typescript can resolve the helper module it now enforces ([ca05541](https://github.com/mallikcheripally/colore-js/commit/ca05541aa425f61f487479725103483a981aab0a))
+* **docs:** correct table format for supported color formats ([3371c3a](https://github.com/mallikcheripally/colore-js/commit/3371c3a1b49c3a7ec437156ef31d6d2facf01812))
+* **docs:** remove extra indentation in README.md ([18e3b1a](https://github.com/mallikcheripally/colore-js/commit/18e3b1a390fc796e80dbf8f88e860ae792d7018f))
+* enforce percentage units for saturation and lightness in `isValidHsl` ([a2686a2](https://github.com/mallikcheripally/colore-js/commit/a2686a2e17caa4281517c0b88bc3241a1bdfdb91))
+* enforce percentage validation for saturation and lightness in `isValidHsla` ([924adf3](https://github.com/mallikcheripally/colore-js/commit/924adf355ab86d2bf5d117159ac37677ca5710b0))
+* improve RGBA validation and regex consistency ([86f0e2a](https://github.com/mallikcheripally/colore-js/commit/86f0e2a09bfbdb2261a67eddfddd7989dfb93b90))
+* update HSL parsing test to enforce percentage unit validation ([efacf8f](https://github.com/mallikcheripally/colore-js/commit/efacf8f920c09a026eba3bc72cf93a882d259ee4))
+* validate `steps` parameter in `generateInterpolatedColors` ([8b3300b](https://github.com/mallikcheripally/colore-js/commit/8b3300b01c998a54328316e553172d07fd20e6a5))
+
+
+### Documentation
+
+* update documentation link style in README ([d7fe75b](https://github.com/mallikcheripally/colore-js/commit/d7fe75b7406d07c0e5fbdf743a90b76896b5e917))
+* update README formatting and color formats section ([02859fb](https://github.com/mallikcheripally/colore-js/commit/02859fb631a40e8b30e40b7a6afe7e4c46c51ccf))
+
+
+### Chores
+
+* update `devDependencies` in package.json to latest versions ([cccbb4e](https://github.com/mallikcheripally/colore-js/commit/cccbb4e7e72e2440fad11d027791f19731c31566))
+
 ### [1.4.2](https://github.com/mallikcheripally/colore-js/compare/v1.4.1...v1.4.2) (2024-08-02)
 
 
