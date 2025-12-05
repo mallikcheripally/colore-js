@@ -10,6 +10,11 @@ export function isValidHsla(color: string): boolean {
     const match = color.match(hslaRegex);
     if (!match) return false;
 
+    // Saturation and lightness must be percentages in this legacy comma syntax.
+    const sUnit = match[6];
+    const lUnit = match[9];
+    if (sUnit !== '%' || lUnit !== '%') return false;
+
     const h = parseFloat(match[1]);
     const s = parseFloat(match[4]);
     const l = parseFloat(match[7]);
@@ -35,4 +40,3 @@ export function isValidHsla(color: string): boolean {
         l >= 0 && l <= 100 &&
         a >= 0 && a <= 1;
 }
-

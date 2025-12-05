@@ -18,6 +18,9 @@ describe('isValidHsla', () => {
         expect(isValidHsla('hsla(180, 100%, 150%, 0.5)')).toBe(false);
         expect(isValidHsla('hsla(180, 100%, 50%, 1.5)')).toBe(false);
         expect(isValidHsla('hsla(180, 100%, 50%, -0.5)')).toBe(false);
+        expect(isValidHsla('hsla(180, 100, 50, 0.5)')).toBe(false);
+        expect(isValidHsla('hsla(180, 100%, 50, 0.5)')).toBe(false);
+        expect(isValidHsla('hsla(180, 100, 50%, 0.5)')).toBe(false);
     });
 
     test('valid HSLA colors with mixed case units', () => {
