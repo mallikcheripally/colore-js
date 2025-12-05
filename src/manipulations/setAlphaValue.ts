@@ -31,6 +31,7 @@ export function setAlphaValue(color: string, alpha: number): string {
         case ColorFormats.HSLA:
         case ColorFormats.HEX_ALPHA:
             decomposed.a = alpha;
+            decomposed.aUnit = '';
             break;
         case ColorFormats.RGB:
             const rgb = parseRgb(color);
@@ -42,6 +43,10 @@ export function setAlphaValue(color: string, alpha: number): string {
             return hexToHexAlpha(color, alpha);
         case ColorFormats.LAB:
         case ColorFormats.LCH: {
+            const rgba = parseColorToRgba(color);
+            return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${alpha})`;
+        }
+        case ColorFormats.XYZ: {
             const rgba = parseColorToRgba(color);
             return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${alpha})`;
         }

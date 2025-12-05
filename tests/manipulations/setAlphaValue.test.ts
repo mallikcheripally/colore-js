@@ -4,6 +4,7 @@ describe('setAlphaValue', () => {
     test('sets alpha value for RGBA color', () => {
         expect(setAlphaValue('rgba(255, 0, 0, 0.5)', 0.8)).toBe('rgba(255, 0, 0, 0.8)');
         expect(setAlphaValue('rgba(0, 255, 0, 0.3)', 0.5)).toBe('rgba(0, 255, 0, 0.5)');
+        expect(setAlphaValue('rgba(0, 0, 255, 50%)', 0.6)).toBe('rgba(0, 0, 255, 0.6)');
     });
 
     test('sets alpha value for HSLA color', () => {
@@ -39,6 +40,10 @@ describe('setAlphaValue', () => {
     test('sets alpha value for LCH color', () => {
         expect(setAlphaValue('lch(50 30 30)', 0.5)).toBe('rgba(167, 101, 95, 0.5)');
         expect(setAlphaValue('lch(75 25 250)', 0.8)).toBe('rgba(137, 191, 227, 0.8)');
+    });
+
+    test('sets alpha value for XYZ color', () => {
+        expect(setAlphaValue('xyz(41.24, 21.26, 1.93)', 0.5)).toBe('rgba(255, 0, 0, 0.5)');
     });
 
     test('sets alpha value for NAMED color', () => {
