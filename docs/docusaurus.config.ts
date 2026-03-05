@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Colore JS',
   tagline: 'Colore JS | Tiny but Comprehensive library for Color Management',
   favicon: 'img/favicon.ico',
-  url: 'https://colore.mallikcheripally.com',
+  url: 'https://colorejs.dev',
   baseUrl: '/',
   trailingSlash: false,
   organizationName: 'mallikcheripally',
@@ -143,7 +143,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 Mallik Cheripally`,
+      copyright: `Copyright © 2026 Mallik Cheripally`,
     },
     prism: {
       theme: prismThemes.github,
@@ -154,12 +154,12 @@ const config: Config = {
       { name: 'keywords', content: 'Colore, colore js, colore-js, JavaScript, TypeScript, Color Conversion, Color Manipulation, Analogous Colors, Tetradic Colors, Triadic Colors, Monochromatic Colors, Color Blending, Accessibility, a11y, Contrast ratio, CSS, color library, Color Validation, hex, hsl, hsla, rgb, rgba, lch, lab, xyz', },
       { property: 'og:title', content: 'Colore JS | Tiny but Comprehensive library for Color Management' },
       { property: 'og:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
-      { property: 'og:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
-      { property: 'og:url', content: 'https://colore.mallikcheripally.com' },
+      { property: 'og:image', content: 'https://colorejs.dev/img/colore-logo.png' },
+      { property: 'og:url', content: 'https://colorejs.dev' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'Colore JS | Tiny but Comprehensive library for Color Management' },
       { name: 'twitter:description', content: 'A robust JavaScript library for color conversions, manipulations, and validations. Generate harmonious schemes, enhance accessibility, and perform precise analysis.' },
-      { name: 'twitter:image', content: 'https://colore.mallikcheripally.com/img/colore-logo.png' },
+      { name: 'twitter:image', content: 'https://colorejs.dev/img/colore-logo.png' },
       {
         type: 'application/ld+json',
         content: `{
@@ -195,8 +195,8 @@ const config: Config = {
       },
       organization: {
         name: 'Colore JS',
-        url: 'https://colore.mallikcheripally.com',
-        logo: 'https://colore.mallikcheripally.com/img/logo.png',
+        url: 'https://colorejs.dev',
+        logo: 'https://colorejs.dev/img/logo.png',
       },
       website: {
         datePublished: '2024-06-16', // default is the current date
